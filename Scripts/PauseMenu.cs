@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -33,7 +34,7 @@ public class PauseMenu : MonoBehaviour {
     {
         pauseMenuUI.SetActive(false); // deactivate gameObject PauseMenu
         Time.timeScale = 1f; // start game time
-        IsGamePaused = false; // cahnge boolean to false
+        IsGamePaused = false; // change boolean to false
         Debug.Log("Resume"); // message console
     }
 
@@ -46,5 +47,13 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 0f; // stop game time
         IsGamePaused = true; // change boolean to true
         Debug.Log("Pause"); // message console
+    }
+
+    /*
+     * This method moves to the previous scene when the menu (then yes) button is clock which is the main menu.
+     */
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // moves to the previous scene (main menu)
     }
 }
