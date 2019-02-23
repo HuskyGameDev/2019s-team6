@@ -3448,7 +3448,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 279614879
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 9a28e90a94856194e8ebe1a932199f03, type: 3}
   m_Color: {r: 0.009433985, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -3573,6 +3573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenuUI: {fileID: 6220108}
+  flashlight: {fileID: 0}
+  blinders: {fileID: 0}
+  cage: {fileID: 0}
+  videoCamera: {fileID: 0}
+  bagOfCorks: {fileID: 0}
+  Marker: {fileID: 0}
 --- !u!114 &645995361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,6 +5107,7 @@ GameObject:
   - component: {fileID: 853975230}
   - component: {fileID: 853975229}
   - component: {fileID: 853975228}
+  - component: {fileID: 853975231}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -5168,6 +5175,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &853975231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853975227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964ada757b8b571469bf3fd21fc64702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 853975227}
 --- !u!1 &861469634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,7 +6543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 362761957
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 18946c1dc64adc04aa999cb2018617b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7316,6 +7336,7 @@ GameObject:
   - component: {fileID: 1228020433}
   - component: {fileID: 1228020432}
   - component: {fileID: 1228020431}
+  - component: {fileID: 1228020434}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -7383,7 +7404,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 853975231}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -7433,6 +7454,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228020429}
   m_CullTransparentMesh: 0
+--- !u!114 &1228020434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228020429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964ada757b8b571469bf3fd21fc64702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1228020429}
 --- !u!1 &1236240117
 GameObject:
   m_ObjectHideFlags: 0
@@ -11309,6 +11343,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenuUI: {fileID: 2023603964}
+  flashlight: {fileID: 0}
+  blinders: {fileID: 0}
+  cage: {fileID: 0}
+  videoCamera: {fileID: 0}
+  bagOfCorks: {fileID: 0}
+  Marker: {fileID: 0}
 --- !u!114 &2023603967
 MonoBehaviour:
   m_ObjectHideFlags: 0

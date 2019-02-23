@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
     {
 
         // if 'TAB' key is pressed while running
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.IsGamePaused)
         {
             // if the players inventory is open and the game is paused
             if (IsInvOpen)
