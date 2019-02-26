@@ -2,6 +2,7 @@ Win64
 PlayerPath?
 C:/Users/MSi_Notebook/Downloads/LostInMazieMansion.exe
 SceneListBegin?
+Assets/Scenes/Menu.unity
 Assets/Scenes/Main.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
