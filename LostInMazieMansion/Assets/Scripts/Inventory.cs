@@ -52,10 +52,7 @@ public class Inventory : MonoBehaviour
     public void CloseInventory()
     {
         inventoryMenuUI.SetActive(false); // deactivate gameObject Inventory
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f; // start game time
-        }
+        Time.timeScale = 1f; // start game time
         IsInvOpen = false; // change boolean to false
         Debug.Log("Inventory Closed"); // message console
     }
@@ -66,10 +63,7 @@ public class Inventory : MonoBehaviour
     void OpenInventory()
     {
         inventoryMenuUI.SetActive(true); // activate gameObject Inventory
-        if (Time.timeScale == 1f)
-        {
-            Time.timeScale = 0f; // stop game time
-        }
+        Time.timeScale = 0f; // stop game time
         IsInvOpen = true; // change boolean to true
         Debug.Log("Inventory Opened"); // message console
     }

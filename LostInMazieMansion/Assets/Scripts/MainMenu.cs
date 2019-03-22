@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour {
         Debug.Log("Quit"); // messages console that the application quit
         Application.Quit(); // exits application
     }
+
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // moves to next scence (the game)
+    }
 }
