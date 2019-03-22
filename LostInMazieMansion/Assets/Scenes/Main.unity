@@ -9721,7 +9721,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699410282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5225f70fecc01a944a58d35c28db17f5, type: 3}
+  m_Script: {fileID: 11500000, guid: d92a743b75b27b448a601d4c685919c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1699410285
@@ -9984,7 +9984,6 @@ GameObject:
   - component: {fileID: 1751614938}
   - component: {fileID: 1751614937}
   - component: {fileID: 1751614936}
-  - component: {fileID: 1751614939}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: Untagged
@@ -10052,8 +10051,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1751614939}
-        m_MethodName: returnToMenu
+      - m_Target: {fileID: 861469635}
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10102,18 +10101,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751614934}
   m_CullTransparentMesh: 0
---- !u!114 &1751614939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751614934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5225f70fecc01a944a58d35c28db17f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1754073959
 GameObject:
   m_ObjectHideFlags: 0
