@@ -33,7 +33,13 @@ public class PauseMenu : MonoBehaviour {
     public void Resume()
     {
         pauseMenuUI.SetActive(false); // deactivate gameObject PauseMenu
-        Time.timeScale = 1f; // start game time
+
+        // If the user's inventory is not open
+        if (!Inventory.IsInvOpen)
+        {
+            Time.timeScale = 1f; // start game time
+        }
+
         IsGamePaused = false; // change boolean to false
         Debug.Log("Resume"); // message console
     }
