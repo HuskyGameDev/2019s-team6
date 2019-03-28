@@ -1,8 +1,1 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/TestEnemyAI.unity
-=======
-- path: Assets/Scenes/Main.unity
->>>>>>> 3c07c7ee99793224a8e1144f78f5b060dfd49047
-  isLoaded: 1
-  isActive: 1
+sceneSetups: []
