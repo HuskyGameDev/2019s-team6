@@ -1,29 +1,91 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Manages how the scenes change based on the door that
+ * was walked through.
+ * 
+ * BE CAREFUL ABOUT NAMING THE DOORS
+ * doorName AND the GameObject's name MUST MATCH!!!
+ */
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
-    // the door that goes to the next level
-    public DoorManager door1;
+    // the door the player walks into - set using ScriptableObject in the Unity Editor
+    public DoorManager doorIn;
 
-    // the door that door1 goes to
-    public DoorManager door2;
+    // the door the player walks out of - set in the Start() method
+    private DoorManager doorOut;
 
+    // the player to spawn
     private GameObject player;
     public GameObject playerPrefab;
+
+    // the game manager to spawn
+    private GameObject gameManager;
+    public GameObject gameManagerPrefab;
 
     /*
      * Spawns the player into position
      */
     private void Start()
     {
-        //https://forum.unity.com/threads/player-duplicating-on-scene-load.494863/
-        if(GameObject.FindGameObjectWithTag("Player") == null)
+        // the player game object
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        // the game manager game object
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+
+        // spawn player in middle of the room if the player is not present
+        if(player == null)
         {
             player = Instantiate(playerPrefab);
-            player.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+            player.transform.position = new Vector2(0.0f, 0.0f);
+        }
+
+        // spawn the game manager object if not present
+        if(gameManager == null)
+        {
+            gameManager = Instantiate(gameManagerPrefab);
+            gameManager.transform.position = new Vector2(0.0f, 0.0f);
+        }
+
+        // otherwise, the player and the game manager are present
+        // put the player on the other side of the door in the room that was just loaded
+        // ^^^ this is why this code is here and not in OnTriggerEnter2D
+        else
+        {
+            // get the door we just walked through
+            doorOut = gameManager.GetComponent<GameManager>().GetOutDoor();
+            if (doorOut != null)
+            {
+                Debug.Log(doorOut.doorName);
+
+                // get the game object associated with this door
+                // BE CAREFUL ABOUT NAMING
+                GameObject outDoor = GameObject.Find(doorOut.doorName);
+
+                // door faces right => put player to right of door
+                if (doorOut.dir == DoorManager.Direction.RIGHT)
+                {
+                    player.transform.position = new Vector2(outDoor.transform.position.x + 2, outDoor.transform.position.y);
+                }
+                // door faces left => put player to left of door
+                else if (doorOut.dir == DoorManager.Direction.LEFT)
+                {
+                    player.transform.position = new Vector2(outDoor.transform.position.x - 2, outDoor.transform.position.y);
+                }
+                // door faces up => put player above door
+                else if (doorOut.dir == DoorManager.Direction.UP)
+                {
+                    player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y + 2);
+                }
+                // door faces down => put player below door
+                else if (doorOut.dir == DoorManager.Direction.DOWN)
+                {
+                    player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y - 2);
+                }
+            }
         }
     }
 
@@ -34,36 +96,16 @@ public class RoomManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            float roomX = 5.33f;
-            float roomY = 5.0f;
-
             // don't destroy the player between scenes
             DontDestroyOnLoad(other.gameObject);
 
+            // set the door we walk out of so we can grab it in the next scene
+            // and don't destroy the game manager
+            gameManager.GetComponent<GameManager>().SetDoor(doorIn.connectingDoor);
+            DontDestroyOnLoad(gameManager);
+
             // load the next scene
-            SceneManager.LoadScene(door1.roomName);
-
-            // put the player just on the other side of door2
-            // TINKER WITH THE AMOUNTS LATER
-            // MAYBE ALL FOR door2.pos TO BE WIHIN SOME RANGE:  roomX - 1 < abs(door.pos) < roomX + 1, or something
-            // just so we don't have to be super precise
-            if(door2.x == roomX && Mathf.Abs(door2.y) != roomY)
-            {
-                other.gameObject.transform.position = new Vector3(door2.x - 3, door2.y, door2.z);
-            }
-            else if (door2.x == -roomX && Mathf.Abs(door2.y) != roomY)
-            {
-                other.gameObject.transform.position = new Vector3(door2.x + 3, door2.y, door2.z);
-            }
-            else if (Mathf.Abs(door2.x) != roomX && door2.y == roomY)
-            {
-                other.gameObject.transform.position = new Vector3(door2.x, door2.y - 3, door2.z);
-            }
-            else if (Mathf.Abs(door2.x) != roomX && door2.y == -roomY)
-            {
-                other.gameObject.transform.position = new Vector3(door2.x, door2.y + 3, door2.z);
-            }
-
+            SceneManager.LoadScene(doorIn.roomName);
         }
     }
 }
