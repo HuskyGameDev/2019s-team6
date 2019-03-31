@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract class Interactable
+abstract class OldInteractable
 {
     /*
      * The player can interact with interactable objects
@@ -51,10 +51,13 @@ class Interaction : Interactable
      * return - true if the player can press 'E' next to object
      *          false otherwise
     */
+
+    /*
     public override bool isInteractable()
     {
         return canTouch;
     }
+    */
 
     /*
      * Checks to see if an object is collectable.
@@ -62,10 +65,13 @@ class Interaction : Interactable
      * return - true if pressing 'E' adds object to inventory
      *          false otherwise
      */
+
+        /*
     public override bool isCollectable()
     {
         return canCollect;
     }
+    */
 }
 
 public class ObjectInteraction : MonoBehaviour
@@ -85,9 +91,12 @@ public class ObjectInteraction : MonoBehaviour
     void Update()
     {
         // if the object is interactable and the player presses 'E'
+
+        /*
         if(obj.isInteractable() && Input.GetKey(KeyCode.E))
         {
             // if the object is collectable
+           
             if (obj.isCollectable())
             {
                 // make item sprite disappear
@@ -98,9 +107,12 @@ public class ObjectInteraction : MonoBehaviour
                 
                 // make "collected item" sound
             }
+            
 
            // a message will appear
                
         }
+
+    */
     }
 }
