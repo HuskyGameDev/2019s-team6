@@ -65,6 +65,9 @@
     <Compile Include="Assets\Scripts\DoorPosition.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EventTrigger.cs" />
+    <Compile Include="Assets\Scripts\FollowThePath.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Hide.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\InventorySlots.cs" />
