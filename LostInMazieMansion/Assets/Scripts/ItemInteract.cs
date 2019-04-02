@@ -4,8 +4,6 @@
  * Non-collectable items can only be interacted with.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemInteract : MonoBehaviour
@@ -15,10 +13,10 @@ public class ItemInteract : MonoBehaviour
     private Item item;
 
     // the player
-    public GameObject player;
+    public GameObject player = null;
 
     // the inventory
-    public Inventory inventory;
+    //public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +30,7 @@ public class ItemInteract : MonoBehaviour
     {
         // if the item can see the player and the player wants to
         // interact with the item
-        if(player != null && Input.GetKey(KeyCode.E))
+        if(player != null && Input.GetKeyDown(KeyCode.E))
         {
             //check if the inventory is full
             bool full = false;
@@ -41,21 +39,20 @@ public class ItemInteract : MonoBehaviour
             if(interactable.IsCollectable())
             {
                 // NEED TO IMPLEMENT THIS STILL
-                full = inventory.PutIntoInventory(item);
+                //full = inventory.PutIntoInventory(item);
                 
                 // if the inventory is not full, collect the item
                 if(!full)
                 {
                     // print the interaction message to the screen
                     // NEED TO IMPLEMENT THIS STILL
-                    // item.InteractMessageDisplay()
+                    interactable.InteractMessageDisplay();
+
+                    // sound the collected item sound
+                    interactable.CollectedItemSound();
 
                     // hide the item from the screen
                     interactable.IsCollected();
-
-                    // sound the collected item sound
-                    // NEED TO IMPLEMENT THIS STILL
-                    // item.CollectedItemSound();
                 }
 
                 // otherwise, the inventory is full
@@ -71,7 +68,7 @@ public class ItemInteract : MonoBehaviour
             else
             {
                 // NEED TO IMPLEMENT THIS STILL
-                // item.InteractMessageDisplay();
+                // interactable.InteractMessageDisplay();
             }
         }
     }
