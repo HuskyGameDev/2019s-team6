@@ -26,9 +26,11 @@ public class RoomManager : MonoBehaviour
     public GameObject gameManagerPrefab;
 
     /*
-     * Spawns the player into position
-     */
-    private void Start()
+    * Spawns the player into position if not present.
+    * Called before Start().  Allows retrieving the gameManager
+    * easier in the Start() method of Interactable
+    */
+    private void Awake()
     {
         // the player game object
         player = GameObject.FindGameObjectWithTag("Player");
@@ -37,54 +39,52 @@ public class RoomManager : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
 
         // spawn player in middle of the room if the player is not present
-        if(player == null)
+        if (player == null)
         {
             player = Instantiate(playerPrefab);
             player.transform.position = new Vector2(0.0f, 0.0f);
         }
 
         // spawn the game manager object if not present
-        if(gameManager == null)
+        if (gameManager == null)
         {
             gameManager = Instantiate(gameManagerPrefab);
             gameManager.transform.position = new Vector2(0.0f, 0.0f);
         }
+    }
 
-        // otherwise, the player and the game manager are present
+    private void Start()
+    {
         // put the player on the other side of the door in the room that was just loaded
         // ^^^ this is why this code is here and not in OnTriggerEnter2D
-        else
+        // get the door we just walked through
+        doorOut = gameManager.GetComponent<GameManager>().GetOutDoor();
+        if (doorOut != null)
         {
-            // get the door we just walked through
-            doorOut = gameManager.GetComponent<GameManager>().GetOutDoor();
-            if (doorOut != null)
+            //Debug.Log(doorOut.doorName);
+            // get the game object associated with this door
+            // BE CAREFUL ABOUT NAMING
+            GameObject outDoor = GameObject.Find(doorOut.doorName);
+
+            // door faces right => put player to right of door
+            if (doorOut.dir == DoorManager.Direction.RIGHT)
             {
-                Debug.Log(doorOut.doorName);
-
-                // get the game object associated with this door
-                // BE CAREFUL ABOUT NAMING
-                GameObject outDoor = GameObject.Find(doorOut.doorName);
-
-                // door faces right => put player to right of door
-                if (doorOut.dir == DoorManager.Direction.RIGHT)
-                {
-                    player.transform.position = new Vector2(outDoor.transform.position.x + 2, outDoor.transform.position.y);
-                }
-                // door faces left => put player to left of door
-                else if (doorOut.dir == DoorManager.Direction.LEFT)
-                {
-                    player.transform.position = new Vector2(outDoor.transform.position.x - 2, outDoor.transform.position.y);
-                }
-                // door faces up => put player above door
-                else if (doorOut.dir == DoorManager.Direction.UP)
-                {
-                    player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y + 2);
-                }
-                // door faces down => put player below door
-                else if (doorOut.dir == DoorManager.Direction.DOWN)
-                {
-                    player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y - 2);
-                }
+                player.transform.position = new Vector2(outDoor.transform.position.x + 2, outDoor.transform.position.y);
+            }
+            // door faces left => put player to left of door
+            else if (doorOut.dir == DoorManager.Direction.LEFT)
+            {
+                player.transform.position = new Vector2(outDoor.transform.position.x - 2, outDoor.transform.position.y);
+            }
+            // door faces up => put player above door
+            else if (doorOut.dir == DoorManager.Direction.UP)
+            {
+                player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y + 2);
+            }
+            // door faces down => put player below door
+            else if (doorOut.dir == DoorManager.Direction.DOWN)
+            {
+                player.transform.position = new Vector2(outDoor.transform.position.x, outDoor.transform.position.y - 2);
             }
         }
     }
