@@ -15,6 +15,9 @@ MonoBehaviour:
   itemName: CoinTest
   picture: {fileID: 21300000, guid: 9a28e90a94856194e8ebe1a932199f03, type: 3}
   collect: 1
+  wasCollected: 0
   messageOnInteract: I found a coin!
-  messageOnUse: 
-  messageOnDiscard: 
+  messageOnUse: Using item!
+  messageOnDiscard: Discarding item!
+  pickUpSound: {fileID: 8300000, guid: 7a41f2b6037d114499f837ff6f35cc9f, type: 3}
+  useSound: {fileID: 8300000, guid: 7a41f2b6037d114499f837ff6f35cc9f, type: 3}
