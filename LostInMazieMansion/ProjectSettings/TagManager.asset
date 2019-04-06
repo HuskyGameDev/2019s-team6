@@ -9,6 +9,8 @@ TagManager:
   - Floor
   - Hide
   - Unhidden
+  - GameManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
