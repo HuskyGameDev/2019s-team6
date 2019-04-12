@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2099863374807908653}
   - component: {fileID: 2099863374807908655}
   - component: {fileID: 2099863374807908652}
+  - component: {fileID: 9021796981317068015}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -74,6 +75,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &9021796981317068015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099863374807908642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf7f2f95cd8194b864a251ac6ebcab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
 --- !u!1 &2099863375245186510
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,6 +100,7 @@ GameObject:
   - component: {fileID: 2099863375245186507}
   - component: {fileID: 2099863375245186504}
   - component: {fileID: 2099863375245186506}
+  - component: {fileID: 454758824864120626}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -110,8 +125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.92499995, y: -0.85000014}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.031982422, y: -1.0289917}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2099863375245186507
 CanvasRenderer:
@@ -177,8 +192,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9a28e90a94856194e8ebe1a932199f03,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: d553e86bdc712ad4bb81bfa0a0072f92, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -186,9 +202,22 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099863374807908652}
+  m_TargetGraphic: {fileID: 2099863375245186504}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &454758824864120626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099863375245186510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45012db2d000ceb4ea6411d6efc64f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useOrRemove: {fileID: 0}
