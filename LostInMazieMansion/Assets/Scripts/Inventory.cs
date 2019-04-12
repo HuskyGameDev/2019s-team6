@@ -8,61 +8,30 @@ public class Inventory : MonoBehaviour
     public static bool IsInvOpen = false;
     public GameObject InventoryFullScreen;
 
-    // Obtainable items -- FEARS -- See GDD -> Special Features for explaination
-    // THESE AREN'T THE ONLY ONES - NEED CERTAIN KEYS
-    // RECONFIGURE TO GENERAL INVENTORY LIST???
-    //public GameObject flashlight;
-    //public GameObject blinders;
-    //public GameObject cage;
-    //public GameObject videoCamera;
-    //public GameObject bagOfCorks;
-    //public GameObject Marker;
-
-    //// Whether the player has obtained the items -- INVENTORY
-    //public static bool hasFlashlight = false;
-    //public static bool hasBlinders = false;
-    //public static bool hasCage = false;
-    //public static bool hasVideoCamera = false;
-    //public static bool hasCorks = false;
-    //public static bool hasMarker = false;
-
-
-
-
-
-
-
-
-
     // the full size of the inventory
     public static int numberOfSlots;
-    public GameObject[] inventory = new GameObject[numberOfSlots];
-    InventorySlots[] slots;
-
-    // assume the inventory is full
-    public bool full = true;
+    public InventoryItems[] slots;
 
     private void Start()
     {
-        slots = InventoryFullScreen.GetComponentsInChildren<InventorySlots>();
+        numberOfSlots = 12;
+        slots = InventoryFullScreen.GetComponentsInChildren<InventoryItems>();
     }
 
     public bool PutIntoInventory(Item item)
     {
         for (int i = 0; i < numberOfSlots; i++)
         {
-            if (slots[i] != null)
+            // if we find an empty slot
+            if (slots[i].GetComponent<Image>().sprite == null)
             {
-                // put the item into this slot
+                // put the item into this slot and say the inventory is not full
                 slots[i].AddItem(item);
-                full = false;
-                break;
+                return false;
             }
         }
-        // if we get here by not taking the break
-        // the inventory is full
-        return full;
-    
+        // if we get here, the inventory is full
+        return true;
     }
 
 
@@ -83,6 +52,11 @@ public class Inventory : MonoBehaviour
             {
                 OpenInventory(); // open the inventory
             }
+        }
+
+        if(IsInvOpen)
+        {
+
         }
     }
 
@@ -107,87 +81,4 @@ public class Inventory : MonoBehaviour
         IsInvOpen = true; // change boolean to true
         Debug.Log("Inventory Opened"); // message console
     }
-
-
-
-
-
-
-    ///*
-    // * This methods activates the flashlight in the inventory menu, and retuns the message 'Flashlight Active' to console.
-    // */
-    //public void obtainedFlashlight()
-    //{
-    //    if (hasFlashlight)
-    //    {
-    //        flashlight.SetActive(true); // activate gameObject Flashlight
-    //        Debug.Log("Flashlight Active"); // message console
-    //    }
-
-    //}
-
-    ///*
-    // * This methods activates the blinders in the inventory menu, and retuns the message 'Blinders Active' to console.
-    // */
-    //public void obtainedBlinders()
-    //{
-    //    if (hasBlinders)
-    //    {
-    //        blinders.SetActive(true); // activate gameObject Blinders
-    //        Debug.Log("Blinders Active"); // message console
-    //    }
-
-    //}
-
-    ///*
-    // * This methods activates the cage in the inventory menu, and retuns the message 'Cage Active' to console.
-    // */
-    //public void obtainedCage()
-    //{
-    //    if (hasCage)
-    //    {
-    //        cage.SetActive(true); // activate gameObject Cage
-    //        Debug.Log("Cage Active"); // message console
-    //    }
-
-    //}
-
-    ///*
-    // * This methods activates the video camera in the inventory menu, and retuns the message 'Video Camera Active' to console.
-    // */
-    //public void obtainedVideoCamera()
-    //{
-    //    if (hasVideoCamera)
-    //    {
-    //        videoCamera.SetActive(true); // activate gameObject Video Camera
-    //        Debug.Log("Video Camera Active"); // message console
-    //    }
-
-    //}
-
-    ///*
-    // * This methods activates the bag of corks in the inventory menu, and retuns the message 'Corks Active' to console.
-    // */
-    //public void obtainedBagOfCorks()
-    //{
-    //    if (hasCorks)
-    //    {
-    //        bagOfCorks.SetActive(true); // activate gameObject Bag of Corks
-    //        Debug.Log("Corks Active"); // message console
-    //    }
-
-    //}
-
-    ///*
-    // * This methods activates the marker in the inventory menu, and retuns the message 'Marker Active' to console.
-    // */
-    //public void obtainedMarker()
-    //{
-    //    if (hasMarker)
-    //    {
-    //        flashlight.SetActive(true); // activate gameObject Marker
-    //        Debug.Log("Marker Active"); // message console
-    //    }
-
-    //}
 }
