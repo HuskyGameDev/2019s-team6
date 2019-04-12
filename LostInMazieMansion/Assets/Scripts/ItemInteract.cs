@@ -16,7 +16,7 @@ public class ItemInteract : MonoBehaviour
     public GameObject player = null;
 
     // the inventory
-    //public Inventory inventory;
+    public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -32,17 +32,20 @@ public class ItemInteract : MonoBehaviour
         // interact with the item
         if(player != null && Input.GetKeyDown(KeyCode.E))
         {
+            // access the player's inventory
+            inventory = player.GetComponentInChildren<Inventory>();
+
             //check if the inventory is full
             bool full = false;
 
             // if the itme is collectable, try to collect the item
             if(interactable.IsCollectable())
             {
-                // NEED TO IMPLEMENT THIS STILL
-                //full = inventory.PutIntoInventory(item);
-                
+                // put the item into the inventory only if the inventory is not full
+                full = inventory.PutIntoInventory(item);
+
                 // if the inventory is not full, collect the item
-                if(!full)
+                if (!full)
                 {
                     // print the interaction message to the screen
                     // NEED TO IMPLEMENT THIS STILL

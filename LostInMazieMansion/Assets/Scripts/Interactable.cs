@@ -17,14 +17,11 @@ public class Interactable : MonoBehaviour
     // the sprite renderer for the object
     private SpriteRenderer sp;
 
-    // the audio sources for the object
+    // the audio source for the object
     private AudioSource source;
 
+    // the game manager to help with collected item destruction
     private GameManager gameManager;
-
-    // the dialog stuff - file is called "benevolentDialog"
-    // interactionMessage - dialog on player interacting with object
-    //private benevolentDialog interactionMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +38,6 @@ public class Interactable : MonoBehaviour
         // otherwise, show the item on screen
         else
         {
-            item.wasCollected = false;
-
             // get the sprite renderer for the object and set
             // it to the image's picture
             sp = gameObject.GetComponent<SpriteRenderer>();
@@ -50,10 +45,6 @@ public class Interactable : MonoBehaviour
 
             // get the item's audio
             source = gameObject.GetComponent<AudioSource>();
-
-            // the message on interaction with the item
-            //interactionMessage = gameObject.GetComponent<benevolentDialog>();
-            //interactionMessage.dialog = item.messageOnInteract;
         }
     }
 
@@ -94,6 +85,7 @@ public class Interactable : MonoBehaviour
     {
         // display item.messageOnInteract
         //interactionMessage.DialogDisplay();
+        gameManager.displayMessage(item.messageOnInteract);
     }
 
     /*

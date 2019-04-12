@@ -26,9 +26,6 @@ public class Item : ScriptableObject
     // true if the item can be collected, false if only interacted with
     public bool collect;
 
-    // true if the player collected the item, false otherwise
-    public bool wasCollected;
-
     // a message that appears when the player interacts with the object
     public string messageOnInteract;
 
