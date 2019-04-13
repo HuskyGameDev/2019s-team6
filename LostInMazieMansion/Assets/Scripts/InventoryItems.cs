@@ -7,7 +7,8 @@ public class InventoryItems : MonoBehaviour
     public Image icon;
 
     /*
-     * Add an item to the inventory
+     * Add an item to the inventory and show it's picture as the inventory
+     * slot picture
      * 
      * item - new item to be added
      */

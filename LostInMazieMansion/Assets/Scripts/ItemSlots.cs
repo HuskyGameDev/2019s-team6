@@ -5,24 +5,50 @@ using UnityEngine.UI;
 
 public class ItemSlots : MonoBehaviour
 {
-    public Button useOrRemove;
+    // the item in the item slot
+    InventoryItems itemInSlot;
 
-    // Start is called before the first frame update
-    void Start()
+    // the use button
+    GameObject useButton;
+
+    // the discard button
+    GameObject discardButton;
+
+    /*
+     * If the player clicks on the inventory slot, then the
+     * "use" and "discard" buttons appear.  If the player
+     * clicks the item again, these buttons disappear.
+     */
+    public void OnItemClicked()
     {
-        useOrRemove = GetComponent<Button>();
+        itemInSlot = GetComponentInChildren<InventoryItems>();
+
+        if (!useButton.activeInHierarchy)
+        {
+            if (itemInSlot.icon != null)
+            {
+                useButton.SetActive(true);
+                discardButton.SetActive(true);
+            }
+        }
+
+        else
+        {
+            useButton.SetActive(false);
+            discardButton.SetActive(false);
+        }
+
     }
 
-    private void ButtonClicked()
+    /*
+     * Start with both the "use" and "discard" buttons off
+     */
+    private void Start()
     {
-        Debug.Log("clicked button");
-    }
+        useButton = GetComponentInChildren<UseButton>().gameObject;
+        useButton.SetActive(false);
 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        discardButton = GetComponentInChildren<DiscardButton>().gameObject;
+        discardButton.SetActive(false);
     }
 }

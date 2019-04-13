@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    // STILL NEEDED:
+    // inventory DisplayInventoryFullMessage() - see ItemInteract
+
     public static bool IsInvOpen = false;
     public GameObject InventoryFullScreen;
 
@@ -14,10 +17,17 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
+        // initialize the number of slots and the slots themselves
         numberOfSlots = 12;
         slots = InventoryFullScreen.GetComponentsInChildren<InventoryItems>();
     }
 
+    /*
+     * Put and item into the inventory if it isn't full.  Otherwise, do nothing.
+     * 
+     * item - the item to be put into the inventory
+     * return false if the inventory is not full, true otherwise
+     */
     public bool PutIntoInventory(Item item)
     {
         for (int i = 0; i < numberOfSlots; i++)
@@ -38,7 +48,6 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // if 'TAB' key is pressed while running
         if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.IsGamePaused)
         {
@@ -52,11 +61,6 @@ public class Inventory : MonoBehaviour
             {
                 OpenInventory(); // open the inventory
             }
-        }
-
-        if(IsInvOpen)
-        {
-
         }
     }
 
