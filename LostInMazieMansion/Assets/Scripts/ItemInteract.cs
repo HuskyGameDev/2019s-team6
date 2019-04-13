@@ -48,7 +48,6 @@ public class ItemInteract : MonoBehaviour
                 if (!full)
                 {
                     // print the interaction message to the screen
-                    // NEED TO IMPLEMENT THIS STILL
                     interactable.InteractMessageDisplay();
 
                     // sound the collected item sound
@@ -70,8 +69,7 @@ public class ItemInteract : MonoBehaviour
             // otherwise, the item is only interactable, so just display the message
             else
             {
-                // NEED TO IMPLEMENT THIS STILL
-                // interactable.InteractMessageDisplay();
+                interactable.InteractMessageDisplay();
             }
         }
     }

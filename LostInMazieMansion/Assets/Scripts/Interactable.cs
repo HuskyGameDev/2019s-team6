@@ -83,13 +83,13 @@ public class Interactable : MonoBehaviour
      */
     public void InteractMessageDisplay()
     {
-        // display item.messageOnInteract
-        //interactionMessage.DialogDisplay();
+        // allows for the interaction message to be displayed on screen
         gameManager.displayMessage(item.messageOnInteract);
     }
 
     /*
      * Displays the message upon use of the item
+     * WILL BE MOVED TO UseButton
      */
     public void UseMessageDisplay()
     {
@@ -98,6 +98,7 @@ public class Interactable : MonoBehaviour
 
     /*
      * Displays the message upon discarding an item
+     * WILL BE MOVED TO DiscardButton
      */
     public void DiscardMessageDisplay()
     {
