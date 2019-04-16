@@ -7,14 +7,15 @@ public class HealthHandler : MonoBehaviour {
 
     [SerializeField] private HealthBar healthBar;
     private Transform target; // Player
-    float maxHPSize = .08f;
-    int maxHP = 80;
-    int currentHP;
-    int damage = 20;
+    float maxHPSize = .08f; // Max HP Bar Size
+    int maxHP = 80; // Total HP
+    int currentHP; // Current HP out of Max
+    int damage = 20; // Damage Modifier
 
     private void Start () {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        currentHP = maxHP;
+  
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // Get Player
+        currentHP = maxHP; // Set current HP to Max
 	}
 
     void Update()
@@ -36,8 +37,8 @@ public class HealthHandler : MonoBehaviour {
         //Checks if the collision was with an enemy
         if (collision.tag == "Enemy")
         {
-            currentHP -= damage;
-            maxHPSize -= .02f;
+            currentHP -= damage; // Take Damage off of Health
+            maxHPSize -= .02f; // Reduce bar size
             healthBar.SetSize(maxHPSize);
         }
     }
