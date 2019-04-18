@@ -4,8 +4,6 @@
  * Non-collectable items can only be interacted with.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemInteract : MonoBehaviour
@@ -15,7 +13,7 @@ public class ItemInteract : MonoBehaviour
     private Item item;
 
     // the player
-    public GameObject player;
+    public GameObject player = null;
 
     // the inventory
     public Inventory inventory;
@@ -32,30 +30,31 @@ public class ItemInteract : MonoBehaviour
     {
         // if the item can see the player and the player wants to
         // interact with the item
-        if(player != null && Input.GetKey(KeyCode.E))
+        if(player != null && Input.GetKeyDown(KeyCode.E))
         {
+            // access the player's inventory
+            inventory = player.GetComponentInChildren<Inventory>();
+
             //check if the inventory is full
             bool full = false;
 
             // if the itme is collectable, try to collect the item
             if(interactable.IsCollectable())
             {
-                // NEED TO IMPLEMENT THIS STILL
+                // put the item into the inventory only if the inventory is not full
                 full = inventory.PutIntoInventory(item);
-                
+
                 // if the inventory is not full, collect the item
-                if(!full)
+                if (!full)
                 {
                     // print the interaction message to the screen
-                    // NEED TO IMPLEMENT THIS STILL
-                    // item.InteractMessageDisplay()
+                    interactable.InteractMessageDisplay();
+
+                    // sound the collected item sound
+                    interactable.CollectedItemSound();
 
                     // hide the item from the screen
                     interactable.IsCollected();
-
-                    // sound the collected item sound
-                    // NEED TO IMPLEMENT THIS STILL
-                    // item.CollectedItemSound();
                 }
 
                 // otherwise, the inventory is full
@@ -70,8 +69,7 @@ public class ItemInteract : MonoBehaviour
             // otherwise, the item is only interactable, so just display the message
             else
             {
-                // NEED TO IMPLEMENT THIS STILL
-                // item.InteractMessageDisplay();
+                interactable.InteractMessageDisplay();
             }
         }
     }

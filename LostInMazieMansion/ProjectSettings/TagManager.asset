@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
+  - Waypoint
+  - Floor
+  - Hide
+  - Unhidden
+  - GameManager
+  - Enemy
   layers:
   - Default
   - TransparentFX

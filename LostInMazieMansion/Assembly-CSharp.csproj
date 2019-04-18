@@ -61,15 +61,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\benevolentDialog.cs" />
+    <Compile Include="Assets\Scripts\dialogSystem.cs" />
+    <Compile Include="Assets\Scripts\DiscardButton.cs" />
     <Compile Include="Assets\Scripts\DoorManager.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EventTrigger.cs" />
+    <Compile Include="Assets\Scripts\FollowThePath.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\HealthHandler.cs" />
+    <Compile Include="Assets\Scripts\Hide.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\InventoryItems.cs" />
     <Compile Include="Assets\Scripts\InventorySlots.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemInteract.cs" />
+    <Compile Include="Assets\Scripts\ItemSlots.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\MovementCamera.cs" />
@@ -78,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\RoomManager.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\UseButton.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Colin Arkens/Documents/GitHub/2019s-team6/LostInMazieMansion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

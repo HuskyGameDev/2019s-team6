@@ -7,8 +7,6 @@
  * the player interacts with the object in some way.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
@@ -19,30 +17,35 @@ public class Interactable : MonoBehaviour
     // the sprite renderer for the object
     private SpriteRenderer sp;
 
-    // the audio clips and sources for the object
-    //private AudioClip pickUp;
-    //private AudioSource pickUpSource;
-    //private AudioClip use;
-    //private AudioSource useSource;
+    // the audio source for the object
+    private AudioSource source;
+
+    // the game manager to help with collected item destruction
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        // get the sprite renderer for the object and set
-        // it to the image's picture
-        sp = GetComponent<SpriteRenderer>();
-        sp.sprite = item.picture;
+        // get the game manager
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-        // set the sounds
-        //pickUp = item.pickUpSound;
-        // use = item.useSound;
-    }
+        // if the list of collected items exists and the item is contained in the list, then destroy it
+        if (gameManager != null && gameManager.GetDestroyedItems() != null && gameManager.GetDestroyedItems().Contains(gameObject.name))
+        {
+            Destroy(gameObject);
+        }
 
-    void Awake()
-    {
-        // get the audio source for the sounds
-        //pickUpSource = GetComponent<AudioSource>();
-        //useSource = GetComponent<AudioSource>();
+        // otherwise, show the item on screen
+        else
+        {
+            // get the sprite renderer for the object and set
+            // it to the image's picture
+            sp = gameObject.GetComponent<SpriteRenderer>();
+            sp.sprite = item.picture;
+
+            // get the item's audio
+            source = gameObject.GetComponent<AudioSource>();
+        }
     }
 
     /*
@@ -62,14 +65,17 @@ public class Interactable : MonoBehaviour
      */
     public void IsCollected()
     {
+        // add the item to the list of collected items
+        gameManager.DestroyItem(gameObject.name);
+
         // no artwork on screen
         sp.sprite = null;
 
         // hide the box collider
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-        // hide the game object
-        gameObject.SetActive(false);
+        // destroys the item after 3 counts - THIS MAY NEED TO BE TINKERED WITH...
+        Destroy(gameObject, 3.0f);
     }
 
     /*
@@ -77,11 +83,13 @@ public class Interactable : MonoBehaviour
      */
     public void InteractMessageDisplay()
     {
-        // display item.messageOnInteract
+        // allows for the interaction message to be displayed on screen
+        gameManager.displayMessage(item.messageOnInteract);
     }
 
     /*
      * Displays the message upon use of the item
+     * WILL BE MOVED TO UseButton
      */
     public void UseMessageDisplay()
     {
@@ -90,6 +98,7 @@ public class Interactable : MonoBehaviour
 
     /*
      * Displays the message upon discarding an item
+     * WILL BE MOVED TO DiscardButton
      */
     public void DiscardMessageDisplay()
     {
@@ -100,12 +109,12 @@ public class Interactable : MonoBehaviour
      * Sounds the collected item sound
      * 
      * RANDOMIZE VOLUME??? (SEE WITHOUT, THEN DECIDE;
-     * sound effects and scripts on unity3d.comS)
+     * sound effects and scripts on unity3d.com)
      */
     public void CollectedItemSound()
     {
         // sound item.pickUpSound
-        //pickUpSource.PlayOneShot(pickUp);
+        source.PlayOneShot(item.pickUpSound);
     }
 
     /*
@@ -114,7 +123,7 @@ public class Interactable : MonoBehaviour
     public void ItemUseSound()
     {
         // sound item.useSound
-        // useSource.PlayOneShot(use);
+        source.PlayOneShot(item.useSound);
     }
 
 }
