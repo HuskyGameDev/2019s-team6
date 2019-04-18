@@ -734,8 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryFullScreen: {fileID: 0}
-  inventory: []
-  full: 1
+  slots: []
 --- !u!114 &60066080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6564,6 +6563,7 @@ GameObject:
   - component: {fileID: 916733397}
   - component: {fileID: 916733398}
   - component: {fileID: 916733399}
+  - component: {fileID: 916733400}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -6608,7 +6608,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300002, guid: fd0d6984fd46c3b4692ca0b7f677aff8, type: 3}
+  m_Sprite: {fileID: 21300016, guid: fd0d6984fd46c3b4692ca0b7f677aff8, type: 3}
   m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6696,6 +6696,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0653346, y: 0.7238786}
   m_EdgeRadius: 0
+--- !u!95 &916733400
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916733394}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7065be0d494c14248a5bf147b6cb7571, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &925972097
 GameObject:
   m_ObjectHideFlags: 0
@@ -7928,8 +7947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryFullScreen: {fileID: 0}
-  inventory: []
-  full: 1
+  slots: []
 --- !u!114 &1113428579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11602,6 +11620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  playerMoving: 0
 --- !u!95 &1707766397
 Animator:
   serializedVersion: 3
