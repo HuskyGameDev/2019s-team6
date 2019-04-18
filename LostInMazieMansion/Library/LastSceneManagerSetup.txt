@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/F3_Mazie'sBedroom.unity
+- path: Assets/Scenes/F3_StorageRoom.unity
   isLoaded: 1
   isActive: 1

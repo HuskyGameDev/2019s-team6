@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     private Animator anim;
 
-    private bool playerMoving;
+    public bool playerMoving;
     private Vector2 lastMove;
 
     void Start()
