@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7022697e036b81349951274a38f2d5b7, type: 3}
+  m_Name: CoinTest2
+  m_EditorClassIdentifier: 
+  itemName: CoinTest2
+  picture: {fileID: 21300000, guid: 9a28e90a94856194e8ebe1a932199f03, type: 3}
+  collect: 1
+  messageOnInteract: I found a coin!
+  messageOnUse: Using coin!
+  messageOnDiscard: Discarding coin!
+  pickUpSound: {fileID: 8300000, guid: 7a41f2b6037d114499f837ff6f35cc9f, type: 3}
+  useSound: {fileID: 8300000, guid: 7a41f2b6037d114499f837ff6f35cc9f, type: 3}
