@@ -13,9 +13,19 @@ public class MovementCamera : MonoBehaviour
 
     public GameObject player;
 
+    private GameManager gameManager;
+    private DoorManager doorOut;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        doorOut = gameManager.GetOutDoor();
+        if (doorOut != null)
+        {
+            GameObject outDoor = GameObject.Find(doorOut.doorName);
+            gameObject.GetComponent<Transform>().position = new Vector3(0, outDoor.transform.position.y, -10.0f);
+        }
     }
 
     // Update is called once per frame
