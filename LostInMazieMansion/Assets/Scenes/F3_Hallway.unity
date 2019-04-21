@@ -7192,7 +7192,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.0004324913}
@@ -7220,9 +7220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorIn: {fileID: 0}
-  playerPrefab: {fileID: 0}
-  gameManagerPrefab: {fileID: 0}
+  doorIn: {fileID: 11400000, guid: 0c2a9038f2b37db44ac6782cdefdf3cd, type: 2}
+  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
+    type: 3}
+  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
+    type: 3}
 --- !u!1 &1201529129
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,7 +9182,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.014072895}
@@ -9588,8 +9590,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1697940709}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1536917818
 MonoBehaviour:
@@ -10645,7 +10647,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 947219004}
-  - {fileID: 1536917817}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
