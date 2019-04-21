@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: F3_Hallway_UpperRight
   m_EditorClassIdentifier: 
   doorName: F3_Hallway_UpperRight
-  roomName: 
-  connectingDoor: {fileID: 0}
-  dir: 2
+  roomName: F3_Lounge
+  connectingDoor: {fileID: 11400000, guid: 4b2b974730bf866469ba0a09fe1d474f, type: 2}
+  dir: 0

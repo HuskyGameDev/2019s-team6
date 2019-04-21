@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbaec4f34eb706c4798dcb69a3b9fcea, type: 3}
-  m_Name: F3_Hallway_LowerLeft
+  m_Name: F3_Lounge
   m_EditorClassIdentifier: 
-  doorName: F3_Hallway_LowerLeft
-  roomName: F3_Study
-  connectingDoor: {fileID: 11400000, guid: b6c82db966d5bb64c91bc1a6fb0996aa, type: 2}
+  doorName: F3_Lounge
+  roomName: F3_Hallway
+  connectingDoor: {fileID: 11400000, guid: 0c2a9038f2b37db44ac6782cdefdf3cd, type: 2}
   dir: 2
