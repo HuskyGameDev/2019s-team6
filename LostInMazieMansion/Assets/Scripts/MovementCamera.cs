@@ -21,10 +21,10 @@ public class MovementCamera : MonoBehaviour
         anim = GetComponent<Animator>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         doorOut = gameManager.GetOutDoor();
-        if (doorOut != null)
+        if(doorOut != null)
         {
             GameObject outDoor = GameObject.Find(doorOut.doorName);
-            gameObject.GetComponent<Transform>().position = new Vector3(0, outDoor.transform.position.y, -10.0f);
+            gameObject.GetComponent<Transform>().position = new Vector3(0.0f, outDoor.transform.position.y, -10.0f);
         }
     }
 
@@ -45,11 +45,13 @@ public class MovementCamera : MonoBehaviour
         */
 
         //if vertical movement is detected
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+        // if moving up and the camera is less than 8 units in the y OR moving down and the camera is more than -5 units in the y
+        if((Input.GetAxisRaw("Vertical") > 0.5f  && transform.position.y < 8) || (Input.GetAxisRaw("Vertical") < -0.5f && transform.position.y > -5))
         {
-            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
+            //Debug.Log(transform.position.y);
+            transform.Translate(new Vector3(0.0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0.0f));
             cameraMoving = true;
-            lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
+            lastMove = new Vector2(0.0f, Input.GetAxisRaw("Vertical"));
         }
 
         /*
