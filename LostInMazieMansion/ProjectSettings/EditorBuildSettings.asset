@@ -5,13 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 07a484cf027f2ee4480bebbc99a8cd43
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 4583ae39c8199f24bbc5f82296770f19
+    path: Assets/Scenes/F3_Mazie'sBedroom.unity
+    guid: 439c01c1435fdb547a28d1c995539a6f
+  - enabled: 1
+    path: Assets/Scenes/F3_Hallway.unity
+    guid: 0a336c9712ed8ba4786234dee020bfe5
+  - enabled: 1
+    path: Assets/Scenes/F3_Lounge.unity
+    guid: 4f6876085ed677e448d41d3026175414
+  - enabled: 1
+    path: Assets/Scenes/F3_Study.unity
+    guid: 31a7b5c32d13855458eae6c907f388a3
+  - enabled: 1
+    path: Assets/Scenes/F3_StorageRoom.unity
+    guid: ae03a69e35222ac42b7d8cfe3d7ddb8c
   m_configObjects: {}
