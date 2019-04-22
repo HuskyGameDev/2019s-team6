@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2099863374807908653}
   - component: {fileID: 2099863374807908655}
   - component: {fileID: 2099863374807908652}
-  - component: {fileID: 9021796981317068015}
+  - component: {fileID: 797960287284899472}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &9021796981317068015
+--- !u!114 &797960287284899472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099863374807908642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cf7f2f95cd8194b864a251ac6ebcab, type: 3}
+  m_Script: {fileID: 11500000, guid: dd39b2b95fc95874998e070812cbc52b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2099863375245186507}
   - component: {fileID: 2099863375245186504}
   - component: {fileID: 2099863375245186506}
-  - component: {fileID: 454758824864120626}
+  - component: {fileID: 2849075628712788043}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 454758824864120626}
+      - m_Target: {fileID: 0}
         m_MethodName: OnItemClicked
         m_Mode: 1
         m_Arguments:
@@ -300,7 +300,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &454758824864120626
+--- !u!114 &2849075628712788043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -56,7 +56,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa0284953cb585f4c87a5fcb2ef828b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eafa1ccae7d784f42a06c181dc41dbd6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -151,13 +151,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3827083272374181790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feba59407e25bf43aa2720e246ddea1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9656642a684e6af4099bb900db728b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 6805510836821470725}
   dialogText: {fileID: 6805510838407015599}
   dialog: 
-  playerInRange: 0
 --- !u!1001 &7023085236033308130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,16 +164,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3827083272374181788}
     m_Modifications:
-    - target: {fileID: 4541047633863187485, guid: 9b9cf12a86a10d847b1fc23aed2044c3,
-        type: 3}
-      propertyPath: m_Name
-      value: dialog
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541047633863187485, guid: 9b9cf12a86a10d847b1fc23aed2044c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4541047633863187473, guid: 9b9cf12a86a10d847b1fc23aed2044c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,6 +268,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541047633863187485, guid: 9b9cf12a86a10d847b1fc23aed2044c3,
+        type: 3}
+      propertyPath: m_Name
+      value: dialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541047633863187485, guid: 9b9cf12a86a10d847b1fc23aed2044c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b9cf12a86a10d847b1fc23aed2044c3, type: 3}

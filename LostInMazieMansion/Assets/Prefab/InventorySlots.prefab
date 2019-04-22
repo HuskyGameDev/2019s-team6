@@ -118,11 +118,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -228,6 +223,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &2251838202170274721 stripped
@@ -243,11 +243,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -353,6 +348,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &83070553917390700 stripped
@@ -368,11 +368,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,6 +473,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &3636700302297866819 stripped
@@ -493,11 +493,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -603,6 +598,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &3624017321392368403 stripped
@@ -618,11 +618,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -728,6 +723,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &3272315380848605096 stripped
@@ -743,11 +743,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -853,6 +848,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &2945521510343411705 stripped
@@ -868,11 +868,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -978,6 +973,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &4706550140955969495 stripped
@@ -993,11 +993,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1103,7 +1098,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186506, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 454758824864120626, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &4632713117180380245 stripped
 RectTransform:
@@ -1118,11 +1124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1228,6 +1229,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (11)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &4842726590984708565 stripped
@@ -1243,11 +1249,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1353,6 +1354,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &9130959085101506397 stripped
@@ -1368,11 +1374,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1478,6 +1479,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}
 --- !u!224 &8719553272383036476 stripped
@@ -1493,11 +1499,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3016941491959283534}
     m_Modifications:
-    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 2099863375245186505, guid: 7e555e6efef6e62449b17a7ffc989ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1602,6 +1603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099863375245186510, guid: 7e555e6efef6e62449b17a7ffc989ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemSlot (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e555e6efef6e62449b17a7ffc989ef8, type: 3}

@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryFullScreen: {fileID: 565774972083986754}
   slots: []
-  itemSlots: []
 --- !u!1001 &3253117600211648687
 PrefabInstance:
   m_ObjectHideFlags: 0
