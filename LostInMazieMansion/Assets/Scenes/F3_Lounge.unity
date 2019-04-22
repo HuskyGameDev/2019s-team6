@@ -5497,7 +5497,6 @@ GameObject:
   - component: {fileID: 862680627}
   - component: {fileID: 862680626}
   - component: {fileID: 862680625}
-  - component: {fileID: 862680624}
   - component: {fileID: 862680623}
   - component: {fileID: 862680622}
   - component: {fileID: 862680621}
@@ -5560,20 +5559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 506405519}
---- !u!114 &862680624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862680620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c635313f34935c46a13a7b36349f09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryFullScreen: {fileID: 0}
-  slots: []
 --- !u!114 &862680625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8036,7 +8021,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1431021990
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10019,7 +10003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1802060023
 MonoBehaviour:
   m_ObjectHideFlags: 0

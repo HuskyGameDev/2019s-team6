@@ -2948,8 +2948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9f02f52ce039e49bdbcb13d0b28052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &363929879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,8 +4588,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!222 &562468266
@@ -12182,7 +12178,6 @@ GameObject:
   - component: {fileID: 1425706010}
   - component: {fileID: 1425706009}
   - component: {fileID: 1425706008}
-  - component: {fileID: 1425706007}
   - component: {fileID: 1425706006}
   - component: {fileID: 1425706005}
   - component: {fileID: 1425706004}
@@ -12245,20 +12240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1528810059}
---- !u!114 &1425706007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425706003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c635313f34935c46a13a7b36349f09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryFullScreen: {fileID: 0}
-  slots: []
 --- !u!114 &1425706008
 MonoBehaviour:
   m_ObjectHideFlags: 0
