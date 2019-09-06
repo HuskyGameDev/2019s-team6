@@ -1,0 +1,12 @@
+* text=input
+
+*.sln text eol=crlf
+
+# Binary Files
+
+## Images
+*.png binary
+*.jpg binary
+
+## Audio
+*.wav binary
