@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class HealthHandler : MonoBehaviour {
 
-    [SerializeField] private HealthBar healthBar;
-    private Transform target; // Player
+    [SerializeField] private HealthBar healthBar = null;
+    private Transform target = null; // Player
     float maxHPSize = .08f; // Max HP Bar Size
     int maxHP = 80; // Total HP
     int currentHP; // Current HP out of Max
     int damage = 20; // Damage Modifier
 
     private void Start () {
-  
+
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // Get Player
         currentHP = maxHP; // Set current HP to Max
 	}
@@ -29,7 +29,7 @@ public class HealthHandler : MonoBehaviour {
     void Die()
     {
         // Reload Level
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

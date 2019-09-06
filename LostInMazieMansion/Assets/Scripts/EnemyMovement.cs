@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     private float wait = 3f; // Wait Time
     public float speed; // Enemy Movement Speed
     private Transform target; // Player
-    private Transform waypoint; // Current Waypoint 
+    private Transform waypoint; // Current Waypoint
 
     /*
      * This is a Global variable class. It is used to tell the enemy object if the player is hiding or not.
@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
 
     // Array of waypoints to walk from one to the next
     [SerializeField]
-    private Transform[] waypoints;
+    private Transform[] waypoints = new Transform[0];
 
     // Walk speed that can be set in Inspector
     [SerializeField]
@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // Get object with "Player" tag
         waypoint = GameObject.FindGameObjectWithTag("Waypoint").GetComponent<Transform>(); // Get object with "Waypoint" tag
-       
+
         // Set position of Enemy as position of the first waypoint
         transform.position = waypoints[waypointIndex].transform.position;
     }
@@ -97,7 +97,7 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             // Once the enemy has completed his path, reset the index
-            waypointIndex = 0; 
+            waypointIndex = 0;
         }
     }
 

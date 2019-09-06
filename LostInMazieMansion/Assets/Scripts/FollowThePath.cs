@@ -6,7 +6,7 @@ public class FollowThePath : MonoBehaviour
 {
     // Array of waypoints to walk from one to the next one
     [SerializeField]
-    private Transform[] waypoints;
+    private Transform[] waypoints = new Transform[0];
 
     // Walk speed that can be set in Inspector
     [SerializeField]
