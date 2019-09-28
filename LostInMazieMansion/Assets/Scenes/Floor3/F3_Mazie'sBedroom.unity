@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 15950547}
   - component: {fileID: 15950548}
   - component: {fileID: 15950549}
-  - component: {fileID: 15950550}
+  - component: {fileID: 15950551}
   m_Layer: 10
   m_Name: MazieDoor
   m_TagString: Untagged
@@ -228,7 +228,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &15950550
+--- !u!114 &15950551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,14 +237,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 15950546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: cd0f6ca1d6de2c943b7294c423b43530, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
+  TargetSceneName: F3_Hallway
+  TargetDoorName: F3_Hallway_UpperLeft
+  DoorOrientation: 2
 --- !u!1001 &27894200
 PrefabInstance:
   m_ObjectHideFlags: 0

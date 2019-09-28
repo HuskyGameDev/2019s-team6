@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 387437618}
   - component: {fileID: 387437619}
   - component: {fileID: 387437620}
-  - component: {fileID: 387437621}
+  - component: {fileID: 387437622}
   m_Layer: 10
   m_Name: F3_Study
   m_TagString: Untagged
@@ -5235,7 +5235,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &387437621
+--- !u!114 &387437622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5244,14 +5244,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 387437617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: b6c82db966d5bb64c91bc1a6fb0996aa, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
+  TargetSceneName: F3_Hallway
+  TargetDoorName: F3_Hallway_LowerLeft
+  DoorOrientation: 2
 --- !u!1001 &666747353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5259,11 +5257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6530949534517407870, guid: 79f04d4328ac5704db1c629c7641778f,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_Name
@@ -5323,6 +5316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530949534517407870, guid: 79f04d4328ac5704db1c629c7641778f,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f04d4328ac5704db1c629c7641778f, type: 3}
@@ -5675,11 +5673,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5696,6 +5689,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 666747354}
     - target: {fileID: 8080743646962803527, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

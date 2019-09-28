@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 362789354}
   - component: {fileID: 362789357}
   - component: {fileID: 362789356}
-  - component: {fileID: 362789355}
+  - component: {fileID: 362789358}
   m_Layer: 0
   m_Name: F3_Hallway_UpperLeft
   m_TagString: Untagged
@@ -303,23 +303,6 @@ Transform:
   m_Father: {fileID: 494280206}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &362789355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362789353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: f035fcd263258f14d8261564a8b2947c, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
 --- !u!61 &362789356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -395,6 +378,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &362789358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362789353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetSceneName: F3_Mazie'sBedroom
+  TargetDoorName: MazieDoor
+  DoorOrientation: 3
 --- !u!1 &364829047
 GameObject:
   m_ObjectHideFlags: 0
@@ -8588,16 +8586,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848504850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: 7a8923e811c50b849be6c3a78e2e72cb, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
+  TargetSceneName: 
+  TargetDoorName: 
+  DoorOrientation: 2
 --- !u!61 &848504853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9023,10 +9019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e03ae3730af1643935007cc2322a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
-  anim: {fileID: 0}
-  playerMoving: 0
-  lastMove: {x: 0, y: 0}
 --- !u!95 &1186039371
 Animator:
   serializedVersion: 3
@@ -9210,7 +9202,7 @@ GameObject:
   - component: {fileID: 1496027869}
   - component: {fileID: 1496027872}
   - component: {fileID: 1496027871}
-  - component: {fileID: 1496027870}
+  - component: {fileID: 1496027873}
   m_Layer: 0
   m_Name: F3_Hallway_LowerRight
   m_TagString: Untagged
@@ -9232,23 +9224,6 @@ Transform:
   m_Father: {fileID: 494280206}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1496027870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496027868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: 78dbc0ec755b0864dbe61b21e741e9a4, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
 --- !u!61 &1496027871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9324,6 +9299,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1496027873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496027868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetSceneName: F3_StorageRoom
+  TargetDoorName: F3_StorageRoom
+  DoorOrientation: 2
 --- !u!1 &1511082151
 GameObject:
   m_ObjectHideFlags: 0
@@ -9552,14 +9542,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2107676364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: 0c2a9038f2b37db44ac6782cdefdf3cd, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
+  TargetSceneName: F3_Lounge
+  TargetDoorName: F3_Lounge
+  DoorOrientation: 2
 --- !u!61 &2107676367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9646,7 +9634,7 @@ GameObject:
   - component: {fileID: 2107907484}
   - component: {fileID: 2107907487}
   - component: {fileID: 2107907486}
-  - component: {fileID: 2107907485}
+  - component: {fileID: 2107907488}
   m_Layer: 0
   m_Name: F3_Hallway_LowerLeft
   m_TagString: Untagged
@@ -9668,23 +9656,6 @@ Transform:
   m_Father: {fileID: 494280206}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2107907485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107907483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5728ccca64c46a649a78a116a3c0802f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorIn: {fileID: 11400000, guid: 37c22c2c91128b04d8076c534d7bc514, type: 2}
-  playerPrefab: {fileID: 1317636469490417104, guid: 79f04d4328ac5704db1c629c7641778f,
-    type: 3}
-  gameManagerPrefab: {fileID: 3827083272374181790, guid: 70a234287985b5444a85bc3d63530bd2,
-    type: 3}
 --- !u!61 &2107907486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9760,6 +9731,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2107907488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107907483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetSceneName: F3_Study
+  TargetDoorName: F3_Study
+  DoorOrientation: 3
 --- !u!1001 &191451152890566397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9767,11 +9753,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 191451153440669020, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Name
@@ -9838,6 +9819,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 868742960}
     - target: {fileID: 8080743646962803527, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

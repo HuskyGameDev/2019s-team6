@@ -34,6 +34,20 @@ namespace MaziesMansion
             }
         }
 
+        private void Start()
+        {
+            var save = PersistentData.Instance;
+            if(null != save.TargetDoorName)
+            {
+                // the player object should be moved in front of a door.
+                var targetDoor = GameObject.Find(save.TargetDoorName);
+                var player = GameObject.FindObjectOfType<Player>();
+                if(null != targetDoor && null != player && targetDoor.TryGetComponent(out Door door))
+                    door.Place(player.gameObject);
+                save.TargetDoorName = null;
+            }
+        }
+
         private void Update()
         {
             // toggle pausing while the game is running
