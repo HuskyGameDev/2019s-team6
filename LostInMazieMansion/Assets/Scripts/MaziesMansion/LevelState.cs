@@ -7,7 +7,7 @@ namespace MaziesMansion
     {
         // TODO: track game state
 
-        public GameObject PauseInterface;
+        public GameObject PauseInterface = null;
 
         private bool _isGamePaused = false;
         public bool IsGamePaused

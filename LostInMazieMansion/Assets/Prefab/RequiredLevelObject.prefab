@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2076580886}
   - component: {fileID: 2076580885}
   - component: {fileID: 5531145608090360952}
+  - component: {fileID: 8654481062405194070}
   m_Layer: 0
   m_Name: RequiredLevelObject
   m_TagString: Untagged
@@ -69,13 +70,9 @@ MonoBehaviour:
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Cinemachine, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!20 &191451153440669023
 Camera:
   m_ObjectHideFlags: 0
@@ -200,6 +197,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &8654481062405194070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191451153440669020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae35866690796c4595dded4160d87b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseInterface: {fileID: 8080743647587481596}
 --- !u!1 &191451153804270017
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,8 +275,6 @@ MonoBehaviour:
     m_OnCameraLive:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 191451153868798624}
 --- !u!1 &191451153868798625
@@ -601,6 +609,12 @@ PrefabInstance:
 --- !u!224 &8080743646962803527 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2172617412020924438, guid: 108bae3b31c007f438cf03bed84c94cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7926935191961178961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8080743647587481596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2172617411563463853, guid: 108bae3b31c007f438cf03bed84c94cb,
     type: 3}
   m_PrefabInstance: {fileID: 7926935191961178961}
   m_PrefabAsset: {fileID: 0}

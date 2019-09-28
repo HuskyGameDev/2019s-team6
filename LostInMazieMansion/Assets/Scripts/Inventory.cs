@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MaziesMansion;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,16 +14,19 @@ public class Inventory : MonoBehaviour
     public static int numberOfSlots;
     public InventoryItems[] slots;
 
+    private LevelState LevelState;
+
     private void Start()
     {
         // initialize the number of slots and the slots themselves
         numberOfSlots = 12;
         slots = InventoryFullScreen.GetComponentsInChildren<InventoryItems>();
+        LevelState = GameObject.FindObjectOfType<LevelState>();
     }
 
     /*
      * Put and item into the inventory if it isn't full.  Otherwise, do nothing.
-     * 
+     *
      * item - the item to be put into the inventory
      * return false if the inventory is not full, true otherwise
      */
@@ -49,7 +51,7 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         // if 'TAB' key is pressed while running
-        if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.IsGamePaused)
+        if (Input.GetKeyDown(KeyCode.Tab) && !LevelState.IsGamePaused)
         {
             // if the players inventory is open and the game is paused
             if (IsInvOpen)
