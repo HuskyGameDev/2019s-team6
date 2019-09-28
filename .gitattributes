@@ -1,8 +1,9 @@
-* text=input
-
+*.cs text=input
+*.md text=input
 *.sln text eol=crlf
 
 # Binary Files
+*.dll binary
 
 ## Images
 *.png binary
