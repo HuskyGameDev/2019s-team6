@@ -73,7 +73,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 force = direction * speed * Time.deltaTime;
 
         rigidbody.AddForce(force);
-        float distance = Vector2.Distance(rigidbody.position, path.vectorPath[currentPoint);
+        float distance = Vector2.Distance(rigidbody.position, path.vectorPath[currentPoint]);
 
         if(distance < nextPointDist)
         {
