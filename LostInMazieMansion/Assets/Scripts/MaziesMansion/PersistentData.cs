@@ -68,5 +68,9 @@ namespace MaziesMansion
         [Tooltip("The player's current sanity.")]
         public int CurrentSanity;
         #endregion
+
+        #region Inventory
+        public Inventory Inventory = new Inventory();
+        #endregion
     }
 }

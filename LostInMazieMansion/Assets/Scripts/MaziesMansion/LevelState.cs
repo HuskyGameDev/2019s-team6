@@ -25,7 +25,7 @@ namespace MaziesMansion
                 } else
                 {
                     // resume
-                    if(!Inventory.IsInvOpen)
+                    if(!global::Inventory.IsInvOpen)
                     {
                         Time.timeScale = 1;
                     }
