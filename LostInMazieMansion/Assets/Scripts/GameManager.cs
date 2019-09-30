@@ -19,9 +19,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // the most recent door entered through
-    private DoorManager door;
-
     // the background music track
     private AudioSource backgroundMusic;
 
@@ -33,28 +30,6 @@ public class GameManager : MonoBehaviour
     // the list is a string b/c it's the name of the gameObject
     // which the item belongs
     private List<string> destroyedItems;
-
-    /*
-     * Remembers the door that was entered through.
-     * For positioning the player on the other side
-     * of the correct door in a room.
-     * 
-     * outDoor - the door entered through
-     */ 
-    public void SetDoor(DoorManager outDoor)
-    {
-        door = outDoor;
-    }
-
-    /*
-     * Gets the door entered through in a room.
-     * For positioning the player on the other side
-     * of the correct door in a room.
-     */
-    public DoorManager GetOutDoor()
-    {
-        return door;
-    }
 
     /*
      * Add an item to the list of collected items.
