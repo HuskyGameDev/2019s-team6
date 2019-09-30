@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace MaziesMansion
 {
@@ -15,7 +16,8 @@ namespace MaziesMansion
     }
 
     [Serializable]
-    internal sealed class PersistentData
+    [CreateAssetMenu(fileName = "DefaultPersistentData.asset", menuName = "Mazie/Default PersistentData")]
+    internal sealed class PersistentData : ScriptableObject
     {
         #region Static Data
         private static PersistentData _instance = null;
@@ -26,20 +28,25 @@ namespace MaziesMansion
             {
                 if(null == _instance)
                 {
-                    _instance = new PersistentData("TemporarySave");
+                    var assets = Resources.FindObjectsOfTypeAll<PersistentData>();
+                    if(assets.Length > 0)
+                        _instance = assets[0];
+                    else
+                        _instance = new PersistentData();
                 }
                 return _instance;
             }
         }
         #endregion
 
-        private PersistentData(string saveName)
+        private PersistentData()
         {
-            SaveName = saveName;
         }
 
+        public void SaveGame() => SaveUtility.SaveGame(this);
+
         /// <summary>Name of the current save file.</summary>
-        public string SaveName;
+        public string SaveName = "TemporarySave";
 
         /// <summary>Things that won't be persisted.</summary>
         [NonSerialized]
@@ -47,5 +54,19 @@ namespace MaziesMansion
         {
             TargetDoorName = null
         };
+
+        #region Player Data
+        [Tooltip("The player's coordinates in the current scene.")]
+        public Vector3 PlayerLocation;
+
+        [Tooltip("The current scene the player is in.")]
+        public string CurrentLevel;
+
+        [Tooltip("The player's maximum sanity.")]
+        public int MaximumSanity;
+
+        [Tooltip("The player's current sanity.")]
+        public int CurrentSanity;
+        #endregion
     }
 }
