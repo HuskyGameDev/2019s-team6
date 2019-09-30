@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191451153440669020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -3.7140245, y: -2.1116796, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191451153804270016}
@@ -604,7 +604,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8653918850244738394, guid: 108bae3b31c007f438cf03bed84c94cb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172617410822882583, guid: 108bae3b31c007f438cf03bed84c94cb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8653918850244738394, guid: 108bae3b31c007f438cf03bed84c94cb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 108bae3b31c007f438cf03bed84c94cb, type: 3}
 --- !u!224 &8080743646962803527 stripped
 RectTransform:
