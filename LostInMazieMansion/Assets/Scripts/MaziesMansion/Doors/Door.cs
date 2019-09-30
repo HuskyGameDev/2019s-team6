@@ -28,7 +28,7 @@ namespace MaziesMansion
                 return;
             if(other.tag == "Player")
             {
-                PersistentData.Instance.TargetDoorName = TargetDoorName;
+                PersistentData.Instance.Volatile.TargetDoorName = TargetDoorName;
                 SceneManager.LoadScene(TargetSceneName, LoadSceneMode.Single);
             }
         }
