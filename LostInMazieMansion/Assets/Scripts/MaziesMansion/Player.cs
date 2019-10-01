@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
+    
     [RequireComponent(typeof(Animator))]
     internal sealed class Player : MonoBehaviour
     {
@@ -32,16 +33,36 @@ namespace MaziesMansion
 
         /// Damage Modifier
         int Damage = 20;
-#endregion
+        #endregion
+
+        public CircleCollider2D playerCollider;
+        public DialogueTrigger objectInteraction;
+        public DialogueTrigger dialogueTrigger;
+        public bool interact;
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            objectInteraction = collision.gameObject.GetComponent<DialogueTrigger>();
+            DisplayInteractionAction();
+            interact = true;
+        }
+
+       void DisplayInteractionAction()
+        {
+
+        }
 
         private void Awake()
         {
-            if(CurrentHealth <= 0)
+            if (CurrentHealth <= 0)
                 CurrentHealth = MaximumHealth;
         }
 
         private void Start()
         {
+            interact = false;
+            dialogueTrigger = GetComponent<DialogueTrigger>();
+            playerCollider = GetComponent<CircleCollider2D>();
             Animator = GetComponent<Animator>();
         }
 
@@ -68,6 +89,17 @@ namespace MaziesMansion
             {
                 Animator.SetBool("PlayerMoving", false);
             }
+
+            if (Input.GetKeyDown("e") && interact && objectInteraction != null)
+            {
+                Debug.Log(objectInteraction);
+                objectInteraction.TriggerDialogue();
+            }
+            else if (Input.anyKeyDown)
+            {
+                interact = false;
+            }
+
         }
 
         private void Die()
