@@ -5,14 +5,25 @@ namespace MaziesMansion
 {
     [CreateAssetMenu(fileName = "New Inventory Item", menuName = "Mazie/Inventory Item")]
     [Serializable]
-    internal sealed class InventoryObject : ScriptableObject
+    internal class InventoryObject : ScriptableObject
     {
-        public Sprite ItemSprite;
+        /// <summary>Unique ID of the item</summary>
+        public string ID;
 
-        public string Name;
-
+        /// <summary>Is the item an essential item? (e.g., the flashlight)</summary>
         public bool IsEssential;
 
-        public string ID;
+        /// <summary>The item's icon</summary>
+        public Sprite ItemSprite;
+
+        /// <summary>The item's name in the inventory.</summary>
+        public string Name;
+
+        /// <summary>The flavor text in the inventory.</summary>
+        public string FlavorText;
+
+        public virtual void OnUse() {}
+
+        public override string ToString() => ID;
     }
 }

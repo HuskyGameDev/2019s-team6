@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class UseButton : MonoBehaviour
 {
-    // the item in this slot
-    InventoryItems itemInSlot;
-
-    private void Start()
-    {
-        itemInSlot = GetComponentInParent<ItemSlots>().gameObject.GetComponentInChildren<InventoryItems>();
-    }
-
     /*
      * When the "use" button is clicked, *do something*
      * according to what object is used.
-     * 
+     *
      * This means that a reference to the player is needed
      * for when a Fear Conquering item is used.  Example: when
      * the flashlight is used, change the player's artwork to that
      * of him holding the flashlight
-     * 
+     *
      * If the item is not a Fear Conquering item, then get a reference
      * to the item so that the appropriate sound or animation or message plays
      */
