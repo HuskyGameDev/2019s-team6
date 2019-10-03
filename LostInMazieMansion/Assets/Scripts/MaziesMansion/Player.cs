@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
-    
+
     [RequireComponent(typeof(Animator))]
     internal sealed class Player : MonoBehaviour
     {
@@ -36,13 +36,13 @@ namespace MaziesMansion
         #endregion
 
         public CircleCollider2D playerCollider;
-        public DialogueTrigger objectInteraction;
-        public DialogueTrigger dialogueTrigger;
+        public DialogTrigger objectInteraction;
+        public DialogTrigger dialogueTrigger;
         public bool interact;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            objectInteraction = collision.gameObject.GetComponent<DialogueTrigger>();
+            objectInteraction = collision.gameObject.GetComponent<DialogTrigger>();
             DisplayInteractionAction();
             interact = true;
         }
@@ -61,7 +61,7 @@ namespace MaziesMansion
         private void Start()
         {
             interact = false;
-            dialogueTrigger = GetComponent<DialogueTrigger>();
+            dialogueTrigger = GetComponent<DialogTrigger>();
             playerCollider = GetComponent<CircleCollider2D>();
             Animator = GetComponent<Animator>();
         }

@@ -1,14 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour {
+public class DialogManager : MonoBehaviour {
 
 	public Text nameText;
-	public Text dialogueText;
-    public string gameObject;
+	public Text dialogText;
     public Animator animator;
 	private Queue<string> sentences;
 
@@ -17,15 +15,15 @@ public class DialogueManager : MonoBehaviour {
 		sentences = new Queue<string>();
 	}
 
-	public void StartDialogue (Dialogue dialogue)
+	public void StartDialogue (Dialog dialog)
 	{
 		animator.SetBool("IsOpen", true);
 
-		nameText.text = dialogue.name;
+		nameText.text = dialog.name;
 
 		sentences.Clear();
 
-		foreach (string sentence in dialogue.sentences)
+		foreach (string sentence in dialog.sentences)
 		{
 			sentences.Enqueue(sentence);
 		}
@@ -48,10 +46,10 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator TypeSentence (string sentence)
 	{
-		dialogueText.text = "";
+		dialogText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
-			dialogueText.text += letter;
+			dialogText.text += letter;
 			yield return null;
 		}
 	}
