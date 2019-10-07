@@ -22,14 +22,14 @@ namespace MaziesMansion
                 throw new ArgumentNullException(nameof(saveData));
             var path = Path.Combine(BasePath, saveData.SaveName + SaveExtension);
             Debug.Log($"Saving to \"{path}\"");
-            File.WriteAllText(path, encoding: Encoding.UTF8, contents: Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonUtility.ToJson(saveData))));
+            File.WriteAllText(path, encoding: Encoding.UTF8, contents: JsonUtility.ToJson(saveData));
         }
 
         public static PersistentData LoadSave(string path)
         {
             if(!File.Exists(path))
                 throw new FileNotFoundException("Save path does not exist.", path);
-            return JsonUtility.FromJson<PersistentData>(Encoding.UTF8.GetString(Convert.FromBase64String(File.ReadAllText(path, Encoding.UTF8))));
+            return JsonUtility.FromJson<PersistentData>(File.ReadAllText(path, Encoding.UTF8));
         }
 
         public static void LoadGame(PersistentData data)
