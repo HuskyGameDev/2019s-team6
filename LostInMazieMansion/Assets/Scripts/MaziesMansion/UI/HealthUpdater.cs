@@ -6,23 +6,23 @@ namespace MaziesMansion
     [RequireComponent(typeof(Image))]
     internal sealed class HealthUpdater : MonoBehaviour
     {
-        [SerializeField]
-        private Player Player;
         private Image HealthBar;
         private int _lastHealth;
 
+        private PersistentData CurrentSave;
+
         private void Start()
         {
-            Player = GameObject.FindObjectOfType<Player>();
+            CurrentSave = PersistentData.Instance;
             HealthBar = GetComponent<Image>();
         }
 
         private void LateUpdate()
         {
-            if(null != Player && Player.CurrentHealth != _lastHealth)
+            if(CurrentSave.CurrentSanity != _lastHealth)
             {
-                _lastHealth = Player.CurrentHealth;
-                HealthBar.fillAmount = (float)Player.CurrentHealth / Player.MaximumHealth;
+                _lastHealth = CurrentSave.CurrentSanity;
+                HealthBar.fillAmount = (float)CurrentSave.CurrentSanity / CurrentSave.MaximumSanity;
             }
         }
     }

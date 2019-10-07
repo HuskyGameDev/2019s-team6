@@ -63,10 +63,10 @@ namespace MaziesMansion
         public string CurrentLevel;
 
         [Tooltip("The player's maximum sanity.")]
-        public int MaximumSanity;
+        public int MaximumSanity = 80;
 
         [Tooltip("The player's current sanity.")]
-        public int CurrentSanity;
+        public int CurrentSanity = int.MaxValue; // if the current > maximum, current will be set to maximum
         #endregion
 
         #region Inventory
