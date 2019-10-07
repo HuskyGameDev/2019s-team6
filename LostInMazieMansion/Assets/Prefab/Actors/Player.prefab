@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5748138101390357826
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,3 +155,9 @@ MonoBehaviour:
   MoveSpeed: 3
   MaximumHealth: 80
   _currentHealth: 0
+  playerCollider: {fileID: 0}
+  objectInteraction: {fileID: 0}
+  dialogueTrigger: {fileID: 0}
+  rb2D: {fileID: 0}
+  characterController: {fileID: 0}
+  interact: 0

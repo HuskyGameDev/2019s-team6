@@ -34,16 +34,13 @@ public class EnemyMovement : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // Get object with "Player" tag
         waypoint = GameObject.FindGameObjectWithTag("Waypoint").GetComponent<Transform>(); // Get object with "Waypoint" tag
-
-        // Set position of Enemy as position of the first waypoint
-       // transform.position = waypoints[waypointIndex].transform.position;
     }
 
     // Update is called once per frame
     private void Update()
     {
         // If the distance between the target(player) and the enemy is less than # and the player is not hidden,
-        if (Vector2.Distance(transform.position, target.position) < 5 && Global.hidden == false)
+        if (Vector2.Distance(transform.position, target.position) < 5 && !Global.hidden)
         {
             // Then the enemy will follow the target(player) at the given speed
             follow();

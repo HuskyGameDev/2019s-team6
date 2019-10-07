@@ -38,13 +38,19 @@ namespace MaziesMansion
         public CircleCollider2D playerCollider;
         public DialogTrigger objectInteraction;
         public DialogTrigger dialogueTrigger;
+        public Rigidbody2D rb2D;
+        public CharacterController characterController;
         public bool interact;
-
+        
         private void OnCollisionEnter2D(Collision2D collision)
         {
             objectInteraction = collision.gameObject.GetComponent<DialogTrigger>();
             DisplayInteractionAction();
             interact = true;
+            if (collision.collider.gameObject.tag == "Enemy")
+            {
+                CurrentHealth -= Damage;
+            }
         }
 
        void DisplayInteractionAction()
@@ -63,6 +69,8 @@ namespace MaziesMansion
             interact = false;
             dialogueTrigger = GetComponent<DialogTrigger>();
             playerCollider = GetComponent<CircleCollider2D>();
+            rb2D = gameObject.GetComponent<Rigidbody2D>();
+            characterController = GetComponent<CharacterController>();
             Animator = GetComponent<Animator>();
         }
 
@@ -85,6 +93,7 @@ namespace MaziesMansion
                 Animator.SetBool("PlayerMoving", true);
                 Animator.SetFloat("LastMoveX", Mathf.Abs(movementVector.y) > 0.5f ? 0 : movementVector.x);
                 Animator.SetFloat("LastMoveY", movementVector.y);
+
             } else
             {
                 Animator.SetBool("PlayerMoving", false);
