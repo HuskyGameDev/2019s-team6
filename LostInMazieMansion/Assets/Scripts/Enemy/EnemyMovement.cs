@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
         waypoint = GameObject.FindGameObjectWithTag("Waypoint").GetComponent<Transform>(); // Get object with "Waypoint" tag
 
         // Set position of Enemy as position of the first waypoint
-        transform.position = waypoints[waypointIndex].transform.position;
+       // transform.position = waypoints[waypointIndex].transform.position;
     }
 
     // Update is called once per frame
