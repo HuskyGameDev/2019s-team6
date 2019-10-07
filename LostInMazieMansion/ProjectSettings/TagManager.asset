@@ -53,6 +53,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ItemLayer
+    uniqueID: 1677225935
+    locked: 0
   - name: Particle
     uniqueID: 2233761243
     locked: 0

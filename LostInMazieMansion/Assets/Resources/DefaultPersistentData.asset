@@ -16,7 +16,7 @@ MonoBehaviour:
   PlayerLocation: {x: 0, y: 0, z: -1}
   CurrentLevel: F3_Mazie'sBedroom
   MaximumSanity: 80
-  CurrentSanity: -60
+  CurrentSanity: 80
   Inventory:
     IsEssentialListDirty: 1
     IsClutterListDirty: 1

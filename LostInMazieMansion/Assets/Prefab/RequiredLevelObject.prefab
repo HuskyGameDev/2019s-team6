@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 99efd8e000000000db7d2485
+  m_ApplyToSortingLayers: 99efd8e000000000cf6ff863db7d2485
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -744,6 +744,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 191451153440669017}
     m_Modifications:
+    - target: {fileID: 4032137804791654201, guid: ffc6cab8d5a5862499b10415c82ba031,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialog
+      objectReference: {fileID: 0}
     - target: {fileID: 6809950285885575429, guid: ffc6cab8d5a5862499b10415c82ba031,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,11 +853,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032137804791654201, guid: ffc6cab8d5a5862499b10415c82ba031,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc6cab8d5a5862499b10415c82ba031, type: 3}
