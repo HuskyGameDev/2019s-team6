@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DefaultPersistentData
   m_EditorClassIdentifier: 
   SaveName: TemporarySave
-  PlayerLocation: {x: 0, y: 0, z: 0}
+  PlayerLocation: {x: 0, y: 0, z: -1}
   CurrentLevel: F3_Mazie'sBedroom
   MaximumSanity: 80
-  CurrentSanity: 80
+  CurrentSanity: -60
   Inventory:
     IsEssentialListDirty: 1
     IsClutterListDirty: 1

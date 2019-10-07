@@ -16,6 +16,9 @@ namespace MaziesMansion
         static OnGameStart()
         {
             Initialize();
+            #if UNITY_EDITOR
+            RegisterEditorHandlers();
+            #endif
         }
 
         [RuntimeInitializeOnLoadMethod]
@@ -25,5 +28,18 @@ namespace MaziesMansion
             GraphicsSettings.transparencySortMode = TransparencySortMode.CustomAxis;
             GraphicsSettings.transparencySortAxis = Vector3.up;
         }
+
+        #if UNITY_EDITOR
+        [RuntimeInitializeOnLoadMethod]
+        internal static void RegisterEditorHandlers()
+        {
+            EditorApplication.playModeStateChanged += (state) => {
+                if(state == PlayModeStateChange.ExitingPlayMode)
+                {
+                    PersistentData.Instance = null;
+                }
+            };
+        }
+        #endif
     }
 }

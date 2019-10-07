@@ -35,13 +35,16 @@ namespace MaziesMansion
             }
         }
 
+        /// <summary>Unity Resources path</summary>
+        private const string DefaultSaveDataLocation = "DefaultPersistentData";
         public static PersistentData Default
         {
             get
             {
-                var assets = Resources.FindObjectsOfTypeAll<PersistentData>();
-                if(assets.Length > 0)
-                    return assets[0];
+                var asset = Resources.Load<PersistentData>(DefaultSaveDataLocation);
+                if(null != asset)
+                    return ScriptableObject.Instantiate(asset);
+                Debug.LogError("Could not find default save data");
                 return ScriptableObject.CreateInstance<PersistentData>();
             }
         }

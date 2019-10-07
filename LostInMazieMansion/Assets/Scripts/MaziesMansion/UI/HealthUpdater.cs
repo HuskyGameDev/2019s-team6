@@ -9,7 +9,7 @@ namespace MaziesMansion
         private Image HealthBar;
         private int _lastHealth;
 
-        private PersistentData CurrentSave;
+        public PersistentData CurrentSave;
 
         private void Start()
         {
