@@ -14,19 +14,14 @@ namespace MaziesMansion
 #endregion
 
 #region HealthData
-        [Tooltip("The player's maximum health.")]
-        public int MaximumHealth = 80;
-
         /// The player's current health.
-        [SerializeField]
-        private int _currentHealth;
         public int CurrentHealth
         {
-            get => _currentHealth;
+            get => PersistentData.Instance.CurrentSanity;
             set
             {
-                _currentHealth = value;
-                if(_currentHealth <= 0)
+                PersistentData.Instance.CurrentSanity = value;
+                if(value <= 0)
                     Die();
             }
         }
@@ -58,14 +53,12 @@ namespace MaziesMansion
 
         }
 
-        private void Awake()
-        {
-            if (CurrentHealth <= 0)
-                CurrentHealth = MaximumHealth;
-        }
-
         private void Start()
         {
+            var save = PersistentData.Instance;
+            if (save.CurrentSanity > save.MaximumSanity)
+                save.CurrentSanity = save.MaximumSanity;
+
             interact = false;
             dialogueTrigger = GetComponent<DialogTrigger>();
             playerCollider = GetComponent<CircleCollider2D>();
@@ -113,8 +106,8 @@ namespace MaziesMansion
 
         private void Die()
         {
-            // Reload Level
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // revert to default save (temp)
+            SaveUtility.LoadGame(PersistentData.Default);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

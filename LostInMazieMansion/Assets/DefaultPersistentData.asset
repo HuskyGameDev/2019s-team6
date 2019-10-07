@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SaveName: TemporarySave
   PlayerLocation: {x: 0, y: 0, z: 0}
-  MaximumSanity: 0
-  CurrentSanity: 0
+  CurrentLevel: F3_Mazie'sBedroom
+  MaximumSanity: 80
+  CurrentSanity: 80
+  Inventory:
+    IsEssentialListDirty: 1
+    IsClutterListDirty: 1

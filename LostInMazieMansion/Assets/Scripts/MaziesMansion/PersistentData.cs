@@ -13,6 +13,9 @@ namespace MaziesMansion
         /// <summary>Target door to move the player object to after loading a scene</summary>
         /// <remarks>Please set this to null once it's been used.</remarks>
         public string TargetDoorName;
+
+        /// <summary>Flags if a save game was loaded and we need to restore the player's position.</summary>
+        public bool JustLoadedGame;
     }
 
     [Serializable]
@@ -27,14 +30,19 @@ namespace MaziesMansion
             get
             {
                 if(null == _instance)
-                {
-                    var assets = Resources.FindObjectsOfTypeAll<PersistentData>();
-                    if(assets.Length > 0)
-                        _instance = assets[0];
-                    else
-                        _instance = new PersistentData();
-                }
+                    _instance = Default;
                 return _instance;
+            }
+        }
+
+        public static PersistentData Default
+        {
+            get
+            {
+                var assets = Resources.FindObjectsOfTypeAll<PersistentData>();
+                if(assets.Length > 0)
+                    return assets[0];
+                return ScriptableObject.CreateInstance<PersistentData>();
             }
         }
         #endregion
@@ -52,21 +60,22 @@ namespace MaziesMansion
         [NonSerialized]
         public SessionData Volatile = new SessionData
         {
-            TargetDoorName = null
+            TargetDoorName = null,
+            JustLoadedGame = false
         };
 
         #region Player Data
         [Tooltip("The player's coordinates in the current scene.")]
-        public Vector3 PlayerLocation;
+        public Vector3 PlayerLocation = new Vector3(0, 0, int.MinValue); // if z < 0, don't set the player's location
 
         [Tooltip("The current scene the player is in.")]
         public string CurrentLevel;
 
         [Tooltip("The player's maximum sanity.")]
-        public int MaximumSanity;
+        public int MaximumSanity = 80;
 
         [Tooltip("The player's current sanity.")]
-        public int CurrentSanity;
+        public int CurrentSanity = int.MaxValue; // if the current > maximum, current will be set to maximum
         #endregion
 
         #region Inventory
