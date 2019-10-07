@@ -49,6 +49,15 @@ namespace MaziesMansion
                     door.Place(player.gameObject);
                 save.Volatile.TargetDoorName = null;
             }
+            if(save.Volatile.JustLoadedGame)
+            {
+                save.Volatile.JustLoadedGame = false;
+                if(save.PlayerLocation.z >= 0)
+                {
+                    var player = GameObject.FindObjectOfType<Player>();
+                    player.transform.position = save.PlayerLocation;
+                }
+            }
         }
 
         private void Update()

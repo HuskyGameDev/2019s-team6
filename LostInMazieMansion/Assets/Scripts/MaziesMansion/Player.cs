@@ -97,8 +97,8 @@ namespace MaziesMansion
 
         private void Die()
         {
-            // Reload Level (temp)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // revert to default save (temp)
+            SaveUtility.LoadGame(PersistentData.Default);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
