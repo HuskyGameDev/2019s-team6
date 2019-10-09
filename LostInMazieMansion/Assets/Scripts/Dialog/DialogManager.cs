@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class DialogManager : MonoBehaviour {
-
-	public Text nameText;
-	public Text dialogText;
+public class DialogManager : MonoBehaviour
+{
+	public TextMeshProUGUI Name;
+	public TextMeshProUGUI Dialog;
     public Animator animator;
 	private Queue<string> sentences;
 
@@ -19,7 +19,7 @@ public class DialogManager : MonoBehaviour {
 	{
 		animator.SetBool("IsOpen", true);
 
-		nameText.text = dialog.name;
+        Name.text = dialog.name;
 
 		sentences.Clear();
 
@@ -46,10 +46,10 @@ public class DialogManager : MonoBehaviour {
 
 	IEnumerator TypeSentence (string sentence)
 	{
-		dialogText.text = "";
+		Dialog.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
-			dialogText.text += letter;
+			Dialog.text += letter;
 			yield return null;
 		}
 	}
