@@ -5201,6 +5201,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 918303150}
         m_MethodName: TriggerDialog
@@ -5213,12 +5219,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []
@@ -5235,7 +5235,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5320,6 +5320,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1153198151}
         m_MethodName: TriggerDialog
@@ -5332,12 +5338,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []
@@ -5819,6 +5819,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1361504344}
         m_MethodName: TriggerDialog
@@ -5831,12 +5837,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []
@@ -5912,6 +5912,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 230314156}
         m_MethodName: TriggerDialog
@@ -5924,12 +5930,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []
@@ -6308,6 +6308,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 797921810}
         m_MethodName: TriggerDialog
@@ -6320,12 +6326,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []

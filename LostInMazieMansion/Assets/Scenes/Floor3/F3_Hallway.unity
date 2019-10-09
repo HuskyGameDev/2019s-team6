@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -465,6 +465,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
+      m_Calls: []
+  OnPlayerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerInteracts:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1644479229}
         m_MethodName: TriggerDialog
@@ -477,12 +483,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls: []
   OnPlayerInspects:
     m_PersistentCalls:
       m_Calls: []

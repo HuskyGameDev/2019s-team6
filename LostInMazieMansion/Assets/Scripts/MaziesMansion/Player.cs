@@ -31,25 +31,17 @@ namespace MaziesMansion
         #endregion
 
         public CircleCollider2D playerCollider;
-        public DialogTrigger objectInteraction;
         public Rigidbody2D rb2D;
         public CharacterController characterController;
-        public bool interact;
-        
+
+        private Interactable _interactable;
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            objectInteraction = collision.gameObject.GetComponent<DialogTrigger>();
-            DisplayInteractionAction();
-            interact = true;
             if (collision.collider.gameObject.tag == "Enemy")
             {
                 CurrentHealth -= Damage;
             }
-        }
-
-       void DisplayInteractionAction()
-        {
-
         }
 
         private void Start()
@@ -58,7 +50,6 @@ namespace MaziesMansion
             if (save.CurrentSanity > save.MaximumSanity)
                 save.CurrentSanity = save.MaximumSanity;
 
-            interact = false;
             playerCollider = GetComponent<CircleCollider2D>();
             rb2D = gameObject.GetComponent<Rigidbody2D>();
             characterController = GetComponent<CharacterController>();
@@ -90,16 +81,11 @@ namespace MaziesMansion
                 Animator.SetBool("PlayerMoving", false);
             }
 
-            if (Input.GetKeyDown("e") && interact && objectInteraction != null)
+            if (Input.GetKey("e") && null != _interactable)
             {
-                Debug.Log(objectInteraction);
-                objectInteraction.TriggerDialog();
+                Debug.Log(_interactable);
+                _interactable.OnPlayerInteracts?.Invoke();
             }
-            else if (Input.anyKeyDown)
-            {
-                interact = false;
-            }
-
         }
 
         private void Die()
@@ -114,6 +100,15 @@ namespace MaziesMansion
             {
                 CurrentHealth -= Damage;
             }
+            if(other.TryGetComponent<Interactable>(out var interactable))
+            {
+                _interactable = interactable;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            _interactable = null;
         }
     }
 }
