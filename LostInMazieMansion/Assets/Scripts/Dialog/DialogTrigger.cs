@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour {
 
-	public Dialog tableDialogue;
+	public Dialog dialog;
 
-	public void TriggerDialogue ()
+	public void TriggerDialog ()
 	{
 
-            FindObjectOfType<DialogManager>().StartDialogue(tableDialogue);
+            FindObjectOfType<DialogManager>().StartDialogue(dialog);
 
 	}
 }

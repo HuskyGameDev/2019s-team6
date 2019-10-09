@@ -5101,6 +5101,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9380727956ca8ef43b28743e499feb48, type: 3}
+--- !u!1 &230314155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9008892536892745666, guid: 9380727956ca8ef43b28743e499feb48,
+    type: 3}
+  m_PrefabInstance: {fileID: 230314154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &230314156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230314155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Bookshelf
+    sentences:
+    - There sure are a lot of books in this place...
 --- !u!1 &293165620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 191451153440669020, guid: 4961286f353d42146980b466e0454db5,
@@ -5399,6 +5421,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcaf2011d2fbae74fbf13085f154febc, type: 3}
+--- !u!1 &797921809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2093848332784150011, guid: dcaf2011d2fbae74fbf13085f154febc,
+    type: 3}
+  m_PrefabInstance: {fileID: 797921808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &797921810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797921809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Desk
+    sentences:
+    - There is another journal here with Mazie's name on it.
+    - I'll talk to her and see what she knows.
 --- !u!1001 &918303148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5468,6 +5513,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cb87aac74a926a4caf8df358d377237, type: 3}
+--- !u!1 &918303149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8661670117209619549, guid: 4cb87aac74a926a4caf8df358d377237,
+    type: 3}
+  m_PrefabInstance: {fileID: 918303148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &918303150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918303149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Mazie
+    sentences:
+    - 'You: Hello?'
+    - '...'
+    - 'You: Where am I?'
+    - '...I''m...I''m not really sure...'
+    - 'You: Oh, well can you tell me your name? Are you Mazie?'
+    - '...I think, but I don''t remember'
+    - 'You: I see'
+    - Can you go get me some candy?
+    - Huh, let me think. Oh! I know, I can get you some candy!
 --- !u!1001 &1153198149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5537,6 +5612,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9380727956ca8ef43b28743e499feb48, type: 3}
+--- !u!1 &1153198150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9008892536892745666, guid: 9380727956ca8ef43b28743e499feb48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1153198149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153198151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153198150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Bookshelf
+    sentences:
+    - There sure are a lot of books in this place...
 --- !u!1001 &1361504342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5606,6 +5703,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9380727956ca8ef43b28743e499feb48, type: 3}
+--- !u!1 &1361504343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9008892536892745666, guid: 9380727956ca8ef43b28743e499feb48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1361504342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1361504344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361504343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Bookshelf
+    sentences:
+    - There sure are a lot of books in this place...
 --- !u!1001 &1503190392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5673,16 +5792,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 191451153804270019, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Follow
@@ -5693,12 +5802,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_ClearFlags
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

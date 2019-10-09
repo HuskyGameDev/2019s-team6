@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4387,6 +4387,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ec6db259c6857f4395aac20ab9bd384, type: 3}
+--- !u!1 &535516344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2093848332784150011, guid: dcaf2011d2fbae74fbf13085f154febc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1532343042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &535516345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535516344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Desk
+    sentences:
+    - There appears to be a journal on this desk. The name on the top reads "Mazie".
+    - I don't want to read someone elses journal, but maybe I can find her.
+--- !u!1 &538798828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1326962155468825836, guid: a4d9975e481910b42acd051bec4eeb39,
+    type: 3}
+  m_PrefabInstance: {fileID: 27894200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &538798829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538798828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Bed
+    sentences:
+    - It appears that no one has been in this bed in ages. I wonder if it belongs
+      to Mazie.
 --- !u!1001 &944869047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6099,6 +6145,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8943141041960770093, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129563986287387964, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129563986287387964, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
 --- !u!1 &1421520671 stripped
@@ -6116,14 +6182,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421520671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ddd33eae28b5148a72170d47ccd942, type: 3}
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableDialogue:
+  dialog:
     name: Table
     sentences:
-    - Seems this is nothing but a boring table.
-    - More text
+    - I don't that anyone has been in this room any time recently. This table is awfully
+      dusty.
 --- !u!1001 &1532343042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6193,3 +6259,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcaf2011d2fbae74fbf13085f154febc, type: 3}
+--- !u!1 &1616187528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8992285546568774025, guid: 5ec6db259c6857f4395aac20ab9bd384,
+    type: 3}
+  m_PrefabInstance: {fileID: 530309558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1616187529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616187528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Dresser
+    sentences:
+    - This dresser appears to be locked. I should find a key to see what is inside.

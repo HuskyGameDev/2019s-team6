@@ -32,7 +32,6 @@ namespace MaziesMansion
 
         public CircleCollider2D playerCollider;
         public DialogTrigger objectInteraction;
-        public DialogTrigger dialogueTrigger;
         public Rigidbody2D rb2D;
         public CharacterController characterController;
         public bool interact;
@@ -60,7 +59,6 @@ namespace MaziesMansion
                 save.CurrentSanity = save.MaximumSanity;
 
             interact = false;
-            dialogueTrigger = GetComponent<DialogTrigger>();
             playerCollider = GetComponent<CircleCollider2D>();
             rb2D = gameObject.GetComponent<Rigidbody2D>();
             characterController = GetComponent<CharacterController>();
@@ -95,7 +93,7 @@ namespace MaziesMansion
             if (Input.GetKeyDown("e") && interact && objectInteraction != null)
             {
                 Debug.Log(objectInteraction);
-                objectInteraction.TriggerDialogue();
+                objectInteraction.TriggerDialog();
             }
             else if (Input.anyKeyDown)
             {
