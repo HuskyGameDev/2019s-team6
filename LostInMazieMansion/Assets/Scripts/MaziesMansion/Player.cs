@@ -81,11 +81,8 @@ namespace MaziesMansion
                 Animator.SetBool("PlayerMoving", false);
             }
 
-            if (Input.GetKey("e") && null != _interactable)
-            {
-                Debug.Log(_interactable);
+            if (Input.GetKeyDown("e") && null != _interactable)
                 _interactable.OnPlayerInteracts?.Invoke();
-            }
         }
 
         private void Die()

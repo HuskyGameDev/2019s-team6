@@ -5208,8 +5208,8 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 918303150}
-        m_MethodName: TriggerDialog
+      - m_Target: {fileID: 918303151}
+        m_MethodName: TriggerStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5741,6 +5741,19 @@ MonoBehaviour:
     - 'You: I see'
     - Can you go get me some candy?
     - Huh, let me think. Oh! I know, I can get you some candy!
+--- !u!114 &918303151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918303149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b0e5b69f1b0194b8ee2f4282fcc0cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InkJSON: {fileID: 4900000, guid: 86e3068098e3de84fa5d52d39d9b8141, type: 3}
 --- !u!4 &918303154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8661670117209619551, guid: 4cb87aac74a926a4caf8df358d377237,
@@ -6204,11 +6217,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -6234,7 +6242,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9003757390165219093, guid: 4961286f353d42146980b466e0454db5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
 --- !u!1 &1570801663
 GameObject:

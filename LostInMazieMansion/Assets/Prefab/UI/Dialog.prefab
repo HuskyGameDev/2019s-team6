@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 3846711873929479884}
   - component: {fileID: 5800093347681641504}
   - component: {fileID: 5656491334823603258}
-  - component: {fileID: 5721659350612445898}
+  - component: {fileID: 6062699204881026545}
   m_Layer: 0
   m_Name: Dialog
   m_TagString: Untagged
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5721659350612445898
+--- !u!114 &6062699204881026545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,12 +265,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4032137804791654201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42bcc54714bd28341b804df8ead1568a, type: 3}
+  m_Script: {fileID: 11500000, guid: 14cf4210eefbbb2408eff113e37807ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: {fileID: 2899508840794885133}
-  Dialog: {fileID: 7556508513563241557}
-  animator: {fileID: 3920177165796169595}
+  Text: {fileID: 7556508513563241557}
+  Animator: {fileID: 3920177165796169595}
 --- !u!1 &4631835441366364279
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5721659350612445898}
-        m_MethodName: DisplayNextSentence
+      - m_Target: {fileID: 6062699204881026545}
+        m_MethodName: AdvanceStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

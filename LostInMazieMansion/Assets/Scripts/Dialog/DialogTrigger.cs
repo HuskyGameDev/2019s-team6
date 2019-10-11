@@ -1,4 +1,5 @@
 using UnityEngine;
+using MaziesMansion;
 
 public class DialogTrigger : MonoBehaviour {
 
@@ -6,8 +7,6 @@ public class DialogTrigger : MonoBehaviour {
 
 	public void TriggerDialog ()
 	{
-
-            FindObjectOfType<DialogManager>().StartDialogue(dialog);
-
+        FindObjectOfType<DialogManager>().BeginStory(dialog.name, dialog.sentences);
 	}
 }
