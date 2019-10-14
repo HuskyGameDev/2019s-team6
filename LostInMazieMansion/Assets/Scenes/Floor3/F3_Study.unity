@@ -5728,6 +5728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InkJSON: {fileID: 4900000, guid: 86e3068098e3de84fa5d52d39d9b8141, type: 3}
+  ResumePath: 0
 --- !u!4 &918303154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8661670117209619551, guid: 4cb87aac74a926a4caf8df358d377237,

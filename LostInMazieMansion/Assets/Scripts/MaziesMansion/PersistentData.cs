@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MaziesMansion
@@ -83,6 +84,11 @@ namespace MaziesMansion
 
         #region Inventory
         public Inventory Inventory = new Inventory();
+        #endregion
+
+        #region Dialog
+        public DialogVariables DialogVariables = new DialogVariables();
+        public Dictionary<string, string> DialogState = new Dictionary<string, string>();
         #endregion
     }
 }
