@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -310,6 +310,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 277944658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &512671758
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1137003423}
+    m_Modifications:
+    - target: {fileID: 5913665169077506725, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_Name
+      value: Fireplace
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9864314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354360614806517321, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 286da8d90a748a84b8fe06d3eb5fb0d2, type: 3}
 --- !u!1001 &530046408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,6 +476,28 @@ MonoBehaviour:
   Lines:
   - This is an incredibly big couch. This room must be important...
   - I'll look around some more.
+--- !u!1 &660507127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5913665169077506725, guid: 286da8d90a748a84b8fe06d3eb5fb0d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 512671758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &660507129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660507127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actor: Big Old Fireplace
+  Lines:
+  - 'There are bricks sticking out from the fiireplace. Looks aged. '
+  - 
 --- !u!1001 &697107339
 PrefabInstance:
   m_ObjectHideFlags: 0
