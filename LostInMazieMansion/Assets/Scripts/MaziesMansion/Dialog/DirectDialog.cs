@@ -7,7 +7,7 @@ namespace MaziesMansion
         public string Actor;
 
         [TextArea(3, 10)]
-        public string[] Lines;
+        public string[] Lines = new string[1];
 
         public void TriggerDialog()
         {

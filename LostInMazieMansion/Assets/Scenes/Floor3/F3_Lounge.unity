@@ -173,7 +173,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 206190231}
+      - m_Target: {fileID: 206190232}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -219,7 +219,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1561048896}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &206190231
+--- !u!114 &206190232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,14 +228,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 206190230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Coffee Table
-    sentences:
-    - Look! There is a note on this table!
-    - What does it say?
+  Actor: Coffee Table
+  Lines:
+  - Look! There is a note on this table!
+  - What does it say?
 --- !u!1001 &277944658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,7 +385,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 530046408}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &530046410
+--- !u!4 &530046411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7554677659122348015, guid: 3a733a59f6a498a46ae140dc158cebf1,
+    type: 3}
+  m_PrefabInstance: {fileID: 530046408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &530046412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,20 +400,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 530046409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Couch
-    sentences:
-    - This is an incredibly big couch. This room must be important...
-    - I'll look around some more.
---- !u!4 &530046411 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7554677659122348015, guid: 3a733a59f6a498a46ae140dc158cebf1,
-    type: 3}
-  m_PrefabInstance: {fileID: 530046408}
-  m_PrefabAsset: {fileID: 0}
+  Actor: Couch
+  Lines:
+  - This is an incredibly big couch. This room must be important...
+  - I'll look around some more.
 --- !u!1001 &697107339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -537,7 +535,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1344844703}
+      - m_Target: {fileID: 1344844704}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -588,16 +586,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grid
-      objectReference: {fileID: 0}
-    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9084342770642966831, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
@@ -5565,6 +5553,16 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[84].second.m_ColliderType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4832317670890029185, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -5742,7 +5740,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 697107339}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1344844703
+--- !u!114 &1344844704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5751,13 +5749,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344844702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Dusty Coffee Table
-    sentences:
-    - This table is extremely dusty. No one has touched it in a long time.
+  Actor: Dusty Coffee Table
+  Lines:
+  - This table is extremely dusty. No one has touched it in a long time.
 --- !u!1 &1374470350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,7 +5834,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 530046410}
+      - m_Target: {fileID: 530046412}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -6126,11 +6123,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -6147,6 +6139,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

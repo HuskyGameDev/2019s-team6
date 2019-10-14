@@ -5107,7 +5107,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 230314154}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &230314156
+--- !u!4 &230314157 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
+    type: 3}
+  m_PrefabInstance: {fileID: 230314154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &230314158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5116,19 +5122,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 230314155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Bookshelf
-    sentences:
-    - There sure are a lot of books in this place...
---- !u!4 &230314157 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
-    type: 3}
-  m_PrefabInstance: {fileID: 230314154}
-  m_PrefabAsset: {fileID: 0}
+  Actor: Bookshelf
+  Lines:
+  - There sure are a lot of books in this place...
 --- !u!1 &293165620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 191451153440669020, guid: 4961286f353d42146980b466e0454db5,
@@ -5619,7 +5618,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 797921808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &797921810
+--- !u!4 &797921811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6761309423647441175, guid: dcaf2011d2fbae74fbf13085f154febc,
+    type: 3}
+  m_PrefabInstance: {fileID: 797921808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &797921812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5628,20 +5633,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 797921809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Desk
-    sentences:
-    - There is another journal here with Mazie's name on it.
-    - I'll talk to her and see what she knows.
---- !u!4 &797921811 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6761309423647441175, guid: dcaf2011d2fbae74fbf13085f154febc,
-    type: 3}
-  m_PrefabInstance: {fileID: 797921808}
-  m_PrefabAsset: {fileID: 0}
+  Actor: Desk
+  Lines:
+  - There is another journal here with Mazie's name on it.
+  - I'll talk to her and see what she knows.
 --- !u!1001 &918303148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5717,30 +5715,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 918303148}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &918303150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918303149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Mazie
-    sentences:
-    - 'You: Hello?'
-    - '...'
-    - 'You: Where am I?'
-    - '...I''m...I''m not really sure...'
-    - 'You: Oh, well can you tell me your name? Are you Mazie?'
-    - '...I think, but I don''t remember'
-    - 'You: I see'
-    - Can you go get me some candy?
-    - Huh, let me think. Oh! I know, I can get you some candy!
 --- !u!114 &918303151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5839,7 +5813,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1361504344}
+      - m_Target: {fileID: 1361504346}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -5932,7 +5906,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 230314156}
+      - m_Target: {fileID: 230314158}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -6030,13 +6004,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1153198150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Bookshelf
-    sentences:
-    - There sure are a lot of books in this place...
+  Actor: Bookshelf
+  Lines:
+  - There sure are a lot of books in this place...
 --- !u!4 &1153198152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
@@ -6118,7 +6091,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1361504342}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1361504344
+--- !u!4 &1361504345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1361504342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1361504346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6127,19 +6106,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361504343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Bookshelf
-    sentences:
-    - There sure are a lot of books in this place...
---- !u!4 &1361504345 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
-    type: 3}
-  m_PrefabInstance: {fileID: 1361504342}
-  m_PrefabAsset: {fileID: 0}
+  Actor: Bookshelf
+  Lines:
+  - There sure are a lot of books in this place...
 --- !u!1001 &1503190392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6324,7 +6296,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797921810}
+      - m_Target: {fileID: 797921812}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:

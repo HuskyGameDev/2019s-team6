@@ -410,16 +410,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
-    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 9084342770642966831, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4316,6 +4306,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300008, guid: bc66c4c2b9d85c045a265481085c893e,
         type: 3}
+    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294aada7b1fe0c945b60e522fe4fcc19, type: 3}
 --- !u!4 &452813142 stripped
@@ -4411,7 +4411,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1532343042}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &535516345
+--- !u!114 &535516346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4420,21 +4420,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 535516344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Desk
-    sentences:
-    - There appears to be a journal on this desk. The name on the top reads "Mazie".
-    - I don't want to read someone elses journal, but maybe I can find her.
+  Actor: Desk
+  Lines:
+  - There appears to be a journal on this desk. The name on the top reads "Mazie".
+  - I don't want to read someone elses journal, but maybe I can find her.
 --- !u!1 &538798828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1326962155468825836, guid: a4d9975e481910b42acd051bec4eeb39,
     type: 3}
   m_PrefabInstance: {fileID: 27894200}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &538798829
+--- !u!114 &538798830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4443,14 +4442,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 538798828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Bed
-    sentences:
-    - It appears that no one has been in this bed in ages. I wonder if it belongs
-      to Mazie.
+  Actor: Bed
+  Lines:
+  - It appears that no one has been in this bed in ages. I wonder if it belongs to
+    Mazie.
 --- !u!1 &800093746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,7 +4502,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 538798829}
+      - m_Target: {fileID: 538798830}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -4696,16 +4694,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390367641715984365, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4722,6 +4710,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -4821,7 +4819,7 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 3390367641715984365, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -6336,7 +6334,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1421520675}
+      - m_Target: {fileID: 1421520672}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -6382,7 +6380,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 429737647}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1421520675
+--- !u!114 &1421520672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6391,14 +6389,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421520671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Table
-    sentences:
-    - I don't that anyone has been in this room any time recently. This table is awfully
-      dusty.
+  Actor: Table
+  Lines:
+  - I don't that anyone has been in this room any time recently. This table is awfully
+    dusty.
 --- !u!1 &1478876043
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,7 +6449,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 535516345}
+      - m_Target: {fileID: 535516346}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -6573,7 +6570,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 530309558}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1616187529
+--- !u!114 &1616187530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6582,13 +6579,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1616187528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Dresser
-    sentences:
-    - This dresser appears to be locked. I should find a key to see what is inside.
+  Actor: Dresser
+  Lines:
+  - This dresser appears to be locked. I should find a key to see what is inside.
 --- !u!1 &1792097974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6642,7 +6638,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1616187529}
+      - m_Target: {fileID: 1616187530}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:

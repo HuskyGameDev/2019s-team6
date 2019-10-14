@@ -472,7 +472,7 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644479229}
+      - m_Target: {fileID: 1644479231}
         m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
@@ -794,16 +794,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grid
-      objectReference: {fileID: 0}
-    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9084342770642966831, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
@@ -8321,6 +8311,16 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[145].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297111661014555677, guid: 294aada7b1fe0c945b60e522fe4fcc19,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9084342768905330716, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -9452,7 +9452,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1644479227}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1644479229
+--- !u!4 &1644479230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7572660696910639605, guid: 2653220e7a6da934483f318a43104db2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1644479227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1644479231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9461,19 +9467,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1644479228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec21568b88a86ff4eacaf25499ad7c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    name: Long Table
-    sentences:
-    - I am glad that this table has a candle. The light comforts me.
---- !u!4 &1644479230 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7572660696910639605, guid: 2653220e7a6da934483f318a43104db2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1644479227}
-  m_PrefabAsset: {fileID: 0}
+  Actor: Long Table
+  Lines:
+  - I am glad that this table has a candle. The light comforts me.
 --- !u!1 &1975706079
 GameObject:
   m_ObjectHideFlags: 0
@@ -9884,16 +9883,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390367641715984365, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -9907,6 +9896,16 @@ PrefabInstance:
     - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758037118256056206, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3040450783530395204, guid: 4961286f353d42146980b466e0454db5,
@@ -10049,7 +10048,7 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 3390367641715984365, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
