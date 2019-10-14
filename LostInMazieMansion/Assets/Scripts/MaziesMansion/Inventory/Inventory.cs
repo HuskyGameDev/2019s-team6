@@ -48,6 +48,8 @@ namespace MaziesMansion
         }
 
         public bool HasCollectedItem(InventoryObject obj) => CollectedObjects.ContainsKey(obj.ID);
+        public bool HasCollectedItem(string objectID) => CollectedObjects.ContainsKey(objectID);
         public bool HasItem(InventoryObject obj) => CollectedObjects.TryGetValue(obj.ID, out var isInInventory) ? isInInventory : false;
+        public bool HasItem(string objectID) => CollectedObjects.TryGetValue(objectID, out var isInInventory) ? isInInventory : false;
     }
 }
