@@ -6,6 +6,11 @@ namespace MaziesMansion
     [CreateAssetMenu(menuName = "Scriptable Objects/Menu Actions")]
     internal sealed class MenuActions : ScriptableObject
     {
+        public void NewGame()
+        {
+            SaveUtility.LoadGame(PersistentData.Default);
+        }
+
         public void LoadTargetScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
