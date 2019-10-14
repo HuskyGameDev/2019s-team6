@@ -38,7 +38,6 @@ namespace MaziesMansion
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
-            Debug.Log(_story.currentText);
             Name.text = actor;
             Lines = lines;
             AdvanceStory();
