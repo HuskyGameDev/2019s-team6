@@ -47,6 +47,27 @@ namespace MaziesMansion
             }
         }
 
+        public void RemoveItem(string itemID)
+        {
+            foreach(var item in EssentialList)
+                if(item.ID == itemID)
+                {
+                    CollectedObjects[itemID] = false;
+                    EssentialList.Remove(item);
+                    IsEssentialListDirty = true;
+                    return;
+                }
+            foreach(var item in ClutterList)
+                if(item.ID == itemID)
+                {
+                    CollectedObjects[itemID] = false;
+                    ClutterList.Remove(item);
+                    IsClutterListDirty = true;
+                    return;
+                }
+            Debug.Log($"Could not find item \"{itemID}\" when removing");
+        }
+
         public bool HasCollectedItem(InventoryObject obj) => CollectedObjects.ContainsKey(obj.ID);
         public bool HasCollectedItem(string objectID) => CollectedObjects.ContainsKey(objectID);
         public bool HasItem(InventoryObject obj) => CollectedObjects.TryGetValue(obj.ID, out var isInInventory) ? isInInventory : false;

@@ -44,6 +44,8 @@ namespace MaziesMansion
             AdvanceStory();
         }
 
+        private bool CanContinue => (null != Lines && CurrentLine < Lines.Length) || _story.canContinue;
+        private string GetNextLine() => null != Lines ? Lines[CurrentLine++] : _story.Continue();
         private IEnumerator _textAnimation;
         public void AdvanceStory()
         {
@@ -55,21 +57,50 @@ namespace MaziesMansion
                 return;
             }
 
-            if((null != Lines && CurrentLine == Lines.Length) || (null != _story && !_story.canContinue))
+            if(!CanContinue)
             {
                 EndStory();
                 return;
             }
 
+            var text = GetNextLine();
+            for(;DialogUtility.PerformAction(text, out var actionName, out var actionArgs); text = GetNextLine())
+            {
+                switch(actionName)
+                {
+                    case "AddItem":
+                        var path = actionArgs[0];
+                        var item = Resources.Load<InventoryObject>(path);
+                        if(null == item)
+                            Debug.LogError($"Could not load item from path \"{path}\"");
+                        else
+                            PersistentData.Instance.Inventory.AddItem(item);
+                        break;
+                    case "RemoveItem":
+                        var itemID = actionArgs[0];
+                        PersistentData.Instance.Inventory.RemoveItem(itemID);
+                        break;
+                    default:
+                        if(actionArgs.Length > 0)
+                            Debug.LogError($"Unrecognized action \"{actionName}\" with argument(s) \"{string.Join("\", \"", actionArgs)}\"");
+                        else
+                            Debug.LogError($"Unrecognized action \"{actionName}\"");
+                        break;
+                }
+                if(!CanContinue)
+                {
+                    EndStory();
+                    return;
+                }
+            }
             if(null != Lines)
             {
-                Text.text = Lines[CurrentLine++];
+                Text.text = text;
             } else
             {
-                var (actor, line) = DialogUtility.GetActorAndLine(_story.Continue());
+                var (actor, line) = DialogUtility.GetActorAndLine(text);
                 Name.text = string.IsNullOrEmpty(actor) ? string.Empty : actor;
                 Text.text = line;
-                ProcessTags(_story.currentTags);
             }
 
             _textAnimation = AnimateText(TextCharacterCount);

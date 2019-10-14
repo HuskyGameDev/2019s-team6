@@ -25,6 +25,7 @@ You: <i>Hm... there must be some stored here somewhere.</i>
 
 === first_visit_has_candy
 You: Oh! I have one here. You can have it!
+DO::RemoveItem F3_Storage_Candy
 -> DONE
 
 === returning
@@ -36,4 +37,5 @@ You: <i>Maybe there's one in the storage room?
 
 === has_candy
 You: Yep! Here you go!
+DO::RemoveItem F3_Storage_Candy
 -> DONE
