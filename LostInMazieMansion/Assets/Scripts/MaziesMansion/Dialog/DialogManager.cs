@@ -44,7 +44,7 @@ namespace MaziesMansion
             AdvanceStory();
         }
 
-        private bool CanContinue => (null != Lines && CurrentLine < Lines.Length) || _story.canContinue;
+        private bool CanContinue => (null != Lines && CurrentLine < Lines.Length) || (null != _story && _story.canContinue);
         private string GetNextLine() => null != Lines ? Lines[CurrentLine++] : _story.Continue();
         private IEnumerator _textAnimation;
         public void AdvanceStory()
