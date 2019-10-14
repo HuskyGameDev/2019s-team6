@@ -19,7 +19,7 @@ namespace MaziesMansion
         {
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
-                EndStory();
+                EndStory(closeDialog: false);
             _story = story;
             _story.ResetState();
             AdvanceStory();
@@ -31,8 +31,10 @@ namespace MaziesMansion
         {
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
-                EndStory();
+                EndStory(closeDialog: false);
             Name.text = actor;
+            Lines = lines;
+            CurrentLine = 0;
             AdvanceStory();
         }
 
@@ -84,6 +86,7 @@ namespace MaziesMansion
         public void EndStory(bool closeDialog = true)
         {
             Animator.SetBool("IsOpen", !closeDialog);
+            _textAnimation = null;
             if(null != _story)
             {
                 _story = null;
