@@ -13,10 +13,10 @@ You: <i>It's locked. Maybe there's a key somewhere...</i>
 -> DONE
 
 === has_key
-<i>Unlocked Dresser</i>
+Unlocked Dresser
 You: Hey, a flashlight!
-<i>Obtained Flashlight</i>
+Obtained Flashlight
 DO::RemoveItem F3_Dresser_Key
-DO::AddItem Items/F3_Hall_Key
+DO::AddItem Items/Flashlight
 -> DONE
 
