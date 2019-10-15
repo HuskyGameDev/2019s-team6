@@ -5,12 +5,21 @@ namespace MaziesMansion
 {
     internal static class DialogUtility
     {
-        private static readonly Regex ActorSplitter = new Regex(@"(?:(?<actor>(?:[^:\\]+(?:\\:)*)+)\s*:\s*)?(?<line>.*)");
         private static readonly Regex ActionText = new Regex(@"^\s*DO::(?<action>\S+)(?:\s+(?<arg>\S+|""[^""]+""))*");
         public static (string actor, string line) GetActorAndLine(string line)
         {
-            var match = ActorSplitter.Match(line);
-            return (match.Groups["actor"]?.Value, match.Groups["line"].Value);
+            var index = line.IndexOf(':', 0);
+            if(index < 0)
+                return ("", line.TrimStart());
+            if(index == 0)
+                return ("", line.Substring(1).TrimStart());
+            for(;;index = line.IndexOf(':', index))
+            {
+                if(index == line.Length + 1)
+                    return ("", line);
+                if(line[index - 1] != '\\')
+                    return (line.Substring(0, index).TrimEnd(), line.Substring(index + 1).TrimStart());
+            }
         }
 
         public static Story CreateStory(string storyData)
