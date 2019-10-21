@@ -4440,32 +4440,6 @@ MonoBehaviour:
   Lines:
   - There appears to be a journal on this desk. The name on the top reads "Mazie".
   - I don't want to read someone elses journal, but maybe I can find her.
---- !u!61 &535516349
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535516344}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.092817605, y: 0.09281784}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1856351, y: 1.1856357}
-  m_EdgeRadius: 0
 --- !u!1 &538798828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1326962155468825836, guid: a4d9975e481910b42acd051bec4eeb39,
@@ -4501,32 +4475,6 @@ MonoBehaviour:
   Lines:
   - It appears that no one has been in this bed in ages. I wonder if it belongs to
     Mazie.
---- !u!61 &538798833
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538798828}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.044817567, y: 0.45173514}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.734375, y: 1}
-    newSize: {x: 0.734375, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.82401013, y: 1.0965297}
-  m_EdgeRadius: 0
 --- !u!1 &800093746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,32 +4937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EtoInteractImage: {fileID: 990460258}
---- !u!61 &1421520674
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421520671}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.053571284, y: -0.07499933}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1071426, y: 1.1499987}
-  m_EdgeRadius: 0
 --- !u!1 &1478876043
 GameObject:
   m_ObjectHideFlags: 0
