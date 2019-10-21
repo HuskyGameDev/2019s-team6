@@ -5,12 +5,14 @@ namespace MaziesMansion
 {
     internal static class DialogUtility
     {
+        private static readonly Regex NonActorLine = new Regex(@":\s*$");
         private static readonly Regex ActionText = new Regex(@"^\s*DO::(?<action>\S+)(?:\s+(?<arg>\S+|""[^""]+""))*");
         public static (string actor, string line) GetActorAndLine(string line)
         {
+            line = line.Trim();
             var index = line.IndexOf(':', 0);
-            if(index < 0)
-                return ("", line.TrimStart());
+            if(index < 0 || index == line.Length - 1)
+                return ("", line);
             if(index == 0)
                 return ("", line.Substring(1).TrimStart());
             for(;;index = line.IndexOf(':', index))
