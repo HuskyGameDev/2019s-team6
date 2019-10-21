@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InteractAppear : MonoBehaviour
 {
-    [SerializeField] private Image EtoInteractImage;
+    [SerializeField] private GameObject EtoInteractImage;
     private bool stillTouchingTrigger = false;
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
@@ -27,7 +27,7 @@ public class InteractAppear : MonoBehaviour
         {
             Debug.Log("Disappear");
             stillTouchingTrigger = false;
-            EtoInteractImage.enabled = false;
+            EtoInteractImage.SetActive(false); // = false;
         }
     }
 
@@ -36,7 +36,8 @@ public class InteractAppear : MonoBehaviour
         if (stillTouchingTrigger)
         { 
             EtoInteractImage.transform.position = this.gameObject.transform.position;
-            EtoInteractImage.enabled = true;
+            EtoInteractImage.SetActive(true);
+            //EtoInteractImage.active = true;
         }
     }
 }
