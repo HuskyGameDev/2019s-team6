@@ -11,3 +11,14 @@ Unity 2018.3 made it very easy to keep things isolated in prefabs. It is recomme
 2. One prefab can be used in multiple scenes.
 
     Because prefabs can be shared between scenes and will be consistent across those scenes, they should be used for things that appear in more than one scene (hence, the `RequiredLevelObject` prefab, which has all of our camera, audio, and interface objects and scripts). Any future levels require that prefab to be present, but won't need any duplicate interfaces copied or updated across them.
+
+## How to pause?
+
+If your component shouldn't act while the game is paused, remember to add
+
+```csharp
+if(LevelState.IsPaused)
+    return;
+```
+
+to the top of all your Update methods.
