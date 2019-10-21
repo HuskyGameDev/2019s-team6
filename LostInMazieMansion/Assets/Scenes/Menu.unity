@@ -1634,10 +1634,11 @@ GameObject:
   - component: {fileID: 944765531}
   - component: {fileID: 944765530}
   - component: {fileID: 944765529}
-  - component: {fileID: 944765528}
   - component: {fileID: 944765532}
   - component: {fileID: 944765534}
   - component: {fileID: 944765533}
+  - component: {fileID: 944765535}
+  - component: {fileID: 944765528}
   m_Layer: 0
   m_Name: Main
   m_TagString: MainCamera
@@ -1645,14 +1646,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &944765528
-AudioListener:
+--- !u!114 &944765528
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944765527}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music/Login_Music
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!124 &944765529
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1777,6 +1793,19 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &944765535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944765527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &946417691
 GameObject:
   m_ObjectHideFlags: 0
@@ -7137,7 +7166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 385, y: -180}
+  m_AnchoredPosition: {x: 385.00003, y: -180.00003}
   m_SizeDelta: {x: 1920, y: 1390}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1083857534
