@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 9223055830865234457}
   - component: {fileID: 556000573382430830}
   m_Layer: 5
-  m_Name: Image
+  m_Name: EtoInteractImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,8 +504,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 33.33}
+  m_SizeDelta: {x: 100, y: 33.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9223055830865234457
 CanvasRenderer:
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 749ae8e3b6de5e548a0e584e4c511e3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1aa57641996b064a99f81e7b64d8c68, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
