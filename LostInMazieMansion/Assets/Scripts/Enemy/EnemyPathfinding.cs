@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using MaziesMansion;
 
 public class EnemyPathfinding : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class EnemyPathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(LevelState.IsPaused)
+            return;
 
         if (_AIPath.desiredVelocity.x >= velocityThreshold)
         {
@@ -36,4 +39,4 @@ public class EnemyPathfinding : MonoBehaviour
 
     }
 }
-    
+

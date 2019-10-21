@@ -58,6 +58,8 @@ namespace MaziesMansion
 
         private void Update()
         {
+            if(LevelState.IsPaused)
+                return;
             var xMovement = Input.GetAxisRaw("Horizontal");
             var yMovement = Input.GetAxisRaw("Vertical");
 

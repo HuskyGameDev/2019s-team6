@@ -7,22 +7,30 @@ namespace MaziesMansion
     {
         // TODO: track game state
 
+        public GameObject MenuBackgroundInterface = null;
+        public GameObject[] MenuInterfaces = new GameObject[3];
         public GameObject PauseInterface = null;
         public GameObject InventoryInterface = null;
 
         private bool _isGamePaused = false;
         private bool _isInventoryOpen = false;
+        private bool _isInteractionOpen = false;
+
+        private static int _openInterfaceCount = 0;
+        public static bool IsPaused => _openInterfaceCount > 0;
+
         public bool IsGamePaused
         {
             get => _isGamePaused;
             set
             {
+                if(_isGamePaused != value)
+                    _openInterfaceCount += value ? 1 : -1;
                 _isGamePaused = value;
-                PauseInterface.SetActive(_isGamePaused);
-                if(_isGamePaused)
-                    Time.timeScale = 0;
-                else if(!IsInventoryOpen)
-                    Time.timeScale = 1;
+                MenuBackgroundInterface.SetActive(_isGamePaused);
+                PauseInterface.SetActive(true);
+                foreach (var item in MenuInterfaces)
+                    item.SetActive(false);
             }
         }
 
@@ -31,10 +39,27 @@ namespace MaziesMansion
             get => _isInventoryOpen;
             set
             {
+                if(_isInventoryOpen != value)
+                    _openInterfaceCount += value ? 1 : -1;
                 _isInventoryOpen = value;
                 InventoryInterface.SetActive(_isInventoryOpen);
-                Time.timeScale = _isInventoryOpen ? 0 : 1;
             }
+        }
+
+        public bool IsInteractionOpen
+        {
+            get => _isInteractionOpen;
+            set
+            {
+                if(IsInteractionOpen != value)
+                    _openInterfaceCount += value ? 1 : -1;
+                _isInteractionOpen = value;
+            }
+        }
+
+        private void Awake()
+        {
+            _openInterfaceCount = 0;
         }
 
         private void Start()
@@ -65,7 +90,8 @@ namespace MaziesMansion
             // toggle pausing while the game is running
             if(Input.GetKeyDown(KeyCode.Escape))
                 IsGamePaused = !IsGamePaused;
-            if(Input.GetKeyDown(KeyCode.Tab) && !IsGamePaused)
+            // toggle inventory while the game is running and not paused and not in another screen.
+            else if(!IsInteractionOpen && !IsGamePaused && Input.GetKeyDown(KeyCode.Tab))
                 IsInventoryOpen = !IsInventoryOpen;
         }
     }

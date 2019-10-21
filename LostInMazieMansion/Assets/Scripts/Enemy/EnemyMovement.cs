@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MaziesMansion;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(LevelState.IsPaused)
+            return;
         // If the distance between the target(player) and the enemy is less than # and the player is not hidden,
         if (Vector2.Distance(transform.position, target.position) < 5 && !Global.hidden)
         {

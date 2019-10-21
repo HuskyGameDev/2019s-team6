@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using MaziesMansion;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(LevelState.IsPaused)
+            return;
         if(path == null)
         {
             return;

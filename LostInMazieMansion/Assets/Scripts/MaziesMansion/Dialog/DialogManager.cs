@@ -11,6 +11,7 @@ namespace MaziesMansion
         public TextMeshProUGUI Name;
         public TextMeshProUGUI Text;
         public Animator Animator;
+        public LevelState LevelState;
 
         private int TextCharacterCount => Text.GetTextInfo(Text.text).characterCount;
 
@@ -19,6 +20,7 @@ namespace MaziesMansion
 
         public void BeginStory(string storyName, Story story)
         {
+            LevelState.IsInteractionOpen = true;
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -35,6 +37,7 @@ namespace MaziesMansion
         private int CurrentLine = 0;
         public void BeginStory(string actor, string[] lines)
         {
+            LevelState.IsInteractionOpen = true;
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -115,6 +118,8 @@ namespace MaziesMansion
             yield return new WaitForSecondsRealtime(0.3f);
             for(var i = 1; i <= totalCharacters; i += 1)
             {
+                while(LevelState.IsGamePaused)
+                    yield return new WaitForSeconds(0.3f);
                 Text.maxVisibleCharacters = i;
                 yield return new WaitForSecondsRealtime(0.05f);
             }
@@ -123,6 +128,7 @@ namespace MaziesMansion
         public void EndStory(bool closeDialog = true)
         {
             Animator.SetBool("IsOpen", !closeDialog);
+            LevelState.IsInteractionOpen = !closeDialog;
             StopAllCoroutines();
             _textAnimation = null;
             if(null != _story)
