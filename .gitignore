@@ -44,4 +44,4 @@ unity_incremental_compiler_server.log
 Audio/.*
 Audio/.*/
 fmod_editor.log
-Assets/FMODStudioCache.asset*
+FMODStudioCache.asset*
