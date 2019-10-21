@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TargetSceneName: F3_Hallway
   TargetDoorName: F3_Hallway_UpperLeft
   DoorOrientation: 2
@@ -518,7 +518,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[4].m_Data
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: 7c8146399a89ac6409ef5279abf05870,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -529,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
-      value: 
+      value:
       objectReference: {fileID: 21300000, guid: 02a93a09bf646c9429194f9f3fb54740,
         type: 3}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -3690,7 +3690,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[3].m_Data
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: fefac4ad780d4ff4b844624672e00930,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -3701,7 +3701,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[3].m_Data
-      value: 
+      value:
       objectReference: {fileID: 21300000, guid: bc66c4c2b9d85c045a265481085c893e,
         type: 3}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4292,7 +4292,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[2].m_Data
-      value: 
+      value:
       objectReference: {fileID: 11400000, guid: e4d5d64b4732f8848879bee83771b91a,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4303,7 +4303,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_Data
-      value: 
+      value:
       objectReference: {fileID: 21300008, guid: bc66c4c2b9d85c045a265481085c893e,
         type: 3}
     - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4421,8 +4421,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EtoInteractImage: {fileID: 990460258}
 --- !u!114 &535516346
 MonoBehaviour:
@@ -4434,8 +4434,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Actor: Desk
   Lines:
   - There appears to be a journal on this desk. The name on the top reads "Mazie".
@@ -4456,8 +4456,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EtoInteractImage: {fileID: 990460258}
 --- !u!114 &538798830
 MonoBehaviour:
@@ -4469,8 +4469,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Actor: Bed
   Lines:
   - It appears that no one has been in this bed in ages. I wonder if it belongs to
@@ -4486,6 +4486,7 @@ GameObject:
   - component: {fileID: 800093747}
   - component: {fileID: 800093749}
   - component: {fileID: 800093748}
+  - component: {fileID: 800093750}
   m_Layer: 9
   m_Name: Dialog
   m_TagString: Untagged
@@ -4517,8 +4518,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4536,7 +4537,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -4568,6 +4569,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.71, y: 1.0000002}
   m_EdgeRadius: 0
+--- !u!114 &800093750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800093746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  EtoInteractImage: {fileID: 990460258}
 --- !u!1001 &944869047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4713,82 +4727,87 @@ PrefabInstance:
     - target: {fileID: 191451153804270019, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Follow
-      value: 
+      value:
       objectReference: {fileID: 944869048}
-    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 638
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 257
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1276
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 514
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 5826773732202139421, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_RenderMode
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
@@ -4802,8 +4821,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &1265882102
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,6 +4834,7 @@ GameObject:
   - component: {fileID: 1265882103}
   - component: {fileID: 1265882105}
   - component: {fileID: 1265882104}
+  - component: {fileID: 1265882106}
   m_Layer: 9
   m_Name: Dialog
   m_TagString: Untagged
@@ -4846,8 +4866,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4865,7 +4885,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -4897,6 +4917,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1265882106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265882102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  EtoInteractImage: {fileID: 990460258}
 --- !u!1 &1421520671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1400048392001319909, guid: 797662ad4d48e7f47b3761251dda0a3b,
@@ -4913,8 +4946,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Actor: Table
   Lines:
   - I don't that anyone has been in this room any time recently. This table is awfully
@@ -4929,35 +4962,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EtoInteractImage: {fileID: 990460258}
---- !u!61 &1421520674
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421520671}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.053571284, y: -0.07499933}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1071426, y: 1.1499987}
-  m_EdgeRadius: 0
 --- !u!1 &1478876043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,6 +4976,7 @@ GameObject:
   - component: {fileID: 1478876044}
   - component: {fileID: 1478876046}
   - component: {fileID: 1478876045}
+  - component: {fileID: 1478876047}
   m_Layer: 9
   m_Name: Dialog
   m_TagString: Untagged
@@ -5000,8 +5008,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5019,7 +5027,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -5051,6 +5059,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1478876047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478876043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  EtoInteractImage: {fileID: 990460258}
 --- !u!1001 &1532343042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5142,8 +5163,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EtoInteractImage: {fileID: 990460258}
 --- !u!114 &1616187530
 MonoBehaviour:
@@ -5155,8 +5176,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80b0e5b69f1b0194b8ee2f4282fcc0cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   InkJSON: {fileID: 4900000, guid: 0df729c597338234f8a967478fda3bd0, type: 3}
   InitialPath: 0
   ResumePath: start
@@ -5171,6 +5192,7 @@ GameObject:
   - component: {fileID: 1792097975}
   - component: {fileID: 1792097977}
   - component: {fileID: 1792097976}
+  - component: {fileID: 1792097978}
   m_Layer: 9
   m_Name: Dialog
   m_TagString: Untagged
@@ -5202,8 +5224,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5221,7 +5243,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -5253,3 +5275,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1792097978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792097974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  EtoInteractImage: {fileID: 990460258}
