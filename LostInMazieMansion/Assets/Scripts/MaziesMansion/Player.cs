@@ -30,11 +30,8 @@ namespace MaziesMansion
         int Damage = 20;
         #endregion
 
-        public CircleCollider2D playerCollider;
-        public Rigidbody2D rb2D;
-        public CharacterController characterController;
-
         private Interactable _interactable;
+        private Footsteps _footsteps;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -49,17 +46,19 @@ namespace MaziesMansion
             var save = PersistentData.Instance;
             if (save.CurrentSanity > save.MaximumSanity)
                 save.CurrentSanity = save.MaximumSanity;
-
-            playerCollider = GetComponent<CircleCollider2D>();
-            rb2D = gameObject.GetComponent<Rigidbody2D>();
-            characterController = GetComponent<CharacterController>();
             Animator = GetComponent<Animator>();
+            _footsteps = GetComponent<Footsteps>();
         }
 
         private void Update()
         {
             if(LevelState.IsPaused)
+            {
+                if(null != _footsteps)
+                    _footsteps.Paused = true;
                 return;
+            } else if(null != _footsteps)
+                _footsteps.Paused = false;
             var xMovement = Input.GetAxisRaw("Horizontal");
             var yMovement = Input.GetAxisRaw("Vertical");
 
@@ -77,10 +76,13 @@ namespace MaziesMansion
                 Animator.SetBool("PlayerMoving", true);
                 Animator.SetFloat("LastMoveX", Mathf.Abs(movementVector.y) > 0.5f ? 0 : movementVector.x);
                 Animator.SetFloat("LastMoveY", movementVector.y);
-
+                if(null != _footsteps)
+                    _footsteps.enabled = true;
             } else
             {
                 Animator.SetBool("PlayerMoving", false);
+                if(null != _footsteps)
+                    _footsteps.enabled = false;
             }
 
             if (Input.GetKeyDown("e") && null != _interactable)
