@@ -1,6 +1,5 @@
 EXTERNAL HasItem(name)
 VAR got_flashlight = false
-INCLUDE Functions.ink
 -> start
 
 === start
