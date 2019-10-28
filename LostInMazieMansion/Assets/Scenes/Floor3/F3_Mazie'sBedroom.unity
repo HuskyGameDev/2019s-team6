@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4439,7 +4439,7 @@ MonoBehaviour:
   Actor: Desk
   Lines:
   - There appears to be a journal on this desk. The name on the top reads "Mazie".
-  - I don't want to read someone elses journal, but maybe I can find her.
+  - I wonder if she's around here somewhere?
 --- !u!1 &538798828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1326962155468825836, guid: a4d9975e481910b42acd051bec4eeb39,
@@ -4473,8 +4473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actor: Bed
   Lines:
-  - It appears that no one has been in this bed in ages. I wonder if it belongs to
-    Mazie.
+  - Nobody has used this bed in ages. Wonder whose it is?
 --- !u!1 &800093746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,6 +4714,21 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 944869048}
+    - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
 --- !u!114 &990460258 stripped

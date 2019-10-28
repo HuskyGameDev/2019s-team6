@@ -145,8 +145,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20459784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -3.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1561048897}
@@ -173,8 +173,8 @@ MonoBehaviour:
   OnPlayerInteracts:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 206190232}
-        m_MethodName: TriggerDialog
+      - m_Target: {fileID: 206190231}
+        m_MethodName: TriggerStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1561048896}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &206190232
+--- !u!114 &206190231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,13 +228,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 206190230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
+  m_Script: {fileID: 11500000, guid: 80b0e5b69f1b0194b8ee2f4282fcc0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actor: Coffee Table
-  Lines:
-  - Look! There is a note on this table!
-  - What does it say?
+  InkJSON: {fileID: 4900000, guid: 25700a652a61688438391d7d0883eb18, type: 3}
+  InitialPath: 0
+  ResumePath: start
 --- !u!1001 &277944658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6230,6 +6229,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
