@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
-    [RequireComponent(typeof(Interactable))]
     internal sealed class Door : MonoBehaviour
     {
         public enum Orientation
@@ -19,6 +18,21 @@ namespace MaziesMansion
 
         [Tooltip("Orientation of this door (which side is the exit).")]
         public Orientation DoorOrientation = Orientation.LEFT;
+
+        // this is only here so we can toggle the enabled state of the component in the editor
+        private void OnEnable(){}
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(!enabled)
+                return;
+            if(other.tag == "Player")
+            {
+                PersistentData.Instance.Volatile.TargetDoorName = TargetDoorName;
+                SceneManager.LoadScene(TargetSceneName, LoadSceneMode.Single);
+            }
+        }
+
         public void Place(GameObject obj)
         {
             var ownPosition = transform.position;
