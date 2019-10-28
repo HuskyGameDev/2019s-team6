@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
@@ -32,6 +33,10 @@ namespace MaziesMansion
                 PersistentData.Instance.Inventory.HasItem(name));
             story.BindExternalFunction<string>("HasCollectedItem", name =>
                 PersistentData.Instance.Inventory.HasCollectedItem(name));
+            story.BindExternalFunction<string, string>("EndAndMovePlayerToDoor", (scene, door) => {
+                PersistentData.Instance.Volatile.TargetDoorName = door;
+                SceneManager.LoadScene(scene, LoadSceneMode.Single);
+            });
             return story;
         }
 
