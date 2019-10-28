@@ -215,8 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actor: Long Table
   Lines:
-  - Oh Look! There appears to be candy on this table!
-  - I am going to grab it before I go!
+  - There's a piece of candy on this table! Better grab it.
 --- !u!1 &452335508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,6 +2986,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8080743646962803527, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
