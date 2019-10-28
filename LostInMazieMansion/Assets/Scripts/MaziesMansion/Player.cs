@@ -87,6 +87,12 @@ namespace MaziesMansion
                 _interactable.OnPlayerInteracts?.Invoke();
         }
 
+        private void LateUpdate()
+        {
+            if(null != _interactable)
+                LevelState.Instance.InteractButton.transform.position = _interactable.transform.position;
+        }
+
         private void Die()
         {
             // revert to default save (temp)
@@ -102,12 +108,15 @@ namespace MaziesMansion
             if(other.TryGetComponent<Interactable>(out var interactable))
             {
                 _interactable = interactable;
+                LevelState.Instance.InteractButton.SetActive(true);
+                LevelState.Instance.InteractButton.transform.position = _interactable.transform.position;
             }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
             _interactable = null;
+            LevelState.Instance.InteractButton.SetActive(false);
         }
     }
 }

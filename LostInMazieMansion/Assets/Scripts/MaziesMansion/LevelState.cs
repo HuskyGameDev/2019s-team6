@@ -12,12 +12,16 @@ namespace MaziesMansion
         public GameObject PauseInterface = null;
         public GameObject InventoryInterface = null;
 
+        public GameObject InteractButton = null;
+
         private bool _isGamePaused = false;
         private bool _isInventoryOpen = false;
         private bool _isInteractionOpen = false;
 
         private static int _openInterfaceCount = 0;
         public static bool IsPaused => _openInterfaceCount > 0;
+
+        public static LevelState Instance;
 
         public bool IsGamePaused
         {
@@ -60,6 +64,7 @@ namespace MaziesMansion
         private void Awake()
         {
             _openInterfaceCount = 0;
+            Instance = this;
         }
 
         private void Start()
@@ -83,6 +88,11 @@ namespace MaziesMansion
                     player.transform.position = save.PlayerLocation;
                 }
             }
+        }
+
+        private void OnDestroy()
+        {
+            Instance = null;
         }
 
         private void Update()
