@@ -1,11 +1,5 @@
-EXTERNAL HasItem(name)
+INCLUDE Functions.ink
 -> start
-
-// functions have to be declared before the start knot,
-// but after the variable declarations, it seems
-=== function HasItem(name) ===
-Fallback.
-~ return false
 
 === start
 { HasItem("F3_Dresser_Key"): -> has_key }

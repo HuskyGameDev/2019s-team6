@@ -1,12 +1,6 @@
-EXTERNAL HasItem(name)
+INCLUDE Functions.ink
 VAR is_first_visit = true
 -> start
-
-// functions have to be declared before the start knot,
-// but after the variable declarations, it seems
-=== function HasItem(name) ===
-Fallback.
-~ return false
 
 === start
 { not is_first_visit: -> returning }
