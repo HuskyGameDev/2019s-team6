@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   TargetSceneName: F3_Hallway
   TargetDoorName: F3_Hallway_UpperLeft
   DoorOrientation: 2
@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[4].m_Data
-      value:
+      value: 
       objectReference: {fileID: 11400000, guid: 7c8146399a89ac6409ef5279abf05870,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -524,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
-      value:
+      value: 
       objectReference: {fileID: 21300000, guid: 02a93a09bf646c9429194f9f3fb54740,
         type: 3}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -3685,7 +3685,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[3].m_Data
-      value:
+      value: 
       objectReference: {fileID: 11400000, guid: fefac4ad780d4ff4b844624672e00930,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -3696,7 +3696,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[3].m_Data
-      value:
+      value: 
       objectReference: {fileID: 21300000, guid: bc66c4c2b9d85c045a265481085c893e,
         type: 3}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4287,7 +4287,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[2].m_Data
-      value:
+      value: 
       objectReference: {fileID: 11400000, guid: e4d5d64b4732f8848879bee83771b91a,
         type: 2}
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4298,7 +4298,7 @@ PrefabInstance:
     - target: {fileID: 9084342769043578046, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_Data
-      value:
+      value: 
       objectReference: {fileID: 21300008, guid: bc66c4c2b9d85c045a265481085c893e,
         type: 3}
     - target: {fileID: 4141554080530979827, guid: 294aada7b1fe0c945b60e522fe4fcc19,
@@ -4416,8 +4416,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Actor: Desk
   Lines:
   - There appears to be a journal on this desk. The name on the top reads "Mazie".
@@ -4438,8 +4438,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Actor: Bed
   Lines:
   - Nobody has used this bed in ages. Wonder whose it is?
@@ -4485,8 +4485,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4504,7 +4504,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -4685,9 +4685,14 @@ PrefabInstance:
     - target: {fileID: 191451153804270019, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Follow
-      value:
+      value: 
       objectReference: {fileID: 944869048}
     - target: {fileID: 7860297359330315482, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -4811,8 +4816,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4830,7 +4835,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -4878,12 +4883,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Actor: Table
   Lines:
-  - I don't that anyone has been in this room any time recently. This table is awfully
-    dusty.
+  - 'This table is awfully dusty. I don''t think anyone has been here in a while. '
 --- !u!1 &1478876043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,8 +4930,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4945,7 +4949,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:
@@ -5068,8 +5072,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80b0e5b69f1b0194b8ee2f4282fcc0cb, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   InkJSON: {fileID: 4900000, guid: 0df729c597338234f8a967478fda3bd0, type: 3}
   InitialPath: 0
   ResumePath: start
@@ -5115,8 +5119,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   OnPlayerEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5134,7 +5138,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   OnPlayerInspects:

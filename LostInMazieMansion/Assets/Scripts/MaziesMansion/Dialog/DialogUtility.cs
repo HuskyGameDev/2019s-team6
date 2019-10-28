@@ -33,10 +33,6 @@ namespace MaziesMansion
                 PersistentData.Instance.Inventory.HasItem(name));
             story.BindExternalFunction<string>("HasCollectedItem", name =>
                 PersistentData.Instance.Inventory.HasCollectedItem(name));
-            story.BindExternalFunction<string, string>("EndAndMovePlayerToDoor", (scene, door) => {
-                PersistentData.Instance.Volatile.TargetDoorName = door;
-                SceneManager.LoadScene(scene, LoadSceneMode.Single);
-            });
             return story;
         }
 
@@ -55,7 +51,12 @@ namespace MaziesMansion
             var argCaptures = match.Groups["arg"].Captures;
             actionArgs = new string[argCaptures.Count];
             for(var i = 0; i < actionArgs.Length; i += 1)
-                actionArgs[i] = argCaptures[i].Value;
+            {
+                var value = argCaptures[i].Value;
+                if(value[0] == '"' && value[value.Length - 1] == '"')
+                    value = value.Substring(1, value.Length - 2);
+                actionArgs[i] = value;
+            }
             return true;
         }
     }
