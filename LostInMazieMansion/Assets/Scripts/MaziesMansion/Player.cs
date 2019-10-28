@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,13 +33,26 @@ namespace MaziesMansion
 
         private Interactable _interactable;
         private Footsteps _footsteps;
+        private bool canTakeDamage = true;
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.collider.gameObject.tag == "Enemy")
             {
-                CurrentHealth -= Damage;
+                if (canTakeDamage)
+                {
+                    StartCoroutine(WaitForSeconds());
+                    CurrentHealth -= Damage;
+                }
+               
             }
+        }
+
+        IEnumerator WaitForSeconds()
+        {
+            canTakeDamage = false;
+            yield return new WaitForSecondsRealtime(1);
+            canTakeDamage = true;
         }
 
         private void Start()
