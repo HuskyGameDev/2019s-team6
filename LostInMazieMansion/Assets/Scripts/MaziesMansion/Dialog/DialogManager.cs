@@ -3,6 +3,7 @@ using Ink.Runtime;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
@@ -81,6 +82,10 @@ namespace MaziesMansion
                     case "RemoveItem":
                         var itemID = actionArgs[0];
                         PersistentData.Instance.Inventory.RemoveItem(itemID);
+                        break;
+                    case "EndAndMovePlayerToDoor":
+                        PersistentData.Instance.Volatile.TargetDoorName = actionArgs[1];
+                        SceneManager.LoadScene(actionArgs[0], LoadSceneMode.Single);
                         break;
                     default:
                         if(actionArgs.Length > 0)
