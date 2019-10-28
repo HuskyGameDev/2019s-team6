@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using UnityEngine.UI;
 
 namespace MaziesMansion
 {
@@ -26,6 +28,26 @@ namespace MaziesMansion
         public void SetFullscreen (bool isFullscreen)
         {
             Screen.fullScreen = isFullscreen;
+        }
+
+        public float Volume
+        {
+            get
+            {
+                var masterBus = RuntimeManager.GetBus("/");
+                masterBus.getVolume(out var volume);
+                return volume;
+            }
+            set
+            {
+                var masterBus = RuntimeManager.GetBus("/");
+                masterBus.setVolume(value);
+            }
+        }
+
+        public void SetVolume (Slider slider)
+        {
+            Volume = slider.value;
         }
 
         public void QuitGame()

@@ -1,12 +1,7 @@
 EXTERNAL HasItem(name)
 VAR got_flashlight = false
+INCLUDE Functions.ink
 -> start
-
-// functions have to be declared before the start knot,
-// but after the variable declarations, it seems
-=== function HasItem(name) ===
-Fallback.
-~ return false
 
 === start
 { got_flashlight: -> returning}

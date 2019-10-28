@@ -904,7 +904,6 @@ GameObject:
   - component: {fileID: 4381638613466240816}
   - component: {fileID: 4381638613466240817}
   - component: {fileID: 4381638613466240818}
-  - component: {fileID: 4381638613466240814}
   - component: {fileID: 9106851020413418165}
   - component: {fileID: 3975057149884529565}
   m_Layer: 5
@@ -997,19 +996,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4381638613466240814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381638613466240815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d77e8dd209fe0a34a8bf50c93ebf7fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
 --- !u!222 &9106851020413418165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3589,16 +3575,16 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627169610265189529}
+      - m_Target: {fileID: 11400000, guid: 6c217ddae91a514439f40bed888b9092, type: 2}
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4381638614637171441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4490,7 +4476,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4381638615045310136}
-  - component: {fileID: 627169610265189529}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -4522,16 +4507,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &627169610265189529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381638615045310139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d77e8dd209fe0a34a8bf50c93ebf7fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
