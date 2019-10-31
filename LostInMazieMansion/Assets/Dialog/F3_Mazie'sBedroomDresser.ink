@@ -1,4 +1,4 @@
-EXTERNAL HasItem(name)
+INCLUDE Functions.ink
 VAR got_flashlight = false
 -> start
 
