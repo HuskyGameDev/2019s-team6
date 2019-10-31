@@ -39,6 +39,7 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
+        // If pathing is complete, reset
         if (seek.IsDone())
         {
             seek.StartPath(rigidbody.position, target.position, onPathCompletion);
@@ -46,6 +47,7 @@ public class EnemyAI : MonoBehaviour
     }
     void onPathCompletion(Path p)
     {
+        // If there is an error, reset
         if (p.error)
         {
             path = p;
@@ -56,6 +58,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the game is paused, return
         if(LevelState.IsPaused)
             return;
         if(path == null)
@@ -63,6 +66,7 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        // If the currentPoint is the last point, then end
         if(currentPoint == path.vectorPath.Count)
         {
             reachedEnd = true;
@@ -72,12 +76,14 @@ public class EnemyAI : MonoBehaviour
             reachedEnd = false;
         }
 
+        // Move towards the current point
         Vector2 direction = ((Vector2)path.vectorPath[currentPoint] - rigidbody.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
         rigidbody.AddForce(force);
         float distance = Vector2.Distance(rigidbody.position, path.vectorPath[currentPoint]);
 
+        // Move to next point
         if(distance < nextPointDist)
         {
             currentPoint++;
