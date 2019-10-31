@@ -37,10 +37,13 @@ namespace MaziesMansion
 
         private void OnCollisionStay2D(Collision2D collision)
         {
+            // Whenever the player is in contact with the enemy
             if (collision.collider.gameObject.tag == "Enemy")
             {
+                // Check if the enemy is invulerable or not
                 if (canTakeDamage)
                 {
+                    // Set timer and take damage
                     StartCoroutine(WaitForSeconds());
                     CurrentHealth -= Damage;
                 }
@@ -48,10 +51,11 @@ namespace MaziesMansion
             }
         }
 
+        // Damage timer for player
         IEnumerator WaitForSeconds()
         {
             canTakeDamage = false;
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSecondsRealtime(1); // Set to 1 second
             canTakeDamage = true;
         }
 
@@ -82,9 +86,11 @@ namespace MaziesMansion
             if(Mathf.Abs(yMovement) > 0.5f)
                 movementVector.y = yMovement  * MoveSpeed * Time.deltaTime;
 
+            // Movement animations
             Animator.SetFloat("Move X", xMovement);
             Animator.SetFloat("Move Y", yMovement);
-            if(movementVector.sqrMagnitude > 0)
+
+            if (movementVector.sqrMagnitude > 0)
             {
                 transform.Translate(movementVector);
                 Animator.SetBool("PlayerMoving", true);
@@ -99,6 +105,7 @@ namespace MaziesMansion
                     _footsteps.enabled = false;
             }
 
+            // Interact with 'e' if interactable
             if (Input.GetKeyDown("e") && null != _interactable)
                 _interactable.OnPlayerInteracts?.Invoke();
         }

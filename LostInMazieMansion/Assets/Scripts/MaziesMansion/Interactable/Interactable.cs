@@ -10,12 +10,14 @@ namespace MaziesMansion
         public UnityEvent OnPlayerInteracts;
         public UnityEvent OnPlayerInspects;
 
+        // Player entering interaction trigger
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.CompareTag("Player"))
                 OnPlayerEntered?.Invoke();
         }
 
+        // Player exiting interaction trigger
         private void OnTriggerExit2D(Collider2D other)
         {
             if(other.CompareTag("Player"))
