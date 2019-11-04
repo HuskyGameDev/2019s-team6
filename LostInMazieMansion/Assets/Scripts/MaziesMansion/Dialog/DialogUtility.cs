@@ -33,6 +33,12 @@ namespace MaziesMansion
                 PersistentData.Instance.Inventory.HasItem(name));
             story.BindExternalFunction<string>("HasCollectedItem", name =>
                 PersistentData.Instance.Inventory.HasCollectedItem(name));
+            story.BindExternalFunction<string>("HasFlag", name =>
+                PersistentData.Instance.DialogVariables.Flags.Contains(name));
+            story.BindExternalFunction<string>("SetFlag", name =>
+                PersistentData.Instance.DialogVariables.Flags.Add(name));
+            story.BindExternalFunction<string>("ClearFlag", name =>
+                PersistentData.Instance.DialogVariables.Flags.Remove(name));
             return story;
         }
 
