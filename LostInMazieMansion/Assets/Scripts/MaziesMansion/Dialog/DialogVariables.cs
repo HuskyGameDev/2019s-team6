@@ -25,6 +25,8 @@ namespace MaziesMansion
             }
         }
 
+        public HashSet<string> Flags = new HashSet<string>();
+
         public bool TryGetValue(string storyName, string variableName, out object value)
             => TryGetValue((storyName, variableName), out value);
 
