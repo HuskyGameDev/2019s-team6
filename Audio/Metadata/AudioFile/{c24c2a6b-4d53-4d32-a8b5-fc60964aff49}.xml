@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{c24c2a6b-4d53-4d32-a8b5-fc60964aff49}">
+		<property name="assetPath">
+			<value>Static60s.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>121.85832199546485</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cb2af8e-a4db-4eaa-ba27-c93e15d7e004}</destination>
+		</relationship>
+	</object>
+</objects>

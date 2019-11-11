@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{040458aa-4614-4035-a11d-f16d019347da}">
+		<property name="assetPath">
+			<value>Success_Item Noise.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>6</value>
+		</property>
+		<property name="length">
+			<value>2.6836666666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cb2af8e-a4db-4eaa-ba27-c93e15d7e004}</destination>
+		</relationship>
+	</object>
+</objects>
