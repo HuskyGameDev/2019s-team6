@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{fddff9bd-aaa6-4caa-84e4-628de55ffc7b}">
+		<property name="assetPath">
+			<value>Footsteps4_Wet Tile_FOL_Calvert.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cb2af8e-a4db-4eaa-ba27-c93e15d7e004}</destination>
+		</relationship>
+	</object>
+</objects>
