@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UseButton : MonoBehaviour
 {
+    private SpriteMask flashlight;
     /*
      * When the "use" button is clicked, *do something*
      * according to what object is used.
@@ -19,14 +20,20 @@ public class UseButton : MonoBehaviour
     public void OnUseClick()
     {
         // if itemInSlot is a fear conquering item then:
-            // in the case of fear conquering items, get a reference to the player
-            // THIS WORKS :)
-            //GameObject player = GameObject.FindGameObjectWithTag("Player");
-            //Debug.Log(player.name);
+        // in the case of fear conquering items, get a reference to the player
+        // THIS WORKS :)
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //Debug.Log(player.name);
 
-            // if the item is the flashlight/cage/video camera/blinders/corks
-                // change the player's animaton to match
-                // => change to flashlight version
+        // if the item is the flashlight/cage/video camera/blinders/corks
+        // change the player's animaton to match
+        // => change to flashlight version
+        flashlight = GameObject.Find("Player").GetComponentInChildren<SpriteMask>();
+        Debug.Log(flashlight);
+        if(flashlight != null)
+        {
+            flashlight.enabled = true;
+        }
                 // => put cage on the ground and go back to normal
                 // => pull out video camera, hold it and look at it -OR- change to a "video camera" type scene
                 // => put on blinders
