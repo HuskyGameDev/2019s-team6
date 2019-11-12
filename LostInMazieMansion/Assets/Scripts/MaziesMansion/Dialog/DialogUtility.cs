@@ -1,5 +1,7 @@
+using System;
 using System.Text.RegularExpressions;
 using Ink.Runtime;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
@@ -25,7 +27,7 @@ namespace MaziesMansion
             }
         }
 
-        public static Story CreateStory(string storyData)
+        public static Story CreateStory(string storyData, DialogEvent[] boundEvents)
         {
             var story = new Story(storyData);
             var save = PersistentData.Instance;
@@ -33,14 +35,20 @@ namespace MaziesMansion
                 PersistentData.Instance.Inventory.HasItem(name));
             story.BindExternalFunction<string>("HasCollectedItem", name =>
                 PersistentData.Instance.Inventory.HasCollectedItem(name));
-            story.BindExternalFunction<string>("HasFlag", name =>
-                PersistentData.Instance.DialogVariables.Flags.Contains(name));
-            story.BindExternalFunction<string>("SetFlag", name =>
-                PersistentData.Instance.DialogVariables.Flags.Add(name));
-            story.BindExternalFunction<string>("ClearFlag", name =>
-                PersistentData.Instance.DialogVariables.Flags.Remove(name));
+            story.BindExternalFunction<string>("HasFlag", name => HasFlag(name));
+            story.BindExternalFunction<string>("SetFlag", (Action<string>) SetFlag);
+            story.BindExternalFunction<string>("ClearFlag", (Action<string>) ClearFlag);
+            foreach(var evt in boundEvents)
+                story.BindExternalFunction($"Do{evt.Name}", () => {
+                    Debug.Log(evt.Name);
+                    evt.Actions?.Invoke();
+                });
             return story;
         }
+
+        public static bool HasFlag(string name) => PersistentData.Instance.DialogVariables.Flags.Contains(name);
+        public static void SetFlag(string name) => PersistentData.Instance.DialogVariables.Flags.Add(name);
+        public static void ClearFlag(string name) => PersistentData.Instance.DialogVariables.Flags.Remove(name);
 
         public static bool PerformAction(string text, out string actionName, out string[] actionArgs)
         {
