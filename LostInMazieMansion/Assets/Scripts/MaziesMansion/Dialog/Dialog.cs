@@ -17,13 +17,15 @@ namespace MaziesMansion
         [Tooltip("The path to resume the story at on subsequent runs (default is 0).")]
         public string ResumePath = "0";
 
+        public DialogEvent[] Events = new DialogEvent[0];
+
         private Story _story;
 
         private void Awake()
         {
             if(null == InkJSON)
                 Destroy(this);
-            _story = DialogUtility.CreateStory(InkJSON.text);
+            _story = DialogUtility.CreateStory(InkJSON.text, Events);
             var save = PersistentData.Instance;
             if(save.DialogState.TryGetValue(InkJSON.name, out var state))
                 _story.state.LoadJson(state);
