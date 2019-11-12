@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5353,7 +5353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 1503190393}
+  EtoInteractImage: {fileID: 0}
 --- !u!1 &387437617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5856,7 +5856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 1503190393}
+  EtoInteractImage: {fileID: 0}
 --- !u!1 &1033820224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 1503190393}
+  EtoInteractImage: {fileID: 0}
 --- !u!1001 &1153198149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6238,10 +6238,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
@@ -6263,31 +6263,24 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3149430597303352693, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 5826773732202139421, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_SortingLayerID
+      value: 1677225935
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9003757390165219093, guid: 4961286f353d42146980b466e0454db5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
---- !u!114 &1503190393 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 556000573382430830, guid: 4961286f353d42146980b466e0454db5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1503190392}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1570801663
 GameObject:
   m_ObjectHideFlags: 0
@@ -6394,4 +6387,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 1503190393}
+  EtoInteractImage: {fileID: 0}
