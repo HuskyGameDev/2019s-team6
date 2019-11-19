@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
@@ -8,13 +7,13 @@ namespace MaziesMansion
     [RequireComponent(typeof(Animator))]
     internal sealed class Player : MonoBehaviour
     {
-#region MovementData
+        #region MovementData
         private Animator Animator;
 
         public float MoveSpeed = 3;
-#endregion
+        #endregion
 
-#region HealthData
+        #region HealthData
         /// The player's current health.
         public int CurrentHealth
         {
@@ -22,7 +21,7 @@ namespace MaziesMansion
             set
             {
                 PersistentData.Instance.CurrentSanity = value;
-                if(value <= 0)
+                if (value <= 0)
                     Die();
             }
         }
@@ -34,6 +33,8 @@ namespace MaziesMansion
         private Interactable _interactable;
         private Footsteps _footsteps;
         private bool canTakeDamage = true;
+        private GameObject flashlight;
+        private GameObject player;
 
         private void OnCollisionStay2D(Collision2D collision)
         {
@@ -47,7 +48,7 @@ namespace MaziesMansion
                     StartCoroutine(WaitForSeconds());
                     CurrentHealth -= Damage;
                 }
-               
+
             }
         }
 
@@ -61,6 +62,8 @@ namespace MaziesMansion
 
         private void Start()
         {
+            player = GameObject.Find("Player");
+            flashlight = GameObject.Find("Flashlight");
             var save = PersistentData.Instance;
             if (save.CurrentSanity > save.MaximumSanity)
                 save.CurrentSanity = save.MaximumSanity;
@@ -70,21 +73,40 @@ namespace MaziesMansion
 
         private void Update()
         {
-            if(LevelState.IsPaused)
+
+            if (LevelState.IsPaused)
             {
-                if(null != _footsteps)
+                if (null != _footsteps)
                     _footsteps.Paused = true;
                 return;
-            } else if(null != _footsteps)
+            }
+            else if (null != _footsteps)
                 _footsteps.Paused = false;
             var xMovement = Input.GetAxisRaw("Horizontal");
             var yMovement = Input.GetAxisRaw("Vertical");
 
+            if (flashlight !=null && xMovement == -1)
+            {
+                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -270);
+            }
+            else if (flashlight != null && xMovement == 1)
+            {
+                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -90);
+            }
+            else if (flashlight != null && yMovement == -1)
+            {
+                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -180);
+            }
+            else if (flashlight != null && yMovement == 1)
+            {
+                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, 0);
+            }
+
             var movementVector = new Vector3(0, 0, 0);
-            if(Mathf.Abs(xMovement) > 0.5f)
+            if (Mathf.Abs(xMovement) > 0.5f)
                 movementVector.x = xMovement * MoveSpeed * Time.deltaTime;
-            if(Mathf.Abs(yMovement) > 0.5f)
-                movementVector.y = yMovement  * MoveSpeed * Time.deltaTime;
+            if (Mathf.Abs(yMovement) > 0.5f)
+                movementVector.y = yMovement * MoveSpeed * Time.deltaTime;
 
             // Movement animations
             Animator.SetFloat("Move X", xMovement);
@@ -96,12 +118,13 @@ namespace MaziesMansion
                 Animator.SetBool("PlayerMoving", true);
                 Animator.SetFloat("LastMoveX", Mathf.Abs(movementVector.y) > 0.5f ? 0 : movementVector.x);
                 Animator.SetFloat("LastMoveY", movementVector.y);
-                if(null != _footsteps)
+                if (null != _footsteps)
                     _footsteps.enabled = true;
-            } else
+            }
+            else
             {
                 Animator.SetBool("PlayerMoving", false);
-                if(null != _footsteps)
+                if (null != _footsteps)
                     _footsteps.enabled = false;
             }
 
@@ -112,7 +135,7 @@ namespace MaziesMansion
 
         private void LateUpdate()
         {
-            if(null != _interactable)
+            if (null != _interactable)
                 LevelState.Instance.InteractButton.transform.position = _interactable.transform.position;
         }
 
@@ -124,11 +147,11 @@ namespace MaziesMansion
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.tag == "Enemy")
+            if (other.tag == "Enemy")
             {
                 CurrentHealth -= Damage;
             }
-            if(other.TryGetComponent<Interactable>(out var interactable))
+            if (other.TryGetComponent<Interactable>(out var interactable))
             {
                 _interactable = interactable;
                 LevelState.Instance.InteractButton.SetActive(true);

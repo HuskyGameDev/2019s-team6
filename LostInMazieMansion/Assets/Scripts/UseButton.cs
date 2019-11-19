@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UseButton : MonoBehaviour
 {
@@ -16,22 +14,37 @@ public class UseButton : MonoBehaviour
      * If the item is not a Fear Conquering item, then get a reference
      * to the item so that the appropriate sound or animation or message plays
      */
+    private GameObject TheLight;
+
+    private void Start()
+    {
+        TheLight = GameObject.Find("Flashlight");
+        Debug.Log(TheLight);
+    }
+
     public void OnUseClick()
     {
-        // if itemInSlot is a fear conquering item then:
-            // in the case of fear conquering items, get a reference to the player
-            // THIS WORKS :)
-            //GameObject player = GameObject.FindGameObjectWithTag("Player");
-            //Debug.Log(player.name);
+        UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLights = TheLight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
 
-            // if the item is the flashlight/cage/video camera/blinders/corks
-                // change the player's animaton to match
-                // => change to flashlight version
-                // => put cage on the ground and go back to normal
-                // => pull out video camera, hold it and look at it -OR- change to a "video camera" type scene
-                // => put on blinders
-                // => move player around wall and show wall slowly filling with corks
-                // the marker may not need a separate animation, unless we want to
+        if (The2DLights != null)
+        {
+            The2DLights.intensity = 0.6f;
+        }
+
+        // if itemInSlot is a fear conquering item then:
+        // in the case of fear conquering items, get a reference to the player
+        // THIS WORKS :)
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //Debug.Log(player.name);
+
+        // if the item is the flashlight/cage/video camera/blinders/corks
+        // change the player's animaton to match
+        // => change to flashlight version
+        // => put cage on the ground and go back to normal
+        // => pull out video camera, hold it and look at it -OR- change to a "video camera" type scene
+        // => put on blinders
+        // => move player around wall and show wall slowly filling with corks
+        // the marker may not need a separate animation, unless we want to
 
         // no matter what the item is, play the correct sound and display the message if any
 
