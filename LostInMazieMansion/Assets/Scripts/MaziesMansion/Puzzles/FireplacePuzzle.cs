@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace MaziesMansion
@@ -10,6 +11,17 @@ namespace MaziesMansion
 
         [HideInInspector]
         public int NextExpectedTarget = 0;
+
+        public UnityEvent OnPuzzleExit;
+        public UnityEvent OnPuzzleFailure;
+
+        private void Start()
+        {
+            if(null == OnPuzzleExit)
+                OnPuzzleExit = new UnityEvent();
+            if(null == OnPuzzleFailure)
+                OnPuzzleFailure = new UnityEvent();
+        }
 
         public void ResetPuzzle()
         {
@@ -25,8 +37,9 @@ namespace MaziesMansion
                 if(NextExpectedTarget >= Targets.Length)
                 {
                     Debug.Log("The last target has been clicked, action here");
-                    gameObject.SetActive(false);
                     DialogUtility.SetFlag("F3_Fireplace_Solved");
+                    gameObject.SetActive(false);
+                    OnPuzzleExit.Invoke();
                 }
             } else
             {
@@ -34,6 +47,7 @@ namespace MaziesMansion
                 //may need to add in some sound effects here to distinguish from
                 //correct ordering
                 Debug.Log("Wrong target clicked");
+                OnPuzzleFailure.Invoke();
                 NextExpectedTarget = 0;
             }
         }

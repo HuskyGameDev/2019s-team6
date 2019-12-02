@@ -46,4 +46,15 @@ MonoBehaviour:
     jsonAssetPath: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 0df729c597338234f8a967478fda3bd0, type: 3}
   pendingCompilationStack: []
-  compilationStack: []
+  compilationStack:
+  - state: 1
+    inkFile:
+      compileAutomatically: 0
+      inkAsset: {fileID: 102900000, guid: f1d6b464effcfcf458a13e1b7237c3f4, type: 3}
+      jsonAssetPath: {fileID: 0}
+      jsonAsset: {fileID: 4900000, guid: 6b8598d3a6b2bc44abad6df888840171, type: 3}
+    inkAbsoluteFilePath: C:/Users/clacourt/repos/LostInMazieMansion/LostInMazieMansion/Assets/Dialog/F3_Lounge_Fireplace.ink
+    jsonAbsoluteFilePath: C:/Users/clacourt/repos/LostInMazieMansion/LostInMazieMansion/Assets/Dialog/F3_Lounge_Fireplace.json
+    output: []
+    errorOutput: []
+    timeTaken: 0

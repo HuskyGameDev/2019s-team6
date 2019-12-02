@@ -241,12 +241,12 @@ PrefabInstance:
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7140245
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1116796
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
@@ -6447,12 +6447,12 @@ PrefabInstance:
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7140245
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1116796
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
@@ -6836,6 +6836,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 512671760}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerStory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912775592678927705, guid: d9a75e056927b494a81a96caaffe9617,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9a75e056927b494a81a96caaffe9617, type: 3}
