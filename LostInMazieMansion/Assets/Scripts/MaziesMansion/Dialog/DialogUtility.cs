@@ -27,7 +27,7 @@ namespace MaziesMansion
             }
         }
 
-        public static Story CreateStory(string storyData, DialogEvent[] boundEvents)
+        public static Story CreateStory(string storyData)
         {
             var story = new Story(storyData);
             var save = PersistentData.Instance;
@@ -38,11 +38,6 @@ namespace MaziesMansion
             story.BindExternalFunction<string>("HasFlag", name => HasFlag(name));
             story.BindExternalFunction<string>("SetFlag", (Action<string>) SetFlag);
             story.BindExternalFunction<string>("ClearFlag", (Action<string>) ClearFlag);
-            foreach(var evt in boundEvents)
-                story.BindExternalFunction($"Do{evt.Name}", () => {
-                    Debug.Log(evt.Name);
-                    evt.Actions?.Invoke();
-                });
             return story;
         }
 

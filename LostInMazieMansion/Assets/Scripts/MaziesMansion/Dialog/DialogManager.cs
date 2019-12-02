@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace MaziesMansion
 {
@@ -19,7 +20,9 @@ namespace MaziesMansion
         private Story _story;
         private string _storyName;
 
-        public void BeginStory(string storyName, Story story)
+        private Dictionary<string, UnityEvent> CurrentEvents = new Dictionary<string, UnityEvent>();
+
+        public void BeginStory(string storyName, Story story, params DialogEvent[] events)
         {
             LevelState.IsInteractionOpen = true;
             Animator.SetBool("IsOpen", true);
@@ -31,6 +34,10 @@ namespace MaziesMansion
             if(save.DialogVariables.StoryKeys.ContainsKey(_storyName))
                 foreach(var key in save.DialogVariables.StoryKeys[_storyName])
                     _story.variablesState[key] = save.DialogVariables[_storyName, key];
+            if(null != events)
+                foreach(var e in events)
+                    if(null != e.Actions)
+                        CurrentEvents[e.Name] = e.Actions;
             AdvanceStory();
         }
 
@@ -66,46 +73,52 @@ namespace MaziesMansion
                 return;
             }
 
-            var text = GetNextLine();
-            for(;DialogUtility.PerformAction(text, out var actionName, out var actionArgs); text = GetNextLine())
+            string text;
+            do
             {
-                switch(actionName)
+                for(text = GetNextLine(); DialogUtility.PerformAction(text, out var actionName, out var actionArgs); text = GetNextLine())
                 {
-                    case "AddItem":
-                        var path = actionArgs[0];
-                        var item = Resources.Load<InventoryObject>(path);
-                        if(null == item)
-                            Debug.LogError($"Could not load item from path \"{path}\"");
-                        else
-                            PersistentData.Instance.Inventory.AddItem(item);
-                        break;
-                    case "RemoveItem":
-                        var itemID = actionArgs[0];
-                        PersistentData.Instance.Inventory.RemoveItem(itemID);
-                        break;
-                    case "EndAndMovePlayerToDoor":
-                        PersistentData.Instance.Volatile.TargetDoorName = actionArgs[1];
-                        SceneManager.LoadScene(actionArgs[0], LoadSceneMode.Single);
-                        break;
-                    default:
-                        if(actionArgs.Length > 0)
-                            Debug.LogError($"Unrecognized action \"{actionName}\" with argument(s) \"{string.Join("\", \"", actionArgs)}\"");
-                        else
-                            Debug.LogError($"Unrecognized action \"{actionName}\"");
-                        break;
+                    switch(actionName)
+                    {
+                        case "AddItem":
+                            var path = actionArgs[0];
+                            var item = Resources.Load<InventoryObject>(path);
+                            if(null == item)
+                                Debug.LogError($"Could not load item from path \"{path}\"");
+                            else
+                                PersistentData.Instance.Inventory.AddItem(item);
+                            break;
+                        case "RemoveItem":
+                            var itemID = actionArgs[0];
+                            PersistentData.Instance.Inventory.RemoveItem(itemID);
+                            break;
+                        case "EndAndMovePlayerToDoor":
+                            PersistentData.Instance.Volatile.TargetDoorName = actionArgs[1];
+                            SceneManager.LoadScene(actionArgs[0], LoadSceneMode.Single);
+                            break;
+                        default:
+                            if(CurrentEvents.TryGetValue(actionName, out var e))
+                                e.Invoke();
+                            else if(actionArgs.Length > 0)
+                                Debug.LogError($"Unrecognized action \"{actionName}\" with argument(s) \"{string.Join("\", \"", actionArgs)}\"");
+                            else
+                                Debug.LogError($"Unrecognized action \"{actionName}\"");
+                            break;
+                    }
+                    if(!CanContinue)
+                    {
+                        EndStory();
+                        return;
+                    }
                 }
-                if(!CanContinue)
-                {
-                    EndStory();
-                    return;
-                }
-            }
+            } while(_story != null && string.IsNullOrWhiteSpace(text));
             if(null != Lines)
             {
                 Text.text = text;
             } else
             {
                 var (actor, line) = DialogUtility.GetActorAndLine(text);
+                Debug.Log($"Text: {line}\nPosition: {_story.state.currentPathString}");
                 Name.text = string.IsNullOrEmpty(actor) ? string.Empty : actor;
                 Text.text = line;
             }
@@ -135,6 +148,7 @@ namespace MaziesMansion
             Animator.SetBool("IsOpen", !closeDialog);
             LevelState.IsInteractionOpen = !closeDialog;
             StopAllCoroutines();
+            CurrentEvents.Clear();
             _textAnimation = null;
             if(null != _story)
             {

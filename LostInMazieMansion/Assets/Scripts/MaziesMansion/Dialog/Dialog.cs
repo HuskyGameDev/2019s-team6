@@ -25,7 +25,7 @@ namespace MaziesMansion
         {
             if(null == InkJSON)
                 Destroy(this);
-            _story = DialogUtility.CreateStory(InkJSON.text, Events);
+            _story = DialogUtility.CreateStory(InkJSON.text);
             var save = PersistentData.Instance;
             if(save.DialogState.TryGetValue(InkJSON.name, out var state))
                 _story.state.LoadJson(state);
@@ -40,7 +40,7 @@ namespace MaziesMansion
                 _story.state.ForceEnd();
                 _story.ChoosePathString(ResumePath);
             }
-            FindObjectOfType<DialogManager>().BeginStory(InkJSON.name, _story);
+            FindObjectOfType<DialogManager>().BeginStory(InkJSON.name, _story, Events);
         }
     }
 }
