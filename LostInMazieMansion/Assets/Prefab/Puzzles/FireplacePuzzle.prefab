@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4092744342379998977
 RectTransform:
   m_ObjectHideFlags: 0
@@ -261,9 +261,7 @@ MonoBehaviour:
   Targets:
   - {fileID: 8334918747257527084}
   - {fileID: 2366377358356282856}
-  - {fileID: 5177891245332313063}
   - {fileID: 2709459059635316800}
-  Dialog: {fileID: 0}
   NextExpectedTarget: 0
 --- !u!1 &4465442553303436004
 GameObject:
