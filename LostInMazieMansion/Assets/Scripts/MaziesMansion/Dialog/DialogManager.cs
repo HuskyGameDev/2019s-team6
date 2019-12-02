@@ -118,7 +118,6 @@ namespace MaziesMansion
             } else
             {
                 var (actor, line) = DialogUtility.GetActorAndLine(text);
-                Debug.Log($"Text: {line}\nPosition: {_story.state.currentPathString}");
                 Name.text = string.IsNullOrEmpty(actor) ? string.Empty : actor;
                 Text.text = line;
             }
