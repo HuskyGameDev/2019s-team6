@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
@@ -13,6 +14,10 @@ namespace MaziesMansion
         public GameObject InventoryInterface = null;
 
         public GameObject InteractButton = null;
+
+        public FadeInOut FadeInOutInterface = null;
+
+        private Player Player = null;
 
         private bool _isGamePaused = false;
         private bool _isInventoryOpen = false;
@@ -55,6 +60,7 @@ namespace MaziesMansion
             get => _isInteractionOpen;
             set
             {
+                Player?.StopAnimation();
                 if(IsInteractionOpen != value)
                     _openInterfaceCount += value ? 1 : -1;
                 _isInteractionOpen = value;
@@ -65,6 +71,7 @@ namespace MaziesMansion
         {
             _openInterfaceCount = 0;
             Instance = this;
+            Player = FindObjectOfType<Player>();
         }
 
         private void Start()
@@ -103,6 +110,21 @@ namespace MaziesMansion
             // toggle inventory while the game is running and not paused and not in another screen.
             else if(!IsInteractionOpen && !IsGamePaused && Input.GetKeyDown(KeyCode.Tab))
                 IsInventoryOpen = !IsInventoryOpen;
+        }
+
+        public void TransitionToLevel(string sceneName, string targetDoor = null)
+        {
+            if(null != targetDoor)
+                PersistentData.Instance.Volatile.TargetDoorName = targetDoor;
+            if(null == FadeInOutInterface)
+                TransitionToLevelImmediate(sceneName);
+            else
+                FadeInOutInterface.TriggerTransition(sceneName);
+        }
+
+        public void TransitionToLevelImmediate(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }
 }

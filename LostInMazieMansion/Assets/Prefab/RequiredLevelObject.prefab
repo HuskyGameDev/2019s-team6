@@ -213,6 +213,7 @@ MonoBehaviour:
   PauseInterface: {fileID: 8080743647587481596}
   InventoryInterface: {fileID: 2758037118256056211}
   InteractButton: {fileID: 2689960866414956360}
+  FadeInOutInterface: {fileID: 443954662177547086}
 --- !u!114 &2806557744543849027
 MonoBehaviour:
   m_ObjectHideFlags: 0

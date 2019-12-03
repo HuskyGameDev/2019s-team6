@@ -27,10 +27,7 @@ namespace MaziesMansion
             if(!enabled)
                 return;
             if(other.tag == "Player")
-            {
-                PersistentData.Instance.Volatile.TargetDoorName = TargetDoorName;
-                SceneManager.LoadScene(TargetSceneName, LoadSceneMode.Single);
-            }
+                LevelState.Instance.TransitionToLevel(TargetSceneName, targetDoor: TargetDoorName);
         }
 
         public void Place(GameObject obj)

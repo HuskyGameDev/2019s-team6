@@ -133,6 +133,11 @@ namespace MaziesMansion
                 _interactable.OnPlayerInteracts?.Invoke();
         }
 
+        public void StopAnimation()
+        {
+            Animator.SetBool("PlayerMoving", false);
+        }
+
         private void LateUpdate()
         {
             if (null != _interactable)

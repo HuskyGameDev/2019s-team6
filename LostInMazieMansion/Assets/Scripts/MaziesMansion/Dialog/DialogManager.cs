@@ -93,8 +93,7 @@ namespace MaziesMansion
                             PersistentData.Instance.Inventory.RemoveItem(itemID);
                             break;
                         case "EndAndMovePlayerToDoor":
-                            PersistentData.Instance.Volatile.TargetDoorName = actionArgs[1];
-                            SceneManager.LoadScene(actionArgs[0], LoadSceneMode.Single);
+                            LevelState.TransitionToLevel(actionArgs[0], targetDoor: actionArgs[1]);
                             break;
                         default:
                             if(CurrentEvents.TryGetValue(actionName, out var e))
