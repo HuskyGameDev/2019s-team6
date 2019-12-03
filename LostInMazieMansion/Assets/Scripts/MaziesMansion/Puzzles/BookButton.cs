@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace MaziesMansion
@@ -24,6 +25,9 @@ namespace MaziesMansion
         private Transform yellow;
         private Transform green;
 
+        public UnityEvent OnPuzzleExit;
+        public UnityEvent OnPuzzleFailure;
+
         // Start is called before the first frame update
         void Awake()
         {
@@ -34,16 +38,29 @@ namespace MaziesMansion
             PlayerPrefs.SetInt("BookIndex", 0);
         }
 
+        private void Start()
+        {
+            if (null == OnPuzzleExit)
+                OnPuzzleExit = new UnityEvent();
+            if (null == OnPuzzleFailure)
+                OnPuzzleFailure = new UnityEvent();
+        }
+
+        public void ResetPuzzle()
+        {
+            PlayerPrefs.SetInt("BookIndex", 0);
+        }
+
         public void onClicked()
         {
             Debug.Log("Before: " + PlayerPrefs.GetInt("BookIndex"));
             book.transform.position = pos[PlayerPrefs.GetInt("BookIndex")];
-            reset();
+            setBooks();
             Debug.Log("After: " + PlayerPrefs.GetInt("BookIndex"));
 
         }
 
-        public void reset()
+        private void setBooks()
         {
             PlayerPrefs.SetInt("BookIndex", PlayerPrefs.GetInt("BookIndex") + 1);
             if (PlayerPrefs.GetInt("BookIndex") >= pos.Length && !checkOrder())
@@ -53,6 +70,14 @@ namespace MaziesMansion
                 blue.position = oldPos[1];
                 yellow.position = oldPos[2];
                 green.position = oldPos[3];
+                OnPuzzleFailure.Invoke();
+            }
+            else
+            {
+                Debug.Log("Correct Book Order, action here");
+                DialogUtility.SetFlag("F3_Bookshelf_Solved");
+                gameObject.SetActive(false);
+                OnPuzzleExit.Invoke();
             }
         }
 

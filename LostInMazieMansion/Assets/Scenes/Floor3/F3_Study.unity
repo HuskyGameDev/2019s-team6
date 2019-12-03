@@ -5451,7 +5451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 0}
 --- !u!1 &387437617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,7 +5954,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 0}
+--- !u!1 &978824059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7555852920016724399, guid: 0c6acf91e75562e43a67efe9ec1e012a,
+    type: 3}
+  m_PrefabInstance: {fileID: 355477721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &978824060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978824059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a365c1e97786b31428bf250bf291f87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  book: {fileID: 0}
+  OnPuzzleExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1361504346}
+        m_MethodName: TriggerStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPuzzleFailure:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1033820224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6062,7 +6096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 0}
 --- !u!1001 &1153198149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6255,7 +6288,33 @@ MonoBehaviour:
   InkJSON: {fileID: 4900000, guid: a97c4f2a02a20344b98a533d1c0b8584, type: 3}
   InitialPath: 0
   ResumePath: start
-  Events: []
+  Events:
+  - Name: OpenPuzzle
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 978824059}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 978824060}
+          m_MethodName: ResetPuzzle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1001 &1503190392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6462,4 +6521,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921edaae2b41c214fbef69b3cce257bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EtoInteractImage: {fileID: 0}
