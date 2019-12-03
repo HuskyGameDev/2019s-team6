@@ -9,7 +9,7 @@ namespace MaziesMansion
         private string NextScene;
         private LevelState LevelState;
 
-        private void Awake()
+        private void Start()
         {
             Animator = GetComponent<Animator>();
             LevelState = LevelState.Instance;
