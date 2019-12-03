@@ -470,6 +470,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 5041709928107425206, guid: c1bc94bd3c8f86f43bfb9716eba92966,
         type: 3}
       propertyPath: m_Sprite
@@ -490,16 +500,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.0001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bc94bd3c8f86f43bfb9716eba92966, type: 3}
@@ -4817,11 +4817,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5826773732202139421, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4851,26 +4846,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3715754032578225920, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230174378314059176, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230174378314059176, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230174378314059176, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 556000573382430830, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
@@ -5247,6 +5222,7 @@ MonoBehaviour:
   InkJSON: {fileID: 4900000, guid: 0df729c597338234f8a967478fda3bd0, type: 3}
   InitialPath: 0
   ResumePath: start
+  Events: []
 --- !u!1 &1792097974
 GameObject:
   m_ObjectHideFlags: 0

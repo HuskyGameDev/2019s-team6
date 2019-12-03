@@ -5128,32 +5128,6 @@ MonoBehaviour:
   Actor: Bookshelf
   Lines:
   - There sure are a lot of books in this place...
---- !u!1 &293165620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 191451153440669020, guid: 4961286f353d42146980b466e0454db5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1503190392}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &293165621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293165620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_RendererOverrideOption: 0
-  m_RendererData: {fileID: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &369862106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,6 +5718,7 @@ MonoBehaviour:
   InkJSON: {fileID: 4900000, guid: 86e3068098e3de84fa5d52d39d9b8141, type: 3}
   InitialPath: 0
   ResumePath: start
+  Events: []
 --- !u!4 &918303154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8661670117209619551, guid: 4cb87aac74a926a4caf8df358d377237,
@@ -6156,6 +6131,7 @@ MonoBehaviour:
   InkJSON: {fileID: 4900000, guid: a97c4f2a02a20344b98a533d1c0b8584, type: 3}
   InitialPath: 0
   ResumePath: start
+  Events: []
 --- !u!1001 &1503190392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6243,40 +6219,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8080743646962803527, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2574604145165921398, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 191451153440669023, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5596002854104251684, guid: 4961286f353d42146980b466e0454db5,
+    - target: {fileID: 5218253638735977251, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5826773732202139421, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1677225935
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9003757390165219093, guid: 4961286f353d42146980b466e0454db5, type: 3}
