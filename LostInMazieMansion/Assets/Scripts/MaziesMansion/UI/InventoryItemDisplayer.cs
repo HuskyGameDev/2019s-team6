@@ -12,7 +12,8 @@ namespace MaziesMansion
 
         private UseButton UseButton;
         private DiscardButton DiscardButton;
-
+        private Player player;
+ 
         private void Start()
         {
             if(null == InventoryObject)
@@ -32,6 +33,10 @@ namespace MaziesMansion
         public void OnInteract()
         {
             UseButton.gameObject.SetActive(!UseButton.gameObject.activeSelf);
+
+            // Set which InventoryObject was clicked
+            UseButton.SetItemToUse(InventoryObject);
+
             DiscardButton.gameObject.SetActive(!DiscardButton.gameObject.activeSelf);
         }
     }

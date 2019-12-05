@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MaziesMansion;
+using UnityEngine;
 
 public class UseButton : MonoBehaviour
 {
@@ -15,20 +16,23 @@ public class UseButton : MonoBehaviour
      * to the item so that the appropriate sound or animation or message plays
      */
     private GameObject TheLight;
+    private InventoryObject itemToUse;
 
     private void Start()
     {
         TheLight = GameObject.Find("Flashlight");
-        Debug.Log(TheLight);
     }
 
     public void OnUseClick()
     {
-        UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLights = TheLight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
+        // Get Flashlight lighting component
+        UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLight = TheLight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
 
-        if (The2DLights != null)
+        // If the inventory item clicked was the flashlight
+        if (The2DLight != null && itemToUse.name == "Flashlight")
         {
-            The2DLights.intensity = 0.6f;
+            // then increase the intensity (turn on the flashlight)
+            The2DLight.intensity = 0.6f;
         }
 
         // if itemInSlot is a fear conquering item then:
@@ -49,5 +53,10 @@ public class UseButton : MonoBehaviour
         // no matter what the item is, play the correct sound and display the message if any
 
         // in the case of unlocking, send info to GameManager so that unlocking can be completed
+    }
+
+    public void SetItemToUse(InventoryObject o)
+    {
+        this.itemToUse = o;
     }
 }

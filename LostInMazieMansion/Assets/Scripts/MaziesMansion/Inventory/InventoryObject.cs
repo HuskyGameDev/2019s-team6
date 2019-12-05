@@ -5,7 +5,7 @@ namespace MaziesMansion
 {
     [CreateAssetMenu(fileName = "New Inventory Item", menuName = "Mazie/Inventory Item")]
     [Serializable]
-    internal class InventoryObject : ScriptableObject
+    public class InventoryObject : ScriptableObject
     {
         /// <summary>Unique ID of the item</summary>
         public string ID;
