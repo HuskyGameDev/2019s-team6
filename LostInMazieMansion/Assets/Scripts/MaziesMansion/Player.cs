@@ -35,6 +35,7 @@ namespace MaziesMansion
         private bool canTakeDamage = true;
         private GameObject flashlight;
         private GameObject player;
+        private GameObject fireplacePuzzle;
 
         private void OnCollisionStay2D(Collision2D collision)
         {
@@ -85,7 +86,7 @@ namespace MaziesMansion
             var xMovement = Input.GetAxisRaw("Horizontal");
             var yMovement = Input.GetAxisRaw("Vertical");
 
-            if (flashlight !=null && xMovement == -1)
+            if (flashlight != null && xMovement == -1)
             {
                 flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -270);
             }
@@ -130,7 +131,23 @@ namespace MaziesMansion
 
             // Interact with 'e' if interactable
             if (Input.GetKeyDown("e") && null != _interactable)
+            { 
                 _interactable.OnPlayerInteracts?.Invoke();
+            }
+
+            // Find the puzzle game object
+            fireplacePuzzle = GameObject.Find("FireplacePuzzle");
+
+            // If it is active,
+            if (fireplacePuzzle != null && fireplacePuzzle.active == true)
+            {
+                // then pause the game
+                Time.timeScale = 0;
+            } else
+            {
+                // otherwise resume
+                Time.timeScale = 1;
+            }
         }
 
         public void StopAnimation()
