@@ -7,12 +7,14 @@ namespace MaziesMansion
 
     internal sealed class BookButton : MonoBehaviour
     {
-
+        
         public Button book;
+        //position for placing books
         private Vector3[] pos = { new Vector3 { x = 336, y = 110, z = 0 },
         new Vector3 { x = 432, y = 110, z = 0},
         new Vector3 { x = 527, y = 110, z = 0},
         new Vector3 { x = 621, y = 110, z = 0} };
+        //position for resetting books
         private Vector3[] oldPos = { new Vector3 { x = 336, y = 295, z = 0 },
         new Vector3 { x = 432, y = 295, z = 0},
         new Vector3 { x = 527, y = 295, z = 0},
@@ -44,17 +46,22 @@ namespace MaziesMansion
                 OnPuzzleExit = new UnityEvent();
             if (null == OnPuzzleFailure)
                 OnPuzzleFailure = new UnityEvent();
+            Debug.Log(red.position.x + " " + red.position.y);
+            Debug.Log(blue.position.x + " " + blue.position.y);
+            Debug.Log(yellow.position.x + " " + yellow.position.y);
+            Debug.Log(green.position.x + " " + green.position.y);
         }
 
         public void ResetPuzzle()
         {
+            //reset book index
             PlayerPrefs.SetInt("BookIndex", 0);
         }
 
         public void onClicked()
         {
+            //if a book is clicked
             Debug.Log("Before: " + PlayerPrefs.GetInt("BookIndex"));
-            book.transform.position = pos[PlayerPrefs.GetInt("BookIndex")];
             setBooks();
             Debug.Log("After: " + PlayerPrefs.GetInt("BookIndex"));
 
@@ -62,7 +69,12 @@ namespace MaziesMansion
 
         private void setBooks()
         {
+            //increment book index
             PlayerPrefs.SetInt("BookIndex", PlayerPrefs.GetInt("BookIndex") + 1);
+            //place book in new position
+            book.transform.position = pos[PlayerPrefs.GetInt("BookIndex") - 1];
+            //if the all books are placed and is not at the correct order
+            //reset position for all books and reset book index to 0
             if (PlayerPrefs.GetInt("BookIndex") >= pos.Length && !checkOrder())
             {
                 PlayerPrefs.SetInt("BookIndex", 0);
@@ -72,11 +84,13 @@ namespace MaziesMansion
                 green.position = oldPos[3];
                 OnPuzzleFailure.Invoke();
             }
-            else
+            //if all books are placed and order is correct
+            //take next action
+            else if (PlayerPrefs.GetInt("BookIndex") == pos.Length && checkOrder())
             {
                 Debug.Log("Correct Book Order, action here");
                 DialogUtility.SetFlag("F3_Bookshelf_Solved");
-                gameObject.SetActive(false);
+                GameObject.Find("Bookshelf Puzzle").SetActive(false);
                 OnPuzzleExit.Invoke();
             }
         }
