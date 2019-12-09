@@ -7,7 +7,7 @@ namespace MaziesMansion
 
     internal sealed class BookButton : MonoBehaviour
     {
-        
+
         public Button book;
         //position for placing books
         private Vector3[] pos = { new Vector3 { x = 336, y = 110, z = 0 },
@@ -21,7 +21,7 @@ namespace MaziesMansion
         new Vector3 { x = 621, y = 295, z = 0} };
 
         //correct ordeer should be blue - green - red - yellow
-        //order sorted alphabetically based on the color 
+        //order sorted alphabetically based on the color
         private Transform red;
         private Transform blue;
         private Transform yellow;
