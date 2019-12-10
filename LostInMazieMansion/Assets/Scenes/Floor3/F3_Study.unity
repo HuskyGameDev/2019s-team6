@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5135,6 +5135,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1956529802241187914, guid: 0c6acf91e75562e43a67efe9ec1e012a,
+        type: 3}
+      propertyPath: OnPuzzleExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1361504346}
     - target: {fileID: 7555852920016724399, guid: 0c6acf91e75562e43a67efe9ec1e012a,
         type: 3}
       propertyPath: m_Name
@@ -5960,11 +5965,11 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 355477721}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &978824060
+--- !u!114 &978824060 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1956529802241187914, guid: 0c6acf91e75562e43a67efe9ec1e012a,
+    type: 3}
+  m_PrefabInstance: {fileID: 355477721}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978824059}
   m_Enabled: 1
@@ -5972,24 +5977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a365c1e97786b31428bf250bf291f87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  book: {fileID: 0}
-  OnPuzzleExit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1361504346}
-        m_MethodName: TriggerStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnPuzzleFailure:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1033820224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,7 +6189,7 @@ PrefabInstance:
     - target: {fileID: 9008892536892745666, guid: 9380727956ca8ef43b28743e499feb48,
         type: 3}
       propertyPath: m_Name
-      value: BookShelf (2)
+      value: PuzzleShelf
       objectReference: {fileID: 0}
     - target: {fileID: 4457487114674471726, guid: 9380727956ca8ef43b28743e499feb48,
         type: 3}
