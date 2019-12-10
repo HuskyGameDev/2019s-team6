@@ -8,13 +8,14 @@ VAR returning_from_puzzle = false
 { HasFlag("F3_Bookshelf_Solved"): -> returning }
 ~ returning_from_puzzle = true
 You: This bookshelf is a mess...
+{ not HasFlag("F3_Study_Bookshelf"): -> no_mazie}
 DO::OpenPuzzle
 ->DONE
 
 === after_puzzle
 ~ returning_from_puzzle = false
 { not HasFlag("F3_Bookshelf_Solved"): -> start }
-You: Hey, a key fell out of one of the books!
+You: Hey, a key fell out the brown book!
 <i>Obtained Dresser Key</i>
 DO::AddItem Items/F3_Dresser_Key
 ~ got_key = true
@@ -29,3 +30,6 @@ You: Better clean it up while I look for that key.
 === returning
 You: The bookshelf is nice and organized now.
 -> DONE 
+
+=== no_mazie
+-> DONE
