@@ -70,6 +70,16 @@ namespace MaziesMansion
                 save.CurrentSanity = save.MaximumSanity;
             Animator = GetComponent<Animator>();
             _footsteps = GetComponent<Footsteps>();
+
+            // Check if flashlight is active
+            UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLight = flashlight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
+
+            // If the flashlight was active
+            if (save.flashlightActive)
+            {
+                // then turn it on by increasing the intensity
+                The2DLight.intensity = 0.6f;
+            }
         }
 
         private void Update()

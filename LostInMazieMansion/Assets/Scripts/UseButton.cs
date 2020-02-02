@@ -33,6 +33,11 @@ public class UseButton : MonoBehaviour
         {
             // then increase the intensity (turn on the flashlight)
             The2DLight.intensity = 0.6f;
+            PersistentData.Instance.flashlightActive = true;
+
+        } else
+        {
+            PersistentData.Instance.flashlightActive = false;
         }
 
         // if itemInSlot is a fear conquering item then:

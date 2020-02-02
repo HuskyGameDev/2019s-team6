@@ -80,6 +80,9 @@ namespace MaziesMansion
 
         [Tooltip("The player's current sanity.")]
         public int CurrentSanity = int.MaxValue; // if the current > maximum, current will be set to maximum
+
+        [Tooltip("The player's flashlight state")]
+        public bool flashlightActive = false;
         #endregion
 
         #region Inventory
