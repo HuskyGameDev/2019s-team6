@@ -13,7 +13,7 @@ namespace MaziesMansion
         private UseButton UseButton;
         private DiscardButton DiscardButton;
         private Player player;
- 
+
         private void Start()
         {
             if(null == InventoryObject)
