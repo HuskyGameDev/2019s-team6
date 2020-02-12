@@ -106,5 +106,15 @@ namespace MaziesMansion
             GameObject.Find("Bookshelf Puzzle").SetActive(false);
             OnPuzzleExit.Invoke();
         }
+
+        private void OnEnable()
+        {
+            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction);
+        }
+
+        private void OnDisable()
+        {
+            LevelState.Instance.InterfaceState.Close(InterfaceType.Interaction);
+        }
     }
 }

@@ -51,5 +51,15 @@ namespace MaziesMansion
                 NextExpectedTarget = 0;
             }
         }
+
+        private void OnEnable()
+        {
+            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction);
+        }
+
+        private void OnDisable()
+        {
+            LevelState.Instance.InterfaceState.Close(InterfaceType.Interaction);
+        }
     }
 }

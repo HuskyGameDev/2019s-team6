@@ -24,7 +24,7 @@ namespace MaziesMansion
 
         public void BeginStory(string storyName, Story story, params DialogEvent[] events)
         {
-            LevelState.IsInteractionOpen = true;
+            LevelState.InterfaceState.Open(InterfaceType.Interaction);
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -45,7 +45,7 @@ namespace MaziesMansion
         private int CurrentLine = 0;
         public void BeginStory(string actor, string[] lines)
         {
-            LevelState.IsInteractionOpen = true;
+            LevelState.InterfaceState.Open(InterfaceType.Interaction);
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -134,7 +134,7 @@ namespace MaziesMansion
             yield return new WaitForSecondsRealtime(0.3f);
             for(var i = 1; i <= totalCharacters; i += 1)
             {
-                while(LevelState.IsGamePaused)
+                while(LevelState.InterfaceState[InterfaceType.PauseMenu | InterfaceType.FadeInOut])
                     yield return new WaitForSeconds(0.3f);
                 Text.maxVisibleCharacters = i;
                 yield return new WaitForSecondsRealtime(0.05f);
@@ -144,7 +144,7 @@ namespace MaziesMansion
         public void EndStory(bool closeDialog = true)
         {
             Animator.SetBool("IsOpen", !closeDialog);
-            LevelState.IsInteractionOpen = !closeDialog;
+            LevelState.InterfaceState.Toggle(InterfaceType.Interaction);
             StopAllCoroutines();
             CurrentEvents.Clear();
             _textAnimation = null;

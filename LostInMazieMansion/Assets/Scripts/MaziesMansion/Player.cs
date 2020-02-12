@@ -80,6 +80,9 @@ namespace MaziesMansion
                 // then turn it on by increasing the intensity
                 The2DLight.intensity = 0.6f;
             }
+
+            if(null != LevelState.Instance)
+                LevelState.Instance.InterfaceState.OnAnyInterfaceStateChanged += value => StopAnimation();
         }
 
         private void Update()
@@ -141,22 +144,8 @@ namespace MaziesMansion
 
             // Interact with 'e' if interactable
             if (Input.GetKeyDown("e") && null != _interactable)
-            { 
+            {
                 _interactable.OnPlayerInteracts?.Invoke();
-            }
-
-            // Find the puzzle game object
-            fireplacePuzzle = GameObject.Find("FireplacePuzzle");
-
-            // If it is active,
-            if (fireplacePuzzle != null && fireplacePuzzle.active == true)
-            {
-                // then pause the game
-                Time.timeScale = 0;
-            } else
-            {
-                // otherwise resume
-                Time.timeScale = 1;
             }
         }
 

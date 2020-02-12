@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MaziesMansion
 {
+    /// <summary>
+    /// Callbacks and management for the level fade in/out.
+    /// </summary>
     [RequireComponent(typeof(Animator))]
     internal sealed class FadeInOut : MonoBehaviour
     {
@@ -14,21 +18,25 @@ namespace MaziesMansion
             Animator = GetComponent<Animator>();
             LevelState = LevelState.Instance;
         }
-        public void SetPauseState(int onOff)
-        {
-            LevelState.IsInteractionOpen = onOff > 0;
-        }
 
+        /// <summary>Starts a fade-out transition to another scene by scene name.</summary>
         public void TriggerTransition(string nextScene)
         {
             NextScene = nextScene;
-            LevelState.IsInteractionOpen = true;
+            LevelState.InterfaceState[InterfaceType.FadeInOut] = true;
             Animator.SetTrigger("OnExitLevel");
         }
 
+        /// <summary>Used by the animator. <paramref cname="onOff"/> is actually a boolean, with 0 being false.</summary>
+        public void SetPauseState(int onOff)
+        {
+            LevelState.InterfaceState[InterfaceType.FadeInOut] = onOff > 0;
+        }
+
+        /// <summary>Used by the animator to load the next scene when the fade out animation is complete.</summary>
         public void PerformTransition()
         {
-            LevelState.TransitionToLevelImmediate(NextScene);
+            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
         }
     }
 }
