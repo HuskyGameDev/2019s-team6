@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -187,6 +187,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 494280205}
     m_Modifications:
+    - target: {fileID: 6579144537510968504, guid: 122108086f8732f418ef6965facff23b,
+        type: 3}
+      propertyPath: m_Name
+      value: TableWithPlant (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4786287877669598006, guid: 122108086f8732f418ef6965facff23b,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -201,11 +206,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6579144537510968504, guid: 122108086f8732f418ef6965facff23b,
-        type: 3}
-      propertyPath: m_Name
-      value: TableWithPlant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1988332601243310164, guid: 122108086f8732f418ef6965facff23b,
         type: 3}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 362789358}
   m_Layer: 0
   m_Name: F3_Hallway_UpperLeft
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9078,7 +9078,7 @@ GameObject:
   - component: {fileID: 848504855}
   m_Layer: 0
   m_Name: F3_Hallway_Bottom
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9864,7 +9864,7 @@ GameObject:
   - component: {fileID: 1496027873}
   m_Layer: 0
   m_Name: F3_Hallway_LowerRight
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10347,7 +10347,7 @@ GameObject:
   - component: {fileID: 2107676369}
   m_Layer: 0
   m_Name: F3_Hallway_UpperRight
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10487,7 +10487,7 @@ GameObject:
   - component: {fileID: 2107907488}
   m_Layer: 0
   m_Name: F3_Hallway_LowerLeft
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

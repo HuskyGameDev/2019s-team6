@@ -172,7 +172,7 @@ namespace MaziesMansion
             {
                 CurrentHealth -= Damage;
             }
-            if (other.TryGetComponent<Interactable>(out var interactable))
+            if (other.TryGetComponent<Interactable>(out var interactable) && other.tag != "Door")
             {
                 _interactable = interactable;
                 LevelState.Instance.InteractButton.SetActive(true);
