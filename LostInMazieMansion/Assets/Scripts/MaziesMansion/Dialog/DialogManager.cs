@@ -14,6 +14,7 @@ namespace MaziesMansion
         public TextMeshProUGUI Text;
         public Animator Animator;
         public LevelState LevelState;
+        public bool isActive;
 
         private int TextCharacterCount => Text.GetTextInfo(Text.text).characterCount;
 
@@ -38,6 +39,7 @@ namespace MaziesMansion
                 foreach(var e in events)
                     if(null != e.Actions)
                         CurrentEvents[e.Name] = e.Actions;
+            isActive = true;
             AdvanceStory();
         }
 
@@ -51,6 +53,7 @@ namespace MaziesMansion
                 EndStory(closeDialog: false);
             Name.text = actor;
             Lines = lines;
+            isActive = true;
             AdvanceStory();
         }
 
@@ -143,6 +146,7 @@ namespace MaziesMansion
 
         public void EndStory(bool closeDialog = true)
         {
+            isActive = false;
             Animator.SetBool("IsOpen", !closeDialog);
             LevelState.InterfaceState.Toggle(InterfaceType.Interaction);
             StopAllCoroutines();
@@ -167,6 +171,30 @@ namespace MaziesMansion
         {
             foreach(var k in tags)
                 Debug.Log(k);
+        }
+
+        private void Start()
+        {
+            isActive = false;
+        }
+
+        private void Update()
+        {
+            // If dialogue is open and the player presses e or space
+            if (isActive && (Input.GetKeyDown("e") || Input.GetKeyDown("space")))
+            {
+                // If the story can continue (more dialogue)
+                if (CanContinue)
+                {
+                    // Continue dialogue
+                    AdvanceStory();
+                }
+                else
+                {
+                    // End dialogue
+                    EndStory();
+                }
+            }
         }
     }
 }
