@@ -15,7 +15,7 @@ DO::OpenPuzzle
 === after_puzzle
 ~ returning_from_puzzle = false
 { not HasFlag("F3_Bookshelf_Solved"): -> start }
-You: Hey, a key fell out the brown book!
+You: Hey, a key fell out the yellow book!
 <i>Obtained Dresser Key</i>
 DO::AddItem Items/F3_Dresser_Key
 ~ got_key = true

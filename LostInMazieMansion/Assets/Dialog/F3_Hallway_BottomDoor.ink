@@ -1,5 +1,5 @@
 INCLUDE Functions.ink
-VAR unlocked_door = false
+VAR unlocked_door = true
 
 -> start
 
@@ -17,5 +17,5 @@ DO::RemoveItem F3_Hall_Key
 -> DONE
 
 === door_unlocked
-DO::EndAndMovePlayerToDoor F3_Study F3_Study
+DO::EndAndMovePlayerToDoor F3_Main_Hallway F3_Main_Hallway_Top
 ->DONE

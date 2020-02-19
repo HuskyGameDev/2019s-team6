@@ -45,13 +45,13 @@ DO::RemoveItem F3_Storage_Candy
 You: Oh, you remembered! Do you remember anything else about this place?
 Mazie: I remember I kept a flashlight in my bedroom dresser, in the next room over. 
 Mazie: The key should be in one of the books on the rightmost bookshelf. 
-Mazie: Blue, green, red, or brown... I can't remember which one it was in...
+Mazie: Blue, green, red, or yellow... I can't remember which one it was in...
 You: Thanks! I'll take a look.
 { SetFlag("F3_Study_Bookshelf") }
 ->DONE
 
 === has_candy_returning
 Mazie: The key should be in one of the books on the rightmost bookshelf. 
-Mazie: Blue, green, red, or brown... I can't remember which one...
+Mazie: Blue, green, red, or yellow... I can't remember which one...
 You: I'll take a look.
 -> DONE
