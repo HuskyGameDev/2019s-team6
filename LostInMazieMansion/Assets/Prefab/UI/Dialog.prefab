@@ -271,6 +271,8 @@ MonoBehaviour:
   Name: {fileID: 2899508840794885133}
   Text: {fileID: 7556508513563241557}
   Animator: {fileID: 3920177165796169595}
+  LevelState: {fileID: 0}
+  isActive: 0
 --- !u!1 &4631835441366364279
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +481,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 3
+  m_overflowMode: 4
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
