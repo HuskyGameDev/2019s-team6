@@ -17,5 +17,5 @@ DO::RemoveItem F3_Hall_Key
 -> DONE
 
 === door_unlocked
-DO::EndAndMovePlayerToDoor F3_Main_Hallway F3_Main_Hallway_Top
+DO::EndAndMovePlayerToDoor F3_MainHallway F3_MainHallway_Top
 ->DONE

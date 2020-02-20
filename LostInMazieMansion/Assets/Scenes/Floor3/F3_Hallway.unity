@@ -9110,8 +9110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSceneName: F3_Main_Hallway
-  TargetDoorName: F3_Main_Hallway_Top
+  TargetSceneName: F3_MainHallway
+  TargetDoorName: F3_MainHallway_Top
   DoorOrientation: 0
 --- !u!61 &848504853
 BoxCollider2D:

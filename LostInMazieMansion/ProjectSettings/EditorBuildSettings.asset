@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor3/F3_StorageRoom.unity
     guid: ae03a69e35222ac42b7d8cfe3d7ddb8c
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_MainHallway.unity
+    guid: 0ee8bb5626c714f469a0b5709ccd1c3c
   m_configObjects: {}
