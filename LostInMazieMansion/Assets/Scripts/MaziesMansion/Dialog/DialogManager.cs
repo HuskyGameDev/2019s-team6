@@ -20,6 +20,7 @@ namespace MaziesMansion
 
         private Story _story;
         private string _storyName;
+        private bool _readyToEnd;
 
         private Dictionary<string, UnityEvent> CurrentEvents = new Dictionary<string, UnityEvent>();
 
@@ -146,7 +147,6 @@ namespace MaziesMansion
 
         public void EndStory(bool closeDialog = true)
         {
-            isActive = false;
             Animator.SetBool("IsOpen", !closeDialog);
             LevelState.InterfaceState.Toggle(InterfaceType.Interaction);
             StopAllCoroutines();
@@ -183,6 +183,13 @@ namespace MaziesMansion
             // If dialogue is open and the player presses e or space
             if (isActive && (Input.GetKeyDown("e") || Input.GetKeyDown("space")))
             {
+                // If all text has been presented, end dialog
+                if (_readyToEnd)
+                {
+                    EndStory();
+                    _readyToEnd = false;
+                }
+
                 // If the story can continue (more dialogue)
                 if (CanContinue)
                 {
@@ -192,7 +199,13 @@ namespace MaziesMansion
                 else
                 {
                     // End dialogue
-                    EndStory();
+                    if (null != _textAnimation && _textAnimation.MoveNext())
+                    {
+                        StopAllCoroutines();
+                        _textAnimation = null;
+                        Text.maxVisibleCharacters = TextCharacterCount;
+                        _readyToEnd = true;
+                    }
                 }
             }
         }
