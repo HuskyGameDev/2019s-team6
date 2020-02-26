@@ -1,5 +1,5 @@
 INCLUDE Functions.ink
-VAR unlocked_door = true
+VAR unlocked_door = false
 
 -> start
 
