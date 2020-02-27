@@ -36,6 +36,7 @@ namespace MaziesMansion
         private GameObject flashlight;
         private GameObject player;
         private GameObject fireplacePuzzle;
+        private DialogManager dialogManger;
 
         private void OnCollisionStay2D(Collision2D collision)
         {
@@ -83,6 +84,9 @@ namespace MaziesMansion
 
             if(null != LevelState.Instance)
                 LevelState.Instance.InterfaceState.OnAnyInterfaceStateChanged += value => StopAnimation();
+
+            dialogManger = GameObject.Find("Dialog").GetComponent<DialogManager>();
+            Debug.Log(dialogManger);
         }
 
         private void Update()
@@ -90,7 +94,7 @@ namespace MaziesMansion
 
             if (LevelState.IsPaused)
             {
-                if (null != _footsteps)
+                if (null != _footsteps && _footsteps.Paused)
                     _footsteps.Paused = true;
                 return;
             }
@@ -143,7 +147,7 @@ namespace MaziesMansion
             }
 
             // Interact with 'e' if interactable
-            if (Input.GetKeyDown("e") && null != _interactable)
+            if (Input.GetKeyDown("e") && null != _interactable && !dialogManger.isActive)
             {
                 _interactable.OnPlayerInteracts?.Invoke();
             }
@@ -172,6 +176,7 @@ namespace MaziesMansion
             {
                 CurrentHealth -= Damage;
             }
+
             if (other.TryGetComponent<Interactable>(out var interactable) && other.tag != "Door")
             {
                 _interactable = interactable;

@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using System;
 
 namespace MaziesMansion
 {
@@ -145,8 +147,9 @@ namespace MaziesMansion
             }
         }
 
-        public void EndStory(bool closeDialog = true)
+        public async void EndStory(bool closeDialog = true)
         {
+            
             Animator.SetBool("IsOpen", !closeDialog);
             LevelState.InterfaceState.Toggle(InterfaceType.Interaction);
             StopAllCoroutines();
@@ -165,6 +168,19 @@ namespace MaziesMansion
                 Lines = null;
                 CurrentLine = 0;
             }
+            StartCoroutine(WaitToTriggerDialog());
+        }
+
+        IEnumerator WaitToTriggerDialog()
+        {
+            //Print the time of when the function is first called.
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(.01f);
+            isActive = false;
+            //After we have waited 5 seconds print the time again.
+            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         }
 
         private void ProcessTags(List<string> tags)
@@ -183,30 +199,8 @@ namespace MaziesMansion
             // If dialogue is open and the player presses e or space
             if (isActive && (Input.GetKeyDown("e") || Input.GetKeyDown("space")))
             {
-                // If all text has been presented, end dialog
-                if (_readyToEnd)
-                {
-                    EndStory();
-                    _readyToEnd = false;
-                }
-
-                // If the story can continue (more dialogue)
-                if (CanContinue)
-                {
-                    // Continue dialogue
-                    AdvanceStory();
-                }
-                else
-                {
-                    // End dialogue
-                    if (null != _textAnimation && _textAnimation.MoveNext())
-                    {
-                        StopAllCoroutines();
-                        _textAnimation = null;
-                        Text.maxVisibleCharacters = TextCharacterCount;
-                        _readyToEnd = true;
-                    }
-                }
+                // Click continue button
+                GameObject.Find("ContinueButton").GetComponent<Button>().onClick.Invoke();
             }
         }
     }
