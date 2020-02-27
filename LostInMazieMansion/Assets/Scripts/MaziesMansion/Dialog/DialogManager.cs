@@ -10,7 +10,7 @@ using System;
 
 namespace MaziesMansion
 {
-    internal sealed class DialogManager : MonoBehaviour
+    internal sealed class DialogManager : MonoBehaviour, ICloseableUI
     {
         public TextMeshProUGUI Name;
         public TextMeshProUGUI Text;
@@ -28,7 +28,7 @@ namespace MaziesMansion
 
         public void BeginStory(string storyName, Story story, params DialogEvent[] events)
         {
-            LevelState.InterfaceState.Open(InterfaceType.Interaction);
+            LevelState.InterfaceState.Open(InterfaceType.Dialogue, this);
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -50,7 +50,7 @@ namespace MaziesMansion
         private int CurrentLine = 0;
         public void BeginStory(string actor, string[] lines)
         {
-            LevelState.InterfaceState.Open(InterfaceType.Interaction);
+            LevelState.InterfaceState.Open(InterfaceType.Dialogue, this);
             Animator.SetBool("IsOpen", true);
             if(null != _story || null != Lines)
                 EndStory(closeDialog: false);
@@ -147,11 +147,12 @@ namespace MaziesMansion
             }
         }
 
-        public async void EndStory(bool closeDialog = true)
+        public void EndStory(bool closeDialog = true)
         {
-            
+
             Animator.SetBool("IsOpen", !closeDialog);
-            LevelState.InterfaceState.Toggle(InterfaceType.Interaction);
+            if(closeDialog)
+                LevelState.InterfaceState.Clear(InterfaceType.Dialogue);
             StopAllCoroutines();
             CurrentEvents.Clear();
             _textAnimation = null;
@@ -171,16 +172,15 @@ namespace MaziesMansion
             StartCoroutine(WaitToTriggerDialog());
         }
 
+        public void Close()
+        {
+            EndStory();
+        }
+
         IEnumerator WaitToTriggerDialog()
         {
-            //Print the time of when the function is first called.
-            Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-            //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(.01f);
             isActive = false;
-            //After we have waited 5 seconds print the time again.
-            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         }
 
         private void ProcessTags(List<string> tags)

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace MaziesMansion
 {
-    internal sealed class FireplacePuzzle: MonoBehaviour
+    internal sealed class FireplacePuzzle: MonoBehaviour, ICloseableUI
     {
         [SerializeField]
         private Button[] Targets;
@@ -38,7 +38,7 @@ namespace MaziesMansion
                 {
                     Debug.Log("The last target has been clicked, action here");
                     DialogUtility.SetFlag("F3_Fireplace_Solved");
-                    gameObject.SetActive(false);
+                    Close();
                     OnPuzzleExit.Invoke();
                 }
             } else
@@ -52,14 +52,19 @@ namespace MaziesMansion
             }
         }
 
+        public void Close()
+        {
+            gameObject.SetActive(false);
+        }
+
         private void OnEnable()
         {
-            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction);
+            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction, this);
         }
 
         private void OnDisable()
         {
-            LevelState.Instance.InterfaceState.Close(InterfaceType.Interaction);
+            LevelState.Instance?.InterfaceState.Close(InterfaceType.Interaction);
         }
     }
 }

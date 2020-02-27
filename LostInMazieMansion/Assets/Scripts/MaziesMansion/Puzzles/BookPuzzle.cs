@@ -13,7 +13,7 @@ namespace MaziesMansion
         BLUE = 3
     }
 
-    internal sealed class BookPuzzle : MonoBehaviour
+    internal sealed class BookPuzzle : MonoBehaviour, ICloseableUI
     {
         public RectTransform RedBook = null;
         public RectTransform YellowBook = null;
@@ -103,18 +103,23 @@ namespace MaziesMansion
             }
             Debug.Log("Correct Book Order, action here");
             DialogUtility.SetFlag("F3_Bookshelf_Solved");
-            GameObject.Find("Bookshelf Puzzle").SetActive(false);
+            Close();
             OnPuzzleExit.Invoke();
+        }
+
+        public void Close()
+        {
+            gameObject.SetActive(false);
         }
 
         private void OnEnable()
         {
-            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction);
+            LevelState.Instance.InterfaceState.Open(InterfaceType.Interaction, this);
         }
 
         private void OnDisable()
         {
-            LevelState.Instance.InterfaceState.Close(InterfaceType.Interaction);
+            LevelState.Instance?.InterfaceState.Close(InterfaceType.Interaction);
         }
     }
 }

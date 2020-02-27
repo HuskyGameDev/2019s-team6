@@ -72,10 +72,17 @@ namespace MaziesMansion
         {
             // toggle pausing while the game is running
             if(Input.GetKeyDown(KeyCode.Escape))
-                InterfaceState.Toggle(InterfaceType.PauseMenu);
-            // toggle inventory while any other UI is not open.
-            else if(!InterfaceState[~InterfaceType.Inventory] && Input.GetKeyDown(KeyCode.Tab))
-                InterfaceState.Toggle(InterfaceType.Inventory);
+            {
+                if(InterfaceState[InterfaceType.Escapable])
+                    InterfaceState.Close(InterfaceType.Escapable);
+                else
+                    InterfaceState.Open(InterfaceType.PauseMenu, new CloseableUIObject(PauseInterface));
+            }
+            else if(Input.GetKeyDown(KeyCode.Tab) && !InterfaceState[~InterfaceType.Inventory])
+            {
+                // toggle inventory while any other UI is not open.
+                InterfaceState.Toggle(InterfaceType.Inventory, new CloseableUIObject(InventoryInterface));
+            }
         }
 
         /// <summary>Load the target scene with a fade in/out.</summary>
