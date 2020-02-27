@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor3/F3_MainHallway.unity
     guid: 0ee8bb5626c714f469a0b5709ccd1c3c
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_Bathroom1.unity
+    guid: 053c3e6afda90d243b71b1c16ec808aa
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_MasterBedroom.unity
+    guid: a609a0e9855d88748bc2680dbafd8b07
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_Bathroom2.unity
+    guid: b2661b8e8df76584d9c46f047b6e6709
   m_configObjects: {}

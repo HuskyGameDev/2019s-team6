@@ -11913,7 +11913,7 @@ GameObject:
   - component: {fileID: 1598701175}
   - component: {fileID: 1598701174}
   m_Layer: 10
-  m_Name: MasterDoor
+  m_Name: F3_MasterBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
