@@ -95,5 +95,11 @@ namespace MaziesMansion
             else
                 FadeInOutInterface.TriggerTransition(sceneName);
         }
+
+        public void ClosePauseMenu()
+        {
+            // TODO: move this somewhere better
+            InterfaceState.Close(InterfaceType.PauseMenu);
+        }
     }
 }
