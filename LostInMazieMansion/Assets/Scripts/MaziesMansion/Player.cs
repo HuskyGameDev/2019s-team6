@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
+using MaziesMansion.Objects;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 namespace MaziesMansion
 {
@@ -7,6 +10,8 @@ namespace MaziesMansion
     [RequireComponent(typeof(Animator))]
     internal sealed class Player : MonoBehaviour
     {
+        public static Player Instance { get; private set; }
+
         #region MovementData
         private Animator Animator;
 
@@ -30,13 +35,11 @@ namespace MaziesMansion
         int Damage = 20;
         #endregion
 
+        [NonSerialized]
+        public Flashlight Flashlight;
         private Interactable _interactable;
         private Footsteps _footsteps;
         private bool canTakeDamage = true;
-        private GameObject flashlight;
-        private GameObject player;
-        private GameObject fireplacePuzzle;
-        private DialogManager dialogManger;
 
         private void OnCollisionStay2D(Collision2D collision)
         {
@@ -62,31 +65,29 @@ namespace MaziesMansion
             canTakeDamage = true;
         }
 
+        private void Awake()
+        {
+            if(null != Instance)
+                Debug.LogError("Duplicate player object in scene", this);
+            Instance = this;
+        }
+
+        private void OnDisable()
+        {
+            Instance = null;
+        }
+
         private void Start()
         {
-            player = GameObject.Find("Player");
-            flashlight = GameObject.Find("Flashlight");
             var save = PersistentData.Instance;
             if (save.CurrentSanity > save.MaximumSanity)
                 save.CurrentSanity = save.MaximumSanity;
             Animator = GetComponent<Animator>();
             _footsteps = GetComponent<Footsteps>();
-
-            // Check if flashlight is active
-            UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLight = flashlight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
-
-            // If the flashlight was active
-            if (save.flashlightActive)
-            {
-                // then turn it on by increasing the intensity
-                The2DLight.intensity = 0.6f;
-            }
+            Flashlight = GetComponentInChildren<Flashlight>(includeInactive: true);
 
             if(null != LevelState.Instance)
                 LevelState.Instance.InterfaceState.OnAnyInterfaceStateChanged += value => StopAnimation();
-
-            dialogManger = GameObject.Find("Dialog").GetComponent<DialogManager>();
-            Debug.Log(dialogManger);
         }
 
         private void Update()
@@ -103,28 +104,11 @@ namespace MaziesMansion
             var xMovement = Input.GetAxisRaw("Horizontal");
             var yMovement = Input.GetAxisRaw("Vertical");
 
-            if (flashlight != null && xMovement == -1)
-            {
-                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -270);
-            }
-            else if (flashlight != null && xMovement == 1)
-            {
-                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -90);
-            }
-            else if (flashlight != null && yMovement == -1)
-            {
-                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, -180);
-            }
-            else if (flashlight != null && yMovement == 1)
-            {
-                flashlight.transform.eulerAngles = new Vector3(flashlight.transform.eulerAngles.x, flashlight.transform.eulerAngles.y, 0);
-            }
-
-            var movementVector = new Vector3(0, 0, 0);
-            if (Mathf.Abs(xMovement) > 0.5f)
-                movementVector.x = xMovement * MoveSpeed * Time.deltaTime;
-            if (Mathf.Abs(yMovement) > 0.5f)
-                movementVector.y = yMovement * MoveSpeed * Time.deltaTime;
+            var movementVector = new Vector2(
+                x: Mathf.Abs(xMovement) < 0.5f ? 0 : xMovement * MoveSpeed * Time.deltaTime,
+                y: Mathf.Abs(yMovement) < 0.5f ? 0 : yMovement * MoveSpeed * Time.deltaTime
+            );
+            // TODO: cap motion at magnitude 1
 
             // Movement animations
             Animator.SetFloat("Move X", xMovement);
@@ -132,6 +116,8 @@ namespace MaziesMansion
 
             if (movementVector.sqrMagnitude > 0)
             {
+                if(null != Flashlight)
+                    Flashlight.Direction = FacingUtility.FromMotionVector(movementVector);
                 transform.Translate(movementVector);
                 Animator.SetBool("PlayerMoving", true);
                 Animator.SetFloat("LastMoveX", Mathf.Abs(movementVector.y) > 0.5f ? 0 : movementVector.x);
@@ -147,7 +133,7 @@ namespace MaziesMansion
             }
 
             // Interact with 'e' if interactable
-            if (Input.GetKeyDown("e") && null != _interactable && !dialogManger.isActive)
+            if(!LevelState.Instance.InterfaceState[InterfaceType.AnyInterface] && Input.GetKeyDown("e") && null != _interactable)
             {
                 _interactable.OnPlayerInteracts?.Invoke();
             }

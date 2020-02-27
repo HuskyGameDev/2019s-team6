@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e8e83c156cf2674e9e70d2de8463843, type: 3}
+  m_Script: {fileID: 11500000, guid: 8863c9b2c50681e49b09c11655d0d3bd, type: 3}
   m_Name: Flashlight
   m_EditorClassIdentifier: 
   ID: Flashlight

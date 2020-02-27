@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MaziesMansion
 {
-    [CreateAssetMenu(fileName = "New Inventory Item", menuName = "Mazie/Inventory Item")]
+    [CreateAssetMenu(fileName = "New Inventory Item", menuName = "Mazie/Inventory/Item")]
     [Serializable]
     public class InventoryObject : ScriptableObject
     {

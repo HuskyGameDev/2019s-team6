@@ -32,12 +32,8 @@ namespace MaziesMansion
 
         public void OnInteract()
         {
-            UseButton.gameObject.SetActive(!UseButton.gameObject.activeSelf);
-
-            // Set which InventoryObject was clicked
-            UseButton.SetItemToUse(InventoryObject);
-
-            DiscardButton.gameObject.SetActive(!DiscardButton.gameObject.activeSelf);
+            // use the associated object if there is one.
+            InventoryObject?.OnUse();
         }
     }
 }

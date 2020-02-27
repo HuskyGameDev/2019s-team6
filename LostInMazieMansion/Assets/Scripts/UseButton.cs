@@ -15,31 +15,14 @@ public class UseButton : MonoBehaviour
      * If the item is not a Fear Conquering item, then get a reference
      * to the item so that the appropriate sound or animation or message plays
      */
-    private GameObject TheLight;
     private InventoryObject itemToUse;
 
     private void Start()
     {
-        TheLight = GameObject.Find("Flashlight");
     }
 
     public void OnUseClick()
     {
-        // Get Flashlight lighting component
-        UnityEngine.Experimental.Rendering.LWRP.Light2D The2DLight = TheLight.GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
-
-        // If the inventory item clicked was the flashlight
-        if (The2DLight != null && itemToUse.name == "Flashlight")
-        {
-            // then increase the intensity (turn on the flashlight)
-            The2DLight.intensity = (The2DLight.intensity == 0) ? 0.6f : 0.0f;
-            PersistentData.Instance.flashlightActive = (The2DLight.intensity == 0)? false: true;
-
-        } else
-        {
-            PersistentData.Instance.flashlightActive = (The2DLight.intensity == 0) ? false : true;
-        }
-
         // if itemInSlot is a fear conquering item then:
         // in the case of fear conquering items, get a reference to the player
         // THIS WORKS :)
