@@ -53,7 +53,17 @@ namespace MaziesMansion
         public void QuitGame()
         {
             Debug.Log("Quitting");
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
             Application.Quit();
+            #endif
+        }
+
+        public void SaveGame()
+        {
+            if(null != PersistentData.Instance)
+                SaveUtility.SaveGame(PersistentData.Instance);
         }
     }
 }

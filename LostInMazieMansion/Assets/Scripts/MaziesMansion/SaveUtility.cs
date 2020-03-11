@@ -29,7 +29,9 @@ namespace MaziesMansion
         {
             if(!File.Exists(path))
                 throw new FileNotFoundException("Save path does not exist.", path);
-            return JsonUtility.FromJson<PersistentData>(File.ReadAllText(path, Encoding.UTF8));
+            var data = ScriptableObject.CreateInstance<PersistentData>();
+            JsonUtility.FromJsonOverwrite(File.ReadAllText(path, Encoding.UTF8), data);
+            return data;
         }
 
         public static void LoadGame(PersistentData data)
@@ -39,6 +41,6 @@ namespace MaziesMansion
         }
 
         public static IEnumerable<string> GetSaveGamePaths()
-            => Directory.EnumerateFiles(BasePath, $"*{SaveExtension}");
+            => Directory.EnumerateFiles(BasePath, $"*{SaveExtension}", SearchOption.TopDirectoryOnly);
     }
 }

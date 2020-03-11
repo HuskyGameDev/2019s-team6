@@ -66,6 +66,9 @@ namespace MaziesMansion
                 if(save.PlayerLocation.z >= 0)
                     Player.transform.position = save.PlayerLocation;
             }
+
+            // update current level when we load in
+            save.CurrentLevel = SceneManager.GetActiveScene().name;
         }
 
         private void Update()

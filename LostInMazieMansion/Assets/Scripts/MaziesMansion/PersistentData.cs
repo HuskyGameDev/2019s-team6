@@ -51,10 +51,6 @@ namespace MaziesMansion
         }
         #endregion
 
-        private PersistentData()
-        {
-        }
-
         public void SaveGame() => SaveUtility.SaveGame(this);
 
         /// <summary>Name of the current save file.</summary>

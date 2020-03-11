@@ -87,7 +87,13 @@ namespace MaziesMansion
             Flashlight = GetComponentInChildren<Flashlight>(includeInactive: true);
 
             if(null != LevelState.Instance)
+            {
                 LevelState.Instance.InterfaceState.OnAnyInterfaceStateChanged += value => StopAnimation();
+                LevelState.Instance.InterfaceState.OnPauseMenuStateChanged += isOpen => {
+                    if(isOpen)
+                        save.PlayerLocation = transform.position;
+                };
+            }
         }
 
         private void Update()
