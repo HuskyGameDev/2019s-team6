@@ -10,8 +10,6 @@ namespace MaziesMansion
 
         public Image ItemRenderer;
 
-        private UseButton UseButton;
-        private DiscardButton DiscardButton;
         private Player player;
 
         private void Start()
@@ -23,11 +21,6 @@ namespace MaziesMansion
             }
 
             ItemRenderer.sprite = InventoryObject.ItemSprite;
-
-            UseButton = GetComponentInChildren<UseButton>();
-            DiscardButton = GetComponentInChildren<DiscardButton>();
-            UseButton.gameObject.SetActive(false);
-            DiscardButton.gameObject.SetActive(false);
         }
 
         public void OnInteract()

@@ -3080,11 +3080,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5826773732202139421, guid: 4961286f353d42146980b466e0454db5,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1677225935
-      objectReference: {fileID: 0}
     - target: {fileID: 5531145608090360952, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_Color.r
