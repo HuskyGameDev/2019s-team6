@@ -179,7 +179,7 @@ namespace MaziesMansion
 
         IEnumerator WaitToTriggerDialog()
         {
-            yield return new WaitForSeconds(.01f);
+            yield return new WaitForSeconds(.1f);
             isActive = false;
         }
 
