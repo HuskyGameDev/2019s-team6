@@ -49779,7 +49779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSceneName: F3_MainHallway_GBed1
+  TargetSceneName: F3_MainHallway_GBed2
   TargetDoorName: F3_GuestBedroom2
   DoorOrientation: 0
 --- !u!61 &183919432
