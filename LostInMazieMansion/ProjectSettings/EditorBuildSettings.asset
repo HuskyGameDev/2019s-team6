@@ -45,6 +45,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor3/Guest Bedrooms/F3_MainHallway_GBed2.unity
     guid: 54fde07d3f7fd914d8ed13c195e610be
   - enabled: 1
+    path: Assets/Scenes/Floor3/Guest Bedrooms/F3_MainHallway_GBed3.unity
+    guid: 1a70d0cf632b06a4c89a2bf5c0efa216
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Guest Bedrooms/F3_MainHallway_GBed4.unity
+    guid: 3a221caf251d6ff4c980fff3dd326989
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Guest Bedrooms/F3_MainHallway_GBed5.unity
+    guid: ed6286fc8aab7634cb9b41800d6f1c43
+  - enabled: 1
     path: Assets/Scenes/Floor3/F3_Attic.unity
     guid: 4948123293ca2a9439b1d6edfcae8f6e
   m_configObjects: {}
