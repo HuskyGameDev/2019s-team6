@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetSceneName: F3_MainHallway
   TargetDoorName: F3_MainHallway_BoatRoom
-  DoorOrientation: 2
+  DoorOrientation: 3
 --- !u!61 &753429354
 BoxCollider2D:
   m_ObjectHideFlags: 0

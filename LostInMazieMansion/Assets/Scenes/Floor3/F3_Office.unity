@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetSceneName: F3_MainHallway
   TargetDoorName: F3_MainHallway_Office
-  DoorOrientation: 2
+  DoorOrientation: 3
 --- !u!61 &16687599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
@@ -12114,7 +12114,7 @@ PrefabInstance:
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}

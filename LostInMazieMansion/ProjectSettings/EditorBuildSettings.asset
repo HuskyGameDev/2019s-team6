@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor3/F3_Attic.unity
     guid: 4948123293ca2a9439b1d6edfcae8f6e
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_Office.unity
+    guid: 686a1efe8e88aff41aa988b475b8ba55
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_BoatRoom.unity
+    guid: a5ea80e43e7482b41bb7fea248577f47
   m_configObjects: {}
