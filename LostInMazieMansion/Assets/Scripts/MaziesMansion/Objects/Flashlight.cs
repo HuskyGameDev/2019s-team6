@@ -3,10 +3,10 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 namespace MaziesMansion.Objects
 {
-    [RequireComponent(typeof(Light2D))]
+    [RequireComponent(typeof(UnityEngine.Experimental.Rendering.Universal.Light2D))]
     public sealed class Flashlight: MonoBehaviour
     {
-        private new Light2D light;
+        private new UnityEngine.Experimental.Rendering.Universal.Light2D light;
         private Facing direction;
 
         public float LightOffIntensity = 0;
@@ -14,7 +14,7 @@ namespace MaziesMansion.Objects
 
         private void Start()
         {
-            light = GetComponent<Light2D>();
+            light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
             IsOn = PersistentData.Instance.FlashlightActive;
         }
 
