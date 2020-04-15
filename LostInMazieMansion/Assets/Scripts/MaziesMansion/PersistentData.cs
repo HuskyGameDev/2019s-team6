@@ -27,6 +27,7 @@ namespace MaziesMansion
         [NonSerialized]
         public Sprite Image;
 
+        [NonSerialized] // this doesn't work yet, so we'll leave it out of the save for now.
         public string ImageInformation;
     }
 
