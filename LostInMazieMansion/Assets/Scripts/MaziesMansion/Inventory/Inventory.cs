@@ -4,30 +4,39 @@ using UnityEngine;
 
 namespace MaziesMansion
 {
+
+    [Serializable]
+    internal class CollectedObjectsDictionary: SerializableDictionary<string, bool> {}
+
     [Serializable]
     internal sealed class Inventory
     {
         // these must be true to force a redraw the next time the interface is opened.
+        [NonSerialized]
         public bool IsEssentialListDirty = true;
+
+        [NonSerialized]
         public bool IsClutterListDirty = true;
 
-        public LinkedList<InventoryObject> EssentialList = new LinkedList<InventoryObject>();
-
-        public LinkedList<InventoryObject> ClutterList = new LinkedList<InventoryObject>();
+        [SerializeField]
+        public List<InventoryObject> EssentialList = new List<InventoryObject>();
 
         [SerializeField]
-        private Dictionary<string, bool> CollectedObjects = new Dictionary<string, bool>();
+        public List<InventoryObject> ClutterList = new List<InventoryObject>();
+
+        [SerializeField]
+        private CollectedObjectsDictionary CollectedObjects = new CollectedObjectsDictionary();
 
         public void AddItem(InventoryObject item)
         {
             if(item.IsEssential)
             {
-                EssentialList.AddLast(item);
+                EssentialList.Add(item);
                 IsEssentialListDirty = true;
             }
             else
             {
-                ClutterList.AddLast(item);
+                ClutterList.Add(item);
                 IsClutterListDirty = true;
             }
             CollectedObjects[item.ID] = true;

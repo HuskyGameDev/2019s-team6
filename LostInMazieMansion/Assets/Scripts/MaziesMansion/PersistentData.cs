@@ -20,6 +20,18 @@ namespace MaziesMansion
     }
 
     [Serializable]
+    internal struct SaveMetadata
+    {
+        public SaveSlot Slot;
+
+        [NonSerialized]
+        public Sprite Image;
+
+        [NonSerialized] // this doesn't work yet, so we'll leave it out of the save for now.
+        public string ImageInformation;
+    }
+
+    [Serializable]
     [CreateAssetMenu(fileName = "DefaultPersistentData.asset", menuName = "Mazie/Default PersistentData")]
     internal sealed class PersistentData : ScriptableObject
     {
@@ -51,14 +63,14 @@ namespace MaziesMansion
         }
         #endregion
 
-        private PersistentData()
-        {
-        }
-
         public void SaveGame() => SaveUtility.SaveGame(this);
 
-        /// <summary>Name of the current save file.</summary>
-        public string SaveName = "TemporarySave";
+        public SaveMetadata SaveData = new SaveMetadata
+        {
+            Slot = SaveSlot.Temporary,
+            Image = null,
+            ImageInformation = null
+        };
 
         /// <summary>Things that won't be persisted.</summary>
         [NonSerialized]
@@ -83,6 +95,9 @@ namespace MaziesMansion
 
         [Tooltip("If the flashlight should be turnedon when loading a scene")]
         public bool FlashlightActive = false;
+
+        [Tooltip("The direction the flashlight is facing.")]
+        public Facing FlashlightFacing;
         #endregion
 
         #region Inventory

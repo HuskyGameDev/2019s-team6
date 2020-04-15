@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace MaziesMansion
 {
+    [Serializable]
     public enum Facing: byte
     {
         UP = 0,

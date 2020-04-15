@@ -1,21 +1,20 @@
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace MaziesMansion.Objects
 {
-    [RequireComponent(typeof(UnityEngine.Experimental.Rendering.Universal.Light2D))]
+    [RequireComponent(typeof(Light2D))]
     public sealed class Flashlight: MonoBehaviour
     {
-        private new UnityEngine.Experimental.Rendering.Universal.Light2D light;
-        private Facing direction;
-
+        private new Light2D light;
         public float LightOffIntensity = 0;
         public float LightOnIntensity = 0.6f;
 
         private void Start()
         {
-            light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+            light = GetComponent<Light2D>();
             IsOn = PersistentData.Instance.FlashlightActive;
+            Direction = PersistentData.Instance.FlashlightFacing;
         }
 
         public bool IsOn
@@ -30,11 +29,11 @@ namespace MaziesMansion.Objects
 
         public Facing Direction
         {
-            get => direction;
+            get => PersistentData.Instance.FlashlightFacing;
             set
             {
-                direction = value;
-                transform.rotation = direction.AsDirectionQuaternion();
+                PersistentData.Instance.FlashlightFacing = value;
+                transform.rotation = value.AsDirectionQuaternion();
             }
         }
     }

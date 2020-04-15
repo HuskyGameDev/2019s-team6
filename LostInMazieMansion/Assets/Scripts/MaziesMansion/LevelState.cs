@@ -9,7 +9,7 @@ namespace MaziesMansion
     {
 #region Menu Interface Variables
         public GameObject MenuBackgroundInterface = null;
-        public GameObject[] MenuInterfaces = new GameObject[3];
+        public GameObject[] MenuInterfaces = new GameObject[4];
         public GameObject PauseInterface = null;
         public GameObject InventoryInterface = null;
 
@@ -63,9 +63,11 @@ namespace MaziesMansion
             if(save.Volatile.JustLoadedGame)
             {
                 save.Volatile.JustLoadedGame = false;
-                if(save.PlayerLocation.z >= 0)
-                    Player.transform.position = save.PlayerLocation;
+                Player.transform.position = save.PlayerLocation;
             }
+
+            // update current level when we load in
+            save.CurrentLevel = SceneManager.GetActiveScene().name;
         }
 
         private void Update()
