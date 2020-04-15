@@ -9,7 +9,7 @@ namespace MaziesMansion
     {
 #region Menu Interface Variables
         public GameObject MenuBackgroundInterface = null;
-        public GameObject[] MenuInterfaces = new GameObject[3];
+        public GameObject[] MenuInterfaces = new GameObject[4];
         public GameObject PauseInterface = null;
         public GameObject InventoryInterface = null;
 
