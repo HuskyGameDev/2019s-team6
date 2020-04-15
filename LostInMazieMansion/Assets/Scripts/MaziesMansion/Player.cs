@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using MaziesMansion.Objects;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
 
 namespace MaziesMansion
 {
@@ -70,6 +69,7 @@ namespace MaziesMansion
             if(null != Instance)
                 Debug.LogError("Duplicate player object in scene", this);
             Instance = this;
+            Flashlight = GetComponentInChildren<Flashlight>(includeInactive: true);
         }
 
         private void OnDisable()
@@ -84,14 +84,16 @@ namespace MaziesMansion
                 save.CurrentSanity = save.MaximumSanity;
             Animator = GetComponent<Animator>();
             _footsteps = GetComponent<Footsteps>();
-            Flashlight = GetComponentInChildren<Flashlight>(includeInactive: true);
 
             if(null != LevelState.Instance)
             {
                 LevelState.Instance.InterfaceState.OnAnyInterfaceStateChanged += value => StopAnimation();
                 LevelState.Instance.InterfaceState.OnPauseMenuStateChanged += isOpen => {
                     if(isOpen)
+                    {
                         save.PlayerLocation = transform.position;
+                        save.CurrentSanity = CurrentHealth;
+                    }
                 };
             }
         }

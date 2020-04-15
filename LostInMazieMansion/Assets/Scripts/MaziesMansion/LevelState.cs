@@ -63,8 +63,7 @@ namespace MaziesMansion
             if(save.Volatile.JustLoadedGame)
             {
                 save.Volatile.JustLoadedGame = false;
-                if(save.PlayerLocation.z >= 0)
-                    Player.transform.position = save.PlayerLocation;
+                Player.transform.position = save.PlayerLocation;
             }
 
             // update current level when we load in
