@@ -66,6 +66,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor3/F3_BoatRoom.unity
     guid: a5ea80e43e7482b41bb7fea248577f47
   - enabled: 1
+    path: Assets/Scenes/Floor2/F2_Hallway.unity
+    guid: bed9a59ff9bb2f8449b7fc78f1242032
+  - enabled: 1
+    path: Assets/Scenes/Floor2/InfiniteHallway/F2_InfiniteHallway.unity
+    guid: 9531df9f495ec634ab13d18515e0c196
+  - enabled: 1
+    path: Assets/Scenes/Floor2/InfiniteHallway/F2_InfiniteHallway_1.unity
+    guid: f999e9fee2a3e114196462379ed76db8
+  - enabled: 1
+    path: Assets/Scenes/Floor2/InfiniteHallway/F2_InfiniteHallway_2.unity
+    guid: 35fae079980f3c14f8b8075f5f22f491
+  - enabled: 1
+    path: Assets/Scenes/Floor2/InfiniteHallway/F2_InfiniteHallway_3.unity
+    guid: add3c08d9eeda2c409c695dd3b1eaf2b
+  - enabled: 1
     path: Assets/Scenes/Floor2/F2_ResidentialStairwell.unity
     guid: 10f5c1e4b02ace94cb89144d2351d24a
   - enabled: 1
