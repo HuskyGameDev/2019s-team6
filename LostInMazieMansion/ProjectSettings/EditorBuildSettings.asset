@@ -86,4 +86,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor1/F1_ResidentialStairwell.unity
     guid: e22859bbb0098cc4f99a923bbc4731e6
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_Library.unity
+    guid: 7825a44b328f3c04ca8409211e7d2d7e
+  - enabled: 1
+    path: Assets/Scenes/Floor2/F2_Library.unity
+    guid: d16a98f256f896147b3d3dfac5d6903e
   m_configObjects: {}
