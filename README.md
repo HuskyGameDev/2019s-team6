@@ -1,10 +1,4 @@
-<p align="center">
-    <img
-      alt="LostInMazieMansion"
-      src="./Art/logo jpg ver.jpg"
-      width="800"
-    />
-</p>
+<p align="center"><img alt="LostInMazieMansion" src="./Art/logo jpg ver.jpg" width="500"/></p>
 
 # Lost in Mazie Mansion
 
