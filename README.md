@@ -20,7 +20,7 @@ Table of Contents
       * [Trailer](#project-overview)
       * [Rules](#rules)
       * [Game Design Document](#game-design-document)
-    * [Project Overview](#project-overview)
+   * [Project Overview](#project-overview)
       * [Game Architecture](#game-architecture)
       * [Developer Setup](#developer-setup)
       * [Dependencies](#dependencies)
@@ -77,14 +77,14 @@ TO DO
 
 TO DO
 
-## Developer Setup
+### Developer Setup
  
 TO DO
 
-## Dependencies
+### Dependencies
  
 TO DO
 
-## Task Board
+### Task Board
 
 Visit our task board [here](https://github.com/HuskyGameDev/2020f-team10/projects/1) if you are interested in contributing. 
