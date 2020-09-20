@@ -98,7 +98,7 @@ namespace MaziesMansion
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
 
             if (LevelState.IsPaused)
