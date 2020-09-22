@@ -23,7 +23,14 @@ Table of Contents
 
 ## Download
 
-TODO - add download loaction and install instructions
+The Lost In Mazie Mansion 2019 install is available on the Husky Game Development website found [here!](https://huskygames.com/games/?game=lost-in-mazie-mansion) The 2020 install will be available later this year!
+
+  1. Navigate to the download page using [this link](https://huskygames.com/games/?game=lost-in-mazie-mansion) or the link above.
+  2. Download the zip file by clicking `Download`.
+  3. Make a new directory and drag the zip file into that directory. 
+  4. Extract the files from the zip file.
+  5. Run the executable file `LostInMazieMansion.exe` to launch the game.
+  6. Enjoy!
 
 ## Husky Game Development
 
