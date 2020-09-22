@@ -68,23 +68,61 @@ The game has a single goal and winning condition - escaping the mansion. Upon go
 
 Available upon request!
 
-TODO
+Part of the pre-production process is the game design document, GDD. It is a highly descriptive and living software design document for our game which includes Sprint planning and roles for the upcoming semester. If you are interested in our documentation, reach out!
 
 ## Project Overview
 
-TO DO
+Lost in Mazie Mansion is a 2D horror-puzzle game designed within Husky Game Development and created using the [Unity Game Engine](https://unity.com/). Scripting is accomplished though [Unity's Scripting API](https://docs.unity3d.com/ScriptReference/) using C#. This tells our GameObjects and other components how to interact with each other, creating gameplay. Our team utilizes [Inky](https://github.com/inkle/inky) for conditional dialogue and story progress and [FMOD](https://www.fmod.com/) for sound implementation. Using these tools our developers are producing a fun and interactive experience.
 
 ### Game Architecture 
 
-TO DO
+- `/Art` - contains art assests and spritesheets 
+- `/Audio` - contains audio files and sound effects
+- `/Documentation` - contains developer documentation other than design documents which are stored on our Team Drive (Google)
+- `/LostInMazieMansion` - Unity project (development)
+  - `/Assets` - all of our gameplay assests
+    - `/Animation` - animation files
+    - `/Art` - sprites and UI artwork
+    - `/Dialog` - dialog systems
+    - `/Editor Default Resources` - contains FMOD resources
+    - `/Fonts` - contains gameplay fonts
+    - `/Gizmos` - contains FMOD resources
+    - `/Plugins` - contains all plugins (Astar, FMOD, Ink, TextMesh)
+    - `/Resources` - other resources
+    - `/Scenes` - contains all Unity gameplay scenes
+    - `/Scripts` - contains all C# scripts
+    - `/Sounds` - contains game sound effects and audio
+    - `/Tiles` - contains tile sprites for tile mapping
+  - `/Packages` - contains manifest.json (dependencies) 
+  - `/ProjectSettings` - settings
 
 ### Developer Setup
  
-TO DO
+ Instructions on development environment setup.
+ 
+ 1. Install Unity Hub 
+    - Visit the download page [here](https://unity3d.com/get-unity/download)
+    - For more information visit [this page](https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html)
+ 2. Install Unity
+    - Unity can be installed using Unity Hub (for current versions) otherwise visit the [Unity download archive](https://unity3d.com/get-unity/download/archive)
+    - Find Unity 2019.3.7f1 (the version our team is using)
+    - Download and setup within Unity Hub
+ 3. Clone the Repository 
+    -`git clone https://github.com/HuskyGameDev/2020f-team10.git`
+ 4. Open the Project
+    - Open Unity Hub
+    - Click open project and location the `/LostInMazieMansion` directory found in the root of this repository
+ 5. Optional
+    - Install Visual Studio or Visual Studio Code [here](https://visualstudio.microsoft.com/)
 
 ### Dependencies
- 
-TO DO
+
+All essential dependencies for development purposes are automatically downloaded after installing Unity Hub and the proper version of Unity (See [Developer Setup](#developer-setup))
+
+For more information visit the following pages:
+- [Unity Game Engine](https://unity.com/)
+- [Inky](https://github.com/inkle/inky) 
+- [FMOD](https://www.fmod.com/) 
 
 ### Task Board
 
