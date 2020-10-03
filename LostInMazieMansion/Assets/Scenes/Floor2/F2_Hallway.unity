@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetSceneName: F2_HalfBathroom
-  TargetDoorName: 
+  TargetDoorName: F2_HalfBathroom_Hallway
   DoorOrientation: 3
 --- !u!61 &580371027
 BoxCollider2D:
