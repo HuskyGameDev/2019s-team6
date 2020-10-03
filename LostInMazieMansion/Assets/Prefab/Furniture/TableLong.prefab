@@ -54,6 +54,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -77,11 +79,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7306374760596990781, guid: c1bc94bd3c8f86f43bfb9716eba92966,
-        type: 3}
-      propertyPath: m_Name
-      value: TableLong
-      objectReference: {fileID: 0}
     - target: {fileID: 2719995832008314833, guid: c1bc94bd3c8f86f43bfb9716eba92966,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -166,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.15
+      value: 0.22730497
       objectReference: {fileID: 0}
     - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
         type: 3}
@@ -191,7 +188,12 @@ PrefabInstance:
     - target: {fileID: 7306374760596990780, guid: c1bc94bd3c8f86f43bfb9716eba92966,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.01
+      value: -0.048652485
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306374760596990781, guid: c1bc94bd3c8f86f43bfb9716eba92966,
+        type: 3}
+      propertyPath: m_Name
+      value: TableLong
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bc94bd3c8f86f43bfb9716eba92966, type: 3}
