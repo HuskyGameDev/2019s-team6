@@ -66,6 +66,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor3/F3_BoatRoom.unity
     guid: a5ea80e43e7482b41bb7fea248577f47
   - enabled: 1
+    path: Assets/Scenes/Floor2/F2_HalfBathroom.unity
+    guid: 50873c2dfbcfdfa46929ffab3b889af0
+  - enabled: 1
     path: Assets/Scenes/Floor2/F2_Hallway.unity
     guid: bed9a59ff9bb2f8449b7fc78f1242032
   - enabled: 1
