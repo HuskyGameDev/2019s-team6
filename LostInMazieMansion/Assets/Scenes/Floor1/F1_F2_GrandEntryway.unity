@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 8056859788328162611, guid: ba54c8d787fe5d19fbad789226706a3b,
         type: 3}
       propertyPath: m_Name
-      value: F1_Gameroom
+      value: F1_GrandEntryway_Gameroom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba54c8d787fe5d19fbad789226706a3b, type: 3}
@@ -17928,7 +17928,7 @@ PrefabInstance:
     - target: {fileID: 9084342770642966829, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9084342770642966831, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
@@ -20424,12 +20424,12 @@ PrefabInstance:
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
@@ -20491,6 +20491,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 73108001}
     m_Modifications:
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: F2_Ornate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: F2_Ornate_GrandEntryway
+      objectReference: {fileID: 0}
     - target: {fileID: 4322619587936249056, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20549,7 +20559,7 @@ PrefabInstance:
     - target: {fileID: 4322619587936249057, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_Name
-      value: F2_OrnateRoom1
+      value: F2_GrandEntryway_Ornate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65689e81be4ca7b19aeaafb5095dacce, type: 3}
@@ -20569,12 +20579,12 @@ PrefabInstance:
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 191451153440669017, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
@@ -20634,7 +20644,7 @@ PrefabInstance:
     - target: {fileID: 191451153804270016, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.020000458
       objectReference: {fileID: 0}
     - target: {fileID: 191451153804270019, guid: 4961286f353d42146980b466e0454db5,
         type: 3}
@@ -20738,6 +20748,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
+--- !u!1001 &977214879
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 554155678}
+    m_Modifications:
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4793556
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0908613
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609386, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609387, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_Name
+      value: LightFromF1Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678938001479609388, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392596867791621029, guid: 9cb45a55213068f489a85b4f1a16f1ac,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cb45a55213068f489a85b4f1a16f1ac, type: 3}
 --- !u!1001 &979702922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21121,7 +21210,7 @@ PrefabInstance:
     - target: {fileID: 4322619587936249057, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_Name
-      value: F1_Breezeway
+      value: F1_GrandEntryway_Breezeway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65689e81be4ca7b19aeaafb5095dacce, type: 3}
@@ -21135,7 +21224,7 @@ PrefabInstance:
     - target: {fileID: 7252101930155398701, guid: b9f4d0687e7ec211b993e91c88a1d243,
         type: 3}
       propertyPath: m_Name
-      value: F1_MainDoor
+      value: F1_GrandEntryway_MainDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7252101930155398702, guid: b9f4d0687e7ec211b993e91c88a1d243,
         type: 3}
@@ -37977,7 +38066,7 @@ PrefabInstance:
     - target: {fileID: 9084342770642966829, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084342770642966831, guid: 294aada7b1fe0c945b60e522fe4fcc19,
         type: 3}
@@ -39596,6 +39685,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 73108001}
     m_Modifications:
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: F2_Hallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: F2_Hallway_GrandEntryway
+      objectReference: {fileID: 0}
     - target: {fileID: 4322619587936249056, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39654,7 +39753,7 @@ PrefabInstance:
     - target: {fileID: 4322619587936249057, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_Name
-      value: F2_Hallway
+      value: F2_GrandEntryway_Hallway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65689e81be4ca7b19aeaafb5095dacce, type: 3}
@@ -40157,7 +40256,7 @@ PrefabInstance:
     - target: {fileID: 9147011243239705698, guid: 2f823dcb4d5230f8c8430ba597659fe3,
         type: 3}
       propertyPath: m_Name
-      value: F1_Diningroom
+      value: F1_GrandEntryway_Diningroom
       objectReference: {fileID: 0}
     - target: {fileID: 9147011243239705721, guid: 2f823dcb4d5230f8c8430ba597659fe3,
         type: 3}
