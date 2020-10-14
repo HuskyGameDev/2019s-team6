@@ -2,23 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntrywayHandler : MonoBehaviour
+namespace MaziesMansion
 {
-    GameObject Floor1;
-    GameObject Floor2;
-
-    // Start is called before the first frame update
-    void Start()
+    public class EntrywayHandler : MonoBehaviour
     {
-        // Check what floor the player is on
+        GameObject Floor1;
+        GameObject Floor2;
 
-        // Get Floor 1 and Floor 2 grids
-        Floor1 = GameObject.Find("F1").transform.Find("Grid").gameObject;
-        Floor2 = GameObject.Find("F2").transform.Find("Grid").gameObject;
+        // Start is called before the first frame update
+        void Start()
+        {
+
+            // TO DO: Check what floor the player is on
+
+            // Get Floor 1 and Floor 2 grids
+            Floor1 = GameObject.Find("F1").transform.Find("Grid").gameObject;
+            Floor2 = GameObject.Find("F2").transform.Find("Grid").gameObject;
 
 
-        // Set correct floor grid active
+            // TO DO: Set correct floor grid active
 
 
+        }
     }
 }

@@ -7,6 +7,12 @@ namespace MaziesMansion
     {
         public string TargetSceneName = null;
         public string TargetDoorName = null;
+        public static Door Instance;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         [Tooltip("Orientation of this door (which side is the exit).")]
         public Facing DoorOrientation = Facing.LEFT;
