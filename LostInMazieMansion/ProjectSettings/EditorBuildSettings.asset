@@ -96,6 +96,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor2/F2_Library.unity
     guid: d16a98f256f896147b3d3dfac5d6903e
   - enabled: 1
+    path: Assets/Scenes/Floor2/F2_Ornate.unity
+    guid: b2adb875c1d01e0478553713b8246f39
+  - enabled: 1
+    path: Assets/Scenes/Floor2/F2_MoonlitGarden.unity
+    guid: dfab2343127c2ddbaa760166bb51b786
+  - enabled: 1
     path: Assets/Scenes/Floor1/F1_F2_GrandEntryway.unity
     guid: 072610cfa730d0729bdb707df7d35be7
   m_configObjects: {}
