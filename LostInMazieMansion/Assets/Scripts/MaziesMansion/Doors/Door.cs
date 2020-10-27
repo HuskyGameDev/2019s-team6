@@ -24,8 +24,24 @@ namespace MaziesMansion
         {
             if(!enabled)
                 return;
-            if(other.tag == "Player")
+            if(other.tag == "Player"){
+                var s = (Instance?.TargetSceneName.Length >= 2 && Instance?.TargetSceneName != "F1_F2_GrandEntryway") ? Instance?.TargetSceneName?.Substring(0, 2) : "";
+                switch (s)
+                {
+                    case "F3":
+                        Player.PlayerFloor = Player.Location.F3;
+                        break;
+                    case "F2":
+                        Player.PlayerFloor = Player.Location.F2;
+                        break;
+                    case "F1":
+                        Player.PlayerFloor = Player.Location.F1;
+                        break;
+                    default:
+                        break;
+                }
                 LevelState.Instance.TransitionToLevel(TargetSceneName, targetDoor: TargetDoorName);
+            }
         }
 
         public void Place(GameObject obj)

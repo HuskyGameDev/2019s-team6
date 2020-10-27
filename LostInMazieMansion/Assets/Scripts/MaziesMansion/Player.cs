@@ -17,6 +17,14 @@ namespace MaziesMansion
         public float MoveSpeed = 3;
         #endregion
 
+        public enum Location {
+            F1,
+            F2,
+            F3
+        }
+
+        public static Location PlayerFloor;
+
         #region HealthData
         /// The player's current health.
         public int CurrentHealth

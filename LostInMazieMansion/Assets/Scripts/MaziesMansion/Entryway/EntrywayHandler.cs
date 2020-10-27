@@ -12,17 +12,13 @@ namespace MaziesMansion
         // Start is called before the first frame update
         void Start()
         {
-
-            // TO DO: Check what floor the player is on
-
             // Get Floor 1 and Floor 2 grids
             Floor1 = GameObject.Find("F1").transform.Find("Grid").gameObject;
             Floor2 = GameObject.Find("F2").transform.Find("Grid").gameObject;
 
-
-            // TO DO: Set correct floor grid active
-
-
+            // Check what floor the player is on and set correct floor grid active
+            Floor1.SetActive((Player.PlayerFloor == Player.Location.F1) ? true : false);
+            Floor2.SetActive((Player.PlayerFloor == Player.Location.F2) ? true : false);
         }
     }
 }
