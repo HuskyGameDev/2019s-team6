@@ -104,4 +104,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor1/F1_F2_GrandEntryway.unity
     guid: 072610cfa730d0729bdb707df7d35be7
+  - enabled: 1
+    path: Assets/Scenes/Floor1/F1_Gameroom.unity
+    guid: 9cc209962f61fc7deb1659c96b645777
+  - enabled: 1
+    path: Assets/Scenes/Floor1/F1_DiningRoom.unity
+    guid: c780f5ded358d71c4bf9a36ebd10fd01
   m_configObjects: {}
