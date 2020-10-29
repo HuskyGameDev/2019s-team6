@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 9147011243239705726}
   - component: {fileID: 9147011243239705727}
   m_Layer: 0
-  m_Name: Doorway (TOP)
+  m_Name: Doorway_Damaged (TOP)
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3544638486050697235, guid: 89d746e08014ee940a15eeae36dfbbce,
+  m_Sprite: {fileID: -8885981502913452981, guid: 89d746e08014ee940a15eeae36dfbbce,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
