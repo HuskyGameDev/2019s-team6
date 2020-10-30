@@ -110,4 +110,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor1/F1_DiningRoom.unity
     guid: c780f5ded358d71c4bf9a36ebd10fd01
+  - enabled: 1
+    path: Assets/Scenes/Floor1/F1_Breezeway.unity
+    guid: 0689cb78ca24f0c21a018bf34f3094f8
   m_configObjects: {}

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -21365,6 +21365,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1450806054}
     m_Modifications:
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: F1_Breezeway
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: F1_Breezeway_GrandEntryway
+      objectReference: {fileID: 0}
     - target: {fileID: 4322619587936249056, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_LocalPosition.x
