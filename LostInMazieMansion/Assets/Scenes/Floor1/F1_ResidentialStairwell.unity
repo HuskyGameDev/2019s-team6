@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 19872347}
   - component: {fileID: 19872346}
   m_Layer: 0
-  m_Name: F1_ResidentialStairwell
+  m_Name: F1_ResidentialStairwell_DiningRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSceneName: 
-  TargetDoorName: 
+  TargetSceneName: F1_DiningRoom
+  TargetDoorName: F1_DiningRoom_ResidentialStairwell
   DoorOrientation: 2
 --- !u!212 &19872348
 SpriteRenderer:
