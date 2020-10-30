@@ -81,7 +81,7 @@ TextureImporter:
       213: -8470446377158925434
     second: sprite_sheet_tiles_32x32_25
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -135,6 +135,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -567,9 +568,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 80
-        width: 32
-        height: 32
+        y: 91
+        width: 21
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
