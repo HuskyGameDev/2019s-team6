@@ -147,12 +147,6 @@ namespace MaziesMansion
                 if (null != _footsteps)
                     _footsteps.enabled = false;
             }
-
-            // Interact with 'e' if interactable
-            if(!LevelState.Instance.InterfaceState[InterfaceType.AnyInterface] && Input.GetKeyDown("e") && null != _interactable)
-            {
-                _interactable.OnPlayerInteracts?.Invoke();
-            }
         }
 
         public void StopAnimation()
@@ -160,8 +154,19 @@ namespace MaziesMansion
             Animator.SetBool("PlayerMoving", false);
         }
 
+        // Handles interaction. Originally, the two if statements and
+        //  their content were separated, the first if statement being
+        //  in the Update() loop (now changed to FixedUpdate() for
+        //  movement consistency. Perhaps another bug is to be uncovered
+        //  here.
         private void LateUpdate()
         {
+            // Interact with 'e' if interactable
+            if (!LevelState.Instance.InterfaceState[InterfaceType.AnyInterface] && Input.GetKeyDown("e") && null != _interactable)
+            {
+                _interactable.OnPlayerInteracts?.Invoke();
+            }
+
             if (null != _interactable)
                 LevelState.Instance.InteractButton.transform.position = _interactable.transform.position;
         }
