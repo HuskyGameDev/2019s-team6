@@ -6316,7 +6316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actor: Bookshelf
+  Actor: You
   Lines:
   - There sure are a lot of books in this place...
 --- !u!1001 &355477721
@@ -7010,7 +7010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actor: Desk
+  Actor: You
   Lines:
   - The book is titled "The History and Social Influence of the Potato".
   - Sound like a real thriller.
@@ -7402,7 +7402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actor: Bookshelf
+  Actor: You
   Lines:
   - There sure are a lot of books in this place...
 --- !u!4 &1153198152 stripped
