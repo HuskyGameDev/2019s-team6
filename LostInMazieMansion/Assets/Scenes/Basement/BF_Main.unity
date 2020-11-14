@@ -18123,6 +18123,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1871936892}
     m_Modifications:
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: BF_LaundryRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322619587936249054, guid: 65689e81be4ca7b19aeaafb5095dacce,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: BF_LaundryRoom_Main
+      objectReference: {fileID: 0}
     - target: {fileID: 4322619587936249056, guid: 65689e81be4ca7b19aeaafb5095dacce,
         type: 3}
       propertyPath: m_LocalPosition.x
