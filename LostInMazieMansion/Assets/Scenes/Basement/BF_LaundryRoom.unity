@@ -10059,6 +10059,101 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb04732df1f864b8dbe2e27aed3acd, type: 3}
+--- !u!1001 &1552500590
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 596705794}
+    m_Modifications:
+    - target: {fileID: 8056859788328162608, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162608, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162608, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: DoorOrientation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162610, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162611, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_Name
+      value: BF_LaundryRoom_Chute
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162615, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056859788328162615, guid: ba54c8d787fe5d19fbad789226706a3b,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8056859788328162609, guid: ba54c8d787fe5d19fbad789226706a3b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ba54c8d787fe5d19fbad789226706a3b, type: 3}
 --- !u!1001 &1596890423
 PrefabInstance:
   m_ObjectHideFlags: 0

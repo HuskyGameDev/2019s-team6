@@ -87,6 +87,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor2/F2_ResidentialStairwell.unity
     guid: 10f5c1e4b02ace94cb89144d2351d24a
   - enabled: 1
+    path: Assets/Scenes/Floor1/F1_ServantStairwell.unity
+    guid: c8fd597733735684a99168451a177cfd
+  - enabled: 1
+    path: Assets/Scenes/Floor2/F2_ServantStairwell.unity
+    guid: a69d7d346d5de4f4e9bc562a759c4698
+  - enabled: 1
     path: Assets/Scenes/Floor1/F1_ResidentialStairwell.unity
     guid: e22859bbb0098cc4f99a923bbc4731e6
   - enabled: 1
