@@ -34584,8 +34584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc47ae1ff1bb57346955424b0b552b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSceneName: F3_Hallway
-  TargetDoorName: F3_Hallway_Bottom
+  TargetSceneName: F3_AtticMusicRoomA
+  TargetDoorName: F3_AtticMusicRoomA
   DoorOrientation: 1
 --- !u!61 &1520533172
 BoxCollider2D:
@@ -34729,6 +34729,11 @@ PrefabInstance:
     - target: {fileID: 1317636469490417116, guid: 79f04d4328ac5704db1c629c7641778f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899385999778097902, guid: 79f04d4328ac5704db1c629c7641778f,
+        type: 3}
+      propertyPath: LightOffIntensity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

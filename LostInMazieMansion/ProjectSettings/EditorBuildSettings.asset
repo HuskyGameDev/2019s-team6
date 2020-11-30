@@ -128,4 +128,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Basement/BF_WineCellar.unity
     guid: 78e637deaaab7a8608cfc11b751c87eb
+  - enabled: 1
+    path: Assets/Scenes/Floor3/F3_AtticMusicRoomA.unity
+    guid: 32f650e98962fc9499aaa6cc724a4f2d
   m_configObjects: {}
