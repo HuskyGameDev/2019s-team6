@@ -17355,6 +17355,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7252101930155398703, guid: b9f4d0687e7ec211b993e91c88a1d243,
+        type: 3}
+      propertyPath: TargetSceneName
+      value: BF_MusicRoomC
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252101930155398703, guid: b9f4d0687e7ec211b993e91c88a1d243,
+        type: 3}
+      propertyPath: TargetDoorName
+      value: BF_MusicRoomC_Main
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f4d0687e7ec211b993e91c88a1d243, type: 3}
 --- !u!1 &351313408
