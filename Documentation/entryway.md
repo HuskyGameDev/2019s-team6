@@ -57,10 +57,14 @@ Table of Contents
   
 ### Files Changes
   * The majority of the files you are looking for can be found in [this folder](https://github.com/HuskyGameDev/2020f-team10/blob/master/LostInMazieMansion/Assets/Scripts/MaziesMansion/Entryway). However, here are the other files which saw changes in order to implement this system:
-    * EntrywayHandler.cs :: TO DO
-    * Door.cs :: TO DO
-    * Stairway.cs :: TO DO
-    * Player.cs :: TO DO
+    * EntrywayHandler.cs
+      * New file. Simply gets both Grids and sets the GameObjects Floor1 and Floor2 accordingly. It then sets the floor the player is on as active and the other it deactivates. If you run the scene from the editor, the default behavior is starting the player on Floor1. The reason this is default is the GrandEntryway scene starts with F1 (F1_F2_GrandEntryway). Check Door.cs or the description below to understand why.
+    * Door.cs
+      * Made changes. When the player collides with a door, it checks if the doorway starts with F1, F2, or F3. If the target scene does (the scene the player is entering) it sets the floor the player is on accordingly (this is stored in the Player.cs script).
+    * Stairway.cs
+      * New file. Sets the proper Grid active when the player walks up and down the trigger which is a "doorway" on the stairs. Look at this file in the scripts. It is pretty easy to understand.
+    * Player.cs
+      * Made changes. Added an enum Location. This file also now stores a Location as a public variable. This variable is edited by the Door.cs script. The the description above to understand how (or visit the script).
   
 ### Meaningful Commits
   * Major File Changes
