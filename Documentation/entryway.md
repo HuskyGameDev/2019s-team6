@@ -31,7 +31,7 @@ Table of Contents
   * F1
     * The gameobject F1 contains the entire Grid for Floor 1.
   * F2
-    * The gameobejct F2 contains the entire Grid for Floor 2.
+    * The gameobject F2 contains the entire Grid for Floor 2.
   * F1/F2
     * The gameobject F1/F2 contains the Grid for everything shared between Floor 1 and Floor 2. This is so that items on Floor 1 can be seen while walking around Floor 2.
     * NOTE: The stairway script is in the F1/F2 Grid under Doorways. It acts as a trigger. Similar to a doorway without any transition. You can view the [Stairway.cs](https://github.com/HuskyGameDev/2020f-team10/blob/master/LostInMazieMansion/Assets/Scripts/MaziesMansion/Entryway/Stairway.cs) file if you are interested in how it works!
