@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 9147011243239705698, guid: 2f823dcb4d5230f8c8430ba597659fe3,
         type: 3}
       propertyPath: m_Name
-      value: BF_MusicRoomC_BF_Main
+      value: BF_MusicRoomC_Main
       objectReference: {fileID: 0}
     - target: {fileID: 9147011243239705725, guid: 2f823dcb4d5230f8c8430ba597659fe3,
         type: 3}
@@ -265,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 9147011243239705727, guid: 2f823dcb4d5230f8c8430ba597659fe3,
         type: 3}
       propertyPath: TargetDoorName
-      value: BF_Main_BF_MusicRoomC
+      value: BF_Main_MusicRoomC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f823dcb4d5230f8c8430ba597659fe3, type: 3}
