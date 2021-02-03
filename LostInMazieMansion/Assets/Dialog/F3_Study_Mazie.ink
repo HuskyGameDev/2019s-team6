@@ -46,12 +46,12 @@ DO::RemoveItem F3_Storage_Candy
 You: Oh, you remembered! Do you remember anything else about this place?
 Mazie: I remember I kept a flashlight in my bedroom dresser, in the next room over. 
 Mazie: The key should be in one of the books on the rightmost bookshelf. 
-Mazie: I remember someone getting mad at me that my books weren't sorted by name...
+Mazie: I remember someone getting mad at me that my books weren't sorted by the color's name...
 You: Thanks! I'll take a look.
 ->DONE
 
 === has_candy_returning
 Mazie: The key should be in one of the books on the rightmost bookshelf. 
-Mazie: I remember someone getting mad at me that my books weren't sorted by name...
+Mazie: I remember someone getting mad at me that my books weren't sorted by the color's name...
 You: I'll take a look.
 -> DONE
