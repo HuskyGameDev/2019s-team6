@@ -63115,6 +63115,90 @@ MonoBehaviour:
   Actor: You
   Lines:
   - <i>It's locked.<i>
+--- !u!1001 &827752163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1706267683}
+    m_Modifications:
+    - target: {fileID: 5235547018700421035, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274374529780145406, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764021061331119368, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: OnPlayerInteracts.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1706267685}
+    - target: {fileID: 8764021061331119368, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: OnPlayerInteracts.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764021061331119368, guid: 15e42552282de7b4b9c889077d7de97a,
+        type: 3}
+      propertyPath: OnPlayerInteracts.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15e42552282de7b4b9c889077d7de97a, type: 3}
 --- !u!1 &832774703
 GameObject:
   m_ObjectHideFlags: 0
@@ -64704,6 +64788,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c65455cc131b8c64a9c7f750187e5bd7, type: 3}
+--- !u!4 &1706267683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4138919050894907664, guid: c65455cc131b8c64a9c7f750187e5bd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1706267682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1706267684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8766903310500593148, guid: c65455cc131b8c64a9c7f750187e5bd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1706267682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706267685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706267684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f91c6a174d2176428ca0bef85571469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actor: Player
+  Lines:
+  - The clock slowly ticks away.
+  - I wonder how long it's been here?
 --- !u!1 &1758428689
 GameObject:
   m_ObjectHideFlags: 0
@@ -65732,6 +65844,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937264057420353277, guid: 122108086f8732f418ef6965facff23b,
+        type: 3}
+      propertyPath: Lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937264057420353277, guid: 122108086f8732f418ef6965facff23b,
+        type: 3}
+      propertyPath: Lines.Array.data[1]
+      value: Test
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122108086f8732f418ef6965facff23b, type: 3}
