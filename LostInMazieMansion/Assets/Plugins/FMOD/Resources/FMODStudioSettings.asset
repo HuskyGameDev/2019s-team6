@@ -16,7 +16,7 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: ../Audio/LostInMazieMansion.fspro
-  sourceBankPath: ..\Audio\Build
+  sourceBankPath: ../Audio/Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
