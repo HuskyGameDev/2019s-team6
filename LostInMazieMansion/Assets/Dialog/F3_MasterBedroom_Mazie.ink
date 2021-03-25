@@ -23,7 +23,7 @@ DO::RemoveItem F3_GuestBedroom_Candy
 
 === returning
 { HasItem("F3_GuestBedroom_Candy"): -> has_candy }
-You: I might remember more if you can find some candy.
+Mazie: I might remember more if you can find some candy.
 You: I’ll see what I can do.
 -> DONE
 
