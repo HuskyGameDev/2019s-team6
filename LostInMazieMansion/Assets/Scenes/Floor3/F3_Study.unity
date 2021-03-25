@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6448,99 +6448,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6acf91e75562e43a67efe9ec1e012a, type: 3}
---- !u!1 &369862106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 369862107}
-  - component: {fileID: 369862109}
-  - component: {fileID: 369862108}
-  m_Layer: 0
-  m_Name: Dialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &369862107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369862106}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 918303154}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &369862108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369862106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18fbc96af1f8b0643b3ba33762cef5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPlayerEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerInteracts:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 918303151}
-        m_MethodName: TriggerStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnPlayerInspects:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!61 &369862109
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369862106}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &373483930
 GameObject:
   m_ObjectHideFlags: 0
@@ -7105,12 +7012,6 @@ MonoBehaviour:
   InitialPath: 0
   ResumePath: start
   Events: []
---- !u!4 &918303154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8661670117209619551, guid: 4cb87aac74a926a4caf8df358d377237,
-    type: 3}
-  m_PrefabInstance: {fileID: 918303148}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921059690
 GameObject:
   m_ObjectHideFlags: 0
@@ -7816,3 +7717,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961286f353d42146980b466e0454db5, type: 3}
+--- !u!1 &1655439734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 191451153440669020, guid: 4961286f353d42146980b466e0454db5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1577427252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &1655439744
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655439734}
+  m_Enabled: 1
