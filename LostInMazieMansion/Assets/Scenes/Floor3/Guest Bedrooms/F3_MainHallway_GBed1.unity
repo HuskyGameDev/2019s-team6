@@ -52143,88 +52143,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcaf2011d2fbae74fbf13085f154febc, type: 3}
---- !u!1001 &382876504364100381
+--- !u!1001 &3918017932176055386
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 806500835}
     m_Modifications:
-    - target: {fileID: 7211233731618931930, guid: eea94aa9a56dae84fa8bdb51ede644d7,
-        type: 3}
-      propertyPath: m_Name
-      value: F3_Clock_Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931931, guid: eea94aa9a56dae84fa8bdb51ede644d7,
-        type: 3}
-      propertyPath: Item
-      value: 
-      objectReference: {fileID: 11400000, guid: 40f0c0fc6a3c0d449875860a33d787c6,
-        type: 2}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.75
+      value: -3.69
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.67
+      value: 6.53
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931934, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931935, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+    - target: {fileID: 6277079401359733661, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7211233731618931935, guid: eea94aa9a56dae84fa8bdb51ede644d7,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2
+      propertyPath: m_Name
+      value: F3_Clock_Hand_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea94aa9a56dae84fa8bdb51ede644d7, type: 3}

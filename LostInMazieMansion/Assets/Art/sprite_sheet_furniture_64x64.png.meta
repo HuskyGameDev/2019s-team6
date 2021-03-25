@@ -50,8 +50,14 @@ TextureImporter:
   - first:
       213: 21300030
     second: sprite_sheet_furniture_64x64_15
+  - first:
+      213: -5705920656028258525
+    second: sprite_sheet_furniture_64x64_16
+  - first:
+      213: 727824311298763373
+    second: sprite_sheet_furniture_64x64_17
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -105,6 +111,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -465,6 +472,48 @@ TextureImporter:
       bones: []
       spriteID: 5e9d3d158b3e99940a45b7a844a45228
       internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet_furniture_64x64_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f2fd4056f70d0b0800000000000000
+      internalID: -5705920656028258525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet_furniture_64x64_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a2bddda50c91a00800000000000000
+      internalID: 727824311298763373
       vertices: []
       indices: 
       edges: []
