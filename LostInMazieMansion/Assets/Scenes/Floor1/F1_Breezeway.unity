@@ -6774,7 +6774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b0e5b69f1b0194b8ee2f4282fcc0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InkJSON: {fileID: 0}
+  InkJSON: {fileID: 4900000, guid: df8b39764886a5a43a45a260607b6021, type: 3}
   InitialPath: 0
   ResumePath: start
   Events: []
