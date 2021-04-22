@@ -609,6 +609,11 @@ PrefabInstance:
       propertyPath: OnPlayerInteracts.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PickUpItem
       objectReference: {fileID: 0}
+    - target: {fileID: 3918017930569968550, guid: 1a1059c172fe765499b8efa05452fd65,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6277079401359733657, guid: 1a1059c172fe765499b8efa05452fd65,
         type: 3}
       propertyPath: m_LocalPosition.x

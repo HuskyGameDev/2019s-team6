@@ -52150,6 +52150,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 806500835}
     m_Modifications:
+    - target: {fileID: 3918017930569968550, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918017930569968550, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+        type: 3}
+      propertyPath: StopEvent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918017930569968550, guid: eea94aa9a56dae84fa8bdb51ede644d7,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6277079401359733657, guid: eea94aa9a56dae84fa8bdb51ede644d7,
         type: 3}
       propertyPath: m_LocalPosition.x
